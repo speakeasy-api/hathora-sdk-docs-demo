@@ -1,0 +1,38 @@
+```unity CreateDeployment.
+using HathoraCloud;
+using HathoraCloud.Models.Shared;
+using HathoraCloud.Models.Operations;
+
+var sdk = new HathoraCloudSDK(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+);
+
+using(var res = await sdk.DeploymentV1.CreateDeploymentAsync(new CreateDeploymentRequest() {
+    DeploymentConfig = new DeploymentConfig() {
+        AdditionalContainerPorts = new List<ContainerPort>() {
+            new ContainerPort() {
+                Name = "default",
+                Port = 8000,
+                TransportType = HathoraCloud.Models.Shared.TransportType.Udp,
+            },
+        },
+        ContainerPort = 4000,
+        Env = new List<DeploymentConfigEnv>() {
+            new DeploymentConfigEnv() {
+                Name = "EULA",
+                Value = "TRUE",
+            },
+        },
+        PlanName = HathoraCloud.Models.Shared.PlanName.Tiny,
+        RoomsPerProcess = 3,
+        TransportType = HathoraCloud.Models.Shared.TransportType.Udp,
+    },
+    BuildId = 1,
+}))
+{
+    // handle response
+}
+```

@@ -1,0 +1,29 @@
+```typescript UpdateApp.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { UpdateAppRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
+import { AppConfig, AuthConfiguration, AuthConfigurationGoogle, RecordStringNever } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+
+(async() => {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const appConfig: AppConfig = {
+  appName: "minecraft",
+  authConfiguration: {
+    anonymous: {},
+    google: {
+      clientId: "string",
+    },
+    nickname: {},
+  },
+};
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+
+  const res = await sdk.appV1.updateApp(appConfig, appId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

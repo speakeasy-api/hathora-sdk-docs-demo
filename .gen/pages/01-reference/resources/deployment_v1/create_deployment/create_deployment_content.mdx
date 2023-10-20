@@ -1,0 +1,24 @@
+## Create Deployment
+
+Create a new [deployment](https://hathora.dev/docs/concepts/hathora-entities#deployment). Creating a new deployment means all new rooms created will use the latest deployment configuration, but existing games in progress will not be affected.
+
+{/* rendered from operation template */}
+
+import {LanguageOperation} from "/.gen/languages";
+import {LanguageSwitch} from "/.gen/languages";
+import UnityParameters from "./_parameters/unity.mdx";
+import UnityResponse from "./_response/unity.mdx";
+import UnityUsage from "./_usage/unity.mdx";
+import TypescriptParameters from "./_parameters/typescript.mdx";
+import TypescriptResponse from "./_response/typescript.mdx";
+import TypescriptUsage from "./_usage/typescript.mdx";
+
+export const Operation = () => {
+    const unity = <LanguageOperation parameters={<UnityParameters/>} response={<UnityResponse/>} usage={<UnityUsage/>}/>
+    const typescript = <LanguageOperation parameters={<TypescriptParameters/>} response={<TypescriptResponse/>} usage={<TypescriptUsage/>}/>
+    return <LanguageSwitch langToContent={{unity, typescript}}/>
+}
+
+<Operation />
+
+{/* end rendered section */}

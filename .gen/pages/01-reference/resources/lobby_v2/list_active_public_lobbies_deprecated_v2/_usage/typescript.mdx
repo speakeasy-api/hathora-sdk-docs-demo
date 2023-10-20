@@ -1,0 +1,20 @@
+```typescript ListActivePublicLobbiesDeprecatedV2.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { ListActivePublicLobbiesDeprecatedV2Request } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
+import { Region } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+
+(async() => {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+const region: Region = Region.Frankfurt;
+
+  const res = await sdk.lobbyV2.listActivePublicLobbiesDeprecatedV2(appId, region);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

@@ -1,0 +1,24 @@
+```typescript CreateRoom.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { CreateRoomRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
+import { CreateRoomParams, Region } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+
+(async() => {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const createRoomParams: CreateRoomParams = {
+  region: Region.SaoPaulo,
+  roomConfig: "{\"name\":\"my-room\"}",
+};
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+const roomId: string = "2swovpy1fnunu";
+
+  const res = await sdk.roomV2.createRoom(createRoomParams, appId, roomId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

@@ -1,0 +1,14 @@
+{
+  "create_deployment": {
+    "title": "resources/deployment_v1/Create Deployment",
+    "href": "/resources/deployment_v1/create_deployment"
+  },
+  "get_deployment_info": {
+    "title": "resources/deployment_v1/Get Deployment Info",
+    "href": "/resources/deployment_v1/get_deployment_info"
+  },
+  "get_deployments": {
+    "title": "resources/deployment_v1/Get Deployments",
+    "href": "/resources/deployment_v1/get_deployments"
+  }
+}

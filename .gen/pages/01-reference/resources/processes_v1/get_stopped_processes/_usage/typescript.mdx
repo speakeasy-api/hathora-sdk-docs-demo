@@ -1,0 +1,20 @@
+```typescript GetStoppedProcesses.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { GetStoppedProcessesRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
+import { Region } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+
+(async() => {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+const region: Region = Region.Mumbai;
+
+  const res = await sdk.processesV1.getStoppedProcesses(appId, region);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

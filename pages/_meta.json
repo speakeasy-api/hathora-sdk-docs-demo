@@ -1,0 +1,82 @@
+{
+  "[...slug]": {
+    "title": "Home",
+    "href": "/home"
+  },
+  "-- guides": {
+    "title": "Guides",
+    "type": "separator"
+  },
+  "installation": {
+    "title": "Installation",
+    "href": "/installation"
+  },
+  "globals": {
+    "title": "Globals",
+    "href": "/globals"
+  },
+  "-- resources": {
+    "title": "Resources",
+    "type": "separator"
+  },
+  "app_v1": {
+    "title": "resources/App V1",
+    "href": "/resources/app_v1"
+  },
+  "auth_v1": {
+    "title": "resources/Auth V1",
+    "href": "/resources/auth_v1"
+  },
+  "billing_v1": {
+    "title": "resources/Billing V1",
+    "href": "/resources/billing_v1"
+  },
+  "build_v1": {
+    "title": "resources/Build V1",
+    "href": "/resources/build_v1"
+  },
+  "deployment_v1": {
+    "title": "resources/Deployment V1",
+    "href": "/resources/deployment_v1"
+  },
+  "discovery_v1": {
+    "title": "resources/Discovery V1",
+    "href": "/resources/discovery_v1"
+  },
+  "lobby_v1": {
+    "title": "resources/Lobby V1",
+    "href": "/resources/lobby_v1"
+  },
+  "lobby_v2": {
+    "title": "resources/Lobby V2",
+    "href": "/resources/lobby_v2"
+  },
+  "lobby_v3": {
+    "title": "resources/Lobby V3",
+    "href": "/resources/lobby_v3"
+  },
+  "log_v1": {
+    "title": "resources/Log V1",
+    "href": "/resources/log_v1"
+  },
+  "management_v1": {
+    "title": "resources/Management V1",
+    "href": "/resources/management_v1"
+  },
+  "metrics_v1": {
+    "title": "resources/Metrics V1",
+    "href": "/resources/metrics_v1"
+  },
+  "processes_v1": {
+    "title": "resources/Processes V1",
+    "href": "/resources/processes_v1"
+  },
+  "room_v1": {
+    "title": "resources/Room V1",
+    "href": "/resources/room_v1"
+  },
+  "room_v2": {
+    "title": "resources/Room V2",
+    "href": "/resources/room_v2"
+  }
+}

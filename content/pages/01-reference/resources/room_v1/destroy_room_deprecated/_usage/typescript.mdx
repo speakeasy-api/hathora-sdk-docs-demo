@@ -1,0 +1,19 @@
+```typescript DestroyRoomDeprecated.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { DestroyRoomDeprecatedRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
+
+(async() => {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const roomId: string = "2swovpy1fnunu";
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+
+  const res = await sdk.roomV1.destroyRoomDeprecated(roomId, appId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+})();
+```

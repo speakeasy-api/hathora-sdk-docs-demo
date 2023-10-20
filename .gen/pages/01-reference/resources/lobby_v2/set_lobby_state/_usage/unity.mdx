@@ -1,0 +1,22 @@
+```unity SetLobbyState.
+using HathoraCloud;
+using HathoraCloud.Models.Shared;
+using HathoraCloud.Models.Operations;
+
+var sdk = new HathoraCloudSDK(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+);
+
+using(var res = await sdk.LobbyV2.SetLobbyStateAsync(new SetLobbyStateRequest() {
+    SetLobbyStateParams = new SetLobbyStateParams() {
+        State = new SetLobbyStateParamsState() {},
+    },
+    RoomId = "2swovpy1fnunu",
+}))
+{
+    // handle response
+}
+```

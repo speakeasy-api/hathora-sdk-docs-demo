@@ -1,0 +1,30 @@
+{
+  "create_room_deprecated": {
+    "title": "resources/room_v1/Create Room Deprecated",
+    "href": "/resources/room_v1/create_room_deprecated"
+  },
+  "destroy_room_deprecated": {
+    "title": "resources/room_v1/Destroy Room Deprecated",
+    "href": "/resources/room_v1/destroy_room_deprecated"
+  },
+  "get_active_rooms_for_process_deprecated": {
+    "title": "resources/room_v1/Get Active Rooms For Process Deprecated",
+    "href": "/resources/room_v1/get_active_rooms_for_process_deprecated"
+  },
+  "get_connection_info_deprecated": {
+    "title": "resources/room_v1/Get Connection Info Deprecated",
+    "href": "/resources/room_v1/get_connection_info_deprecated"
+  },
+  "get_inactive_rooms_for_process_deprecated": {
+    "title": "resources/room_v1/Get Inactive Rooms For Process Deprecated",
+    "href": "/resources/room_v1/get_inactive_rooms_for_process_deprecated"
+  },
+  "get_room_info_deprecated": {
+    "title": "resources/room_v1/Get Room Info Deprecated",
+    "href": "/resources/room_v1/get_room_info_deprecated"
+  },
+  "suspend_room_deprecated": {
+    "title": "resources/room_v1/Suspend Room Deprecated",
+    "href": "/resources/room_v1/suspend_room_deprecated"
+  }
+}
