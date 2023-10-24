@@ -1,22 +1,22 @@
 {
   "create_build": {
-    "title": "Create Build",
+    "title": "resources/build_v1/Create Build",
     "href": "/resources/build_v1/create_build"
   },
   "delete_build": {
-    "title": "Delete Build",
+    "title": "resources/build_v1/Delete Build",
     "href": "/resources/build_v1/delete_build"
   },
   "get_build_info": {
-    "title": "Get Build Info",
+    "title": "resources/build_v1/Get Build Info",
     "href": "/resources/build_v1/get_build_info"
   },
   "get_builds": {
-    "title": "Get Builds",
+    "title": "resources/build_v1/Get Builds",
     "href": "/resources/build_v1/get_builds"
   },
   "run_build": {
-    "title": "Run Build",
+    "title": "resources/build_v1/Run Build",
     "href": "/resources/build_v1/run_build"
   }
 }

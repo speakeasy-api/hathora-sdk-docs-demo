@@ -1,6 +1,6 @@
 {
   "send_verification_email": {
-    "title": "Send Verification Email",
+    "title": "resources/management_v1/Send Verification Email",
     "href": "/resources/management_v1/send_verification_email"
   }
 }

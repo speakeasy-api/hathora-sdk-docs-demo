@@ -1,6 +1,6 @@
 {
   "get_metrics": {
-    "title": "Get Metrics",
+    "title": "resources/metrics_v1/Get Metrics",
     "href": "/resources/metrics_v1/get_metrics"
   }
 }
