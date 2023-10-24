@@ -1,14 +1,14 @@
 {
   "get_logs_for_app": {
-    "title": "resources/log_v1/Get Logs For App",
+    "title": "Get Logs For App",
     "href": "/resources/log_v1/get_logs_for_app"
   },
   "get_logs_for_deployment": {
-    "title": "resources/log_v1/Get Logs For Deployment",
+    "title": "Get Logs For Deployment",
     "href": "/resources/log_v1/get_logs_for_deployment"
   },
   "get_logs_for_process": {
-    "title": "resources/log_v1/Get Logs For Process",
+    "title": "Get Logs For Process",
     "href": "/resources/log_v1/get_logs_for_process"
   }
 }

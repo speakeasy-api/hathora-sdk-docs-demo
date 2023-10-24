@@ -14,8 +14,8 @@
   h5 {
     font-family: var(--font-family-mono);
     font-weight: normal;
-    @include generatePxToRem('font-size', 16);
-    @include generatePxToRem('margin', 0);
+    @include generatePxToRem('font-size', 15);
+    @include generatePxToRem('margin', 0 0 8 0);
 
     // Styling for parameter types
     em {
@@ -28,10 +28,11 @@
 
   p {
     @include generatePxToRem('font-size', 14);
+    @include generatePxToRem('line-height', 20);
     margin: 0;
   }
 
-  hr {
+  > hr {
     @include generatePxToRem('margin', 20 0, !important);
   }
 }

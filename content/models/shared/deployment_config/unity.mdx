@@ -9,7 +9,8 @@ Additional ports your server listens on.
 ---
 ##### *{`int`}* `ContainerPort`
 Default port the server listens on.
-`4000`
+<br/>
+**Example value:** `4000`
 
 ---
 ##### *{`List<DeploymentConfigEnv>`}* `Env`
@@ -28,14 +29,16 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 `medium`: 2 core, 4gb memory
 
 `large`: 4 core, 8gb memory
-`tiny`
+<br/>
+**Example value:** `tiny`
 <Collapsible content={() => import('/content/models/shared/plan_name/unity.mdx')}>
 </Collapsible>
 
 ---
 ##### *{`int`}* `RoomsPerProcess`
 Governs how many [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) can be scheduled in a process.
-`3`
+<br/>
+**Example value:** `3`
 
 ---
 ##### *{`TransportType`}* `TransportType`

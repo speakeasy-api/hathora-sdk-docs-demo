@@ -11,14 +11,14 @@ import UpdateRoomConfig from "./update_room_config/update_room_config.mdx";
 
 ### Available Operations
 
-* [CreateRoom](/resources/roomv2/create_room) - Create a new [room](https://hathora.dev/docs/concepts/hathora-entities#room) for an existing [application](https://hathora.dev/docs/concepts/hathora-entities#application). Poll the [`GetConnectionInfo()`](https://hathora.dev/api#tag/RoomV2/operation/GetConnectionInfo) endpoint to get connection details for an active room.
-* [DestroyRoom](/resources/roomv2/destroy_room) - Destroy a [room](https://hathora.dev/docs/concepts/hathora-entities#room). All associated metadata is deleted.
-* [GetActiveRoomsForProcess](/resources/roomv2/get_active_rooms_for_process) - Get all active [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) for a given [process](https://hathora.dev/docs/concepts/hathora-entities#process).
-* [GetConnectionInfo](/resources/roomv2/get_connection_info) - Poll this endpoint to get connection details to a [room](https://hathora.dev/docs/concepts/hathora-entities#room). Clients can call this endpoint without authentication.
-* [GetInactiveRoomsForProcess](/resources/roomv2/get_inactive_rooms_for_process) - Get all inactive [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) for a given [process](https://hathora.dev/docs/concepts/hathora-entities#process).
-* [GetRoomInfo](/resources/roomv2/get_room_info) - Retreive current and historical allocation data for a [room](https://hathora.dev/docs/concepts/hathora-entities#room).
-* [SuspendRoom](/resources/roomv2/suspend_room) - Suspend a [room](https://hathora.dev/docs/concepts/hathora-entities#room). The room is unallocated from the process but can be rescheduled later using the same `roomId`.
-* [UpdateRoomConfig](/resources/roomv2/update_room_config) - Update Room Config
+* [CreateRoom](/resources/room_v2/create_room) - Create a new [room](https://hathora.dev/docs/concepts/hathora-entities#room) for an existing [application](https://hathora.dev/docs/concepts/hathora-entities#application). Poll the [`GetConnectionInfo()`](https://hathora.dev/api#tag/RoomV2/operation/GetConnectionInfo) endpoint to get connection details for an active room.
+* [DestroyRoom](/resources/room_v2/destroy_room) - Destroy a [room](https://hathora.dev/docs/concepts/hathora-entities#room). All associated metadata is deleted.
+* [GetActiveRoomsForProcess](/resources/room_v2/get_active_rooms_for_process) - Get all active [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) for a given [process](https://hathora.dev/docs/concepts/hathora-entities#process).
+* [GetConnectionInfo](/resources/room_v2/get_connection_info) - Poll this endpoint to get connection details to a [room](https://hathora.dev/docs/concepts/hathora-entities#room). Clients can call this endpoint without authentication.
+* [GetInactiveRoomsForProcess](/resources/room_v2/get_inactive_rooms_for_process) - Get all inactive [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) for a given [process](https://hathora.dev/docs/concepts/hathora-entities#process).
+* [GetRoomInfo](/resources/room_v2/get_room_info) - Retreive current and historical allocation data for a [room](https://hathora.dev/docs/concepts/hathora-entities#room).
+* [SuspendRoom](/resources/room_v2/suspend_room) - Suspend a [room](https://hathora.dev/docs/concepts/hathora-entities#room). The room is unallocated from the process but can be rescheduled later using the same `roomId`.
+* [UpdateRoomConfig](/resources/room_v2/update_room_config) - Update Room Config
 
 ---
 <CreateRoom />

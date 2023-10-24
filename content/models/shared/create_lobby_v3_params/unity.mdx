@@ -8,7 +8,8 @@ import Collapsible from "/components/Collapsible";
 ---
 ##### *{`string`}* `RoomConfig`
 Optional configuration parameters for the room. Can be any string including stringified JSON. It is accessible from the room via [`GetRoomInfo()`](https://hathora.dev/api#tag/RoomV2/operation/GetRoomInfo).
-`{"name":"my-room"}`
+<br/>
+**Example value:** `{"name":"my-room"}`
 
 ---
 ##### *{`LobbyVisibility`}* `Visibility`
@@ -19,7 +20,8 @@ Types of lobbies a player can create.
 `public`: visible in the public lobby list, anyone can join
 
 `local`: for testing with a server running locally
-`private`
+<br/>
+**Example value:** `private`
 <Collapsible content={() => import('/content/models/shared/lobby_visibility/unity.mdx')}>
 </Collapsible>
 

@@ -1,6 +1,6 @@
 {
   "get_ping_service_endpoints": {
-    "title": "resources/discovery_v1/Get Ping Service Endpoints",
+    "title": "Get Ping Service Endpoints",
     "href": "/resources/discovery_v1/get_ping_service_endpoints"
   }
 }

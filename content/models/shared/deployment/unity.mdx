@@ -3,19 +3,22 @@ import Collapsible from "/components/Collapsible";
 
 ##### *{`List<ContainerPort>`}* `AdditionalContainerPorts`
 Additional ports your server listens on.
-`[object Object]`
+<br/>
+**Example value:** `[object Object]`
 <Collapsible content={() => import('/content/models/shared/container_port/unity.mdx')}>
 </Collapsible>
 
 ---
 ##### *{`string`}* `AppId`
 System generated unique identifier for an application.
-`app-af469a92-5b45-4565-b3c4-b79878de67d2`
+<br/>
+**Example value:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
 ##### *{`int`}* `BuildId`
 System generated id for a build. Increments by 1.
-`1`
+<br/>
+**Example value:** `1`
 
 ---
 ##### *{`double`}* `ContainerPort`
@@ -28,7 +31,8 @@ When the deployment was created.
 ---
 ##### *{`string`}* `CreatedBy`
 Email address for the user that created the deployment.
-`dev@hathora.dev`
+<br/>
+**Example value:** `dev@hathora.dev`
 
 ---
 ##### *{`ContainerPort`}* `DefaultContainerPort`
@@ -39,7 +43,8 @@ A container port object represents the transport configruations for how your ser
 ---
 ##### *{`int`}* `DeploymentId`
 System generated id for a deployment. Increments by 1.
-`1`
+<br/>
+**Example value:** `1`
 
 ---
 ##### *{`List<DeploymentEnv>`}* `Env`
@@ -58,24 +63,28 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 `medium`: 2 core, 4gb memory
 
 `large`: 4 core, 8gb memory
-`tiny`
+<br/>
+**Example value:** `tiny`
 <Collapsible content={() => import('/content/models/shared/plan_name/unity.mdx')}>
 </Collapsible>
 
 ---
 ##### *{`double`}* `RequestedCPU`
 The number of cores allocated to your process.
-`0.5`
+<br/>
+**Example value:** `0.5`
 
 ---
 ##### *{`double`}* `RequestedMemoryMB`
 The amount of memory allocated to your process.
-`1024`
+<br/>
+**Example value:** `1024`
 
 ---
 ##### *{`int`}* `RoomsPerProcess`
 Governs how many [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) can be scheduled in a process.
-`3`
+<br/>
+**Example value:** `3`
 
 ---
 ##### *{`DeploymentTransportType`}* `TransportType`

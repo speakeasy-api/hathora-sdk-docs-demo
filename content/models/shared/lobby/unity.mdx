@@ -3,7 +3,8 @@ import Collapsible from "/components/Collapsible";
 
 ##### *{`string`}* `AppId`
 System generated unique identifier for an application.
-`app-af469a92-5b45-4565-b3c4-b79878de67d2`
+<br/>
+**Example value:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
 ##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `CreatedAt`
@@ -12,7 +13,8 @@ When the lobby was created.
 ---
 ##### *{`string`}* `CreatedBy`
 Email address for the user that created the lobby.
-`dev@hathora.dev`
+<br/>
+**Example value:** `dev@hathora.dev`
 
 ---
 ##### *{`LobbyInitialConfig`}* `InitialConfig`
@@ -23,7 +25,8 @@ User input to initialize the game state. Object must be smaller than 64KB.
 ---
 ##### *{`bool`}* `Local`
 : warning: ** DEPRECATED **: This will be removed in a future release, please migrate away from it as soon as possible.
-`false`
+<br/>
+**Example value:** `false`
 
 ---
 ##### *{`Region`}* `Region`
@@ -33,11 +36,13 @@ User input to initialize the game state. Object must be smaller than 64KB.
 ---
 ##### *{`string`}* `RoomId`
 Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
-`2swovpy1fnunu`
+<br/>
+**Example value:** `2swovpy1fnunu`
 
 ---
 ##### *{`string`}* `ShortCode`
-`LFG4`
+<br/>
+**Example value:** `LFG4`
 
 ---
 ##### *{`LobbyState`}* `State`
@@ -54,7 +59,8 @@ Types of lobbies a player can create.
 `public`: visible in the public lobby list, anyone can join
 
 `local`: for testing with a server running locally
-`private`
+<br/>
+**Example value:** `private`
 <Collapsible content={() => import('/content/models/shared/lobby_visibility/unity.mdx')}>
 </Collapsible>
 

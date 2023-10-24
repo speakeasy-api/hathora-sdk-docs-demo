@@ -1,18 +1,18 @@
 {
   "get_balance": {
-    "title": "resources/billing_v1/Get Balance",
+    "title": "Get Balance",
     "href": "/resources/billing_v1/get_balance"
   },
   "get_invoices": {
-    "title": "resources/billing_v1/Get Invoices",
+    "title": "Get Invoices",
     "href": "/resources/billing_v1/get_invoices"
   },
   "get_payment_method": {
-    "title": "resources/billing_v1/Get Payment Method",
+    "title": "Get Payment Method",
     "href": "/resources/billing_v1/get_payment_method"
   },
   "init_stripe_customer_portal_url": {
-    "title": "resources/billing_v1/Init Stripe Customer Portal Url",
+    "title": "Init Stripe Customer Portal Url",
     "href": "/resources/billing_v1/init_stripe_customer_portal_url"
   }
 }

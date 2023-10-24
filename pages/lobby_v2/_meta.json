@@ -1,30 +1,30 @@
 {
   "create_lobby_deprecated": {
-    "title": "resources/lobby_v2/Create Lobby Deprecated",
+    "title": "Create Lobby Deprecated",
     "href": "/resources/lobby_v2/create_lobby_deprecated"
   },
   "create_local_lobby": {
-    "title": "resources/lobby_v2/Create Local Lobby",
+    "title": "Create Local Lobby",
     "href": "/resources/lobby_v2/create_local_lobby"
   },
   "create_private_lobby": {
-    "title": "resources/lobby_v2/Create Private Lobby",
+    "title": "Create Private Lobby",
     "href": "/resources/lobby_v2/create_private_lobby"
   },
   "create_public_lobby": {
-    "title": "resources/lobby_v2/Create Public Lobby",
+    "title": "Create Public Lobby",
     "href": "/resources/lobby_v2/create_public_lobby"
   },
   "get_lobby_info": {
-    "title": "resources/lobby_v2/Get Lobby Info",
+    "title": "Get Lobby Info",
     "href": "/resources/lobby_v2/get_lobby_info"
   },
   "list_active_public_lobbies_deprecated_v2": {
-    "title": "resources/lobby_v2/List Active Public Lobbies Deprecated V2",
+    "title": "List Active Public Lobbies Deprecated V2",
     "href": "/resources/lobby_v2/list_active_public_lobbies_deprecated_v2"
   },
   "set_lobby_state": {
-    "title": "resources/lobby_v2/Set Lobby State",
+    "title": "Set Lobby State",
     "href": "/resources/lobby_v2/set_lobby_state"
   }
 }

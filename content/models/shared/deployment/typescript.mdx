@@ -3,19 +3,22 @@ import Collapsible from "/components/Collapsible";
 
 ##### `additionalContainerPorts`: *{`ContainerPort[]`}*
 Additional ports your server listens on.
-`[object Object]`
+<br/>
+**Example value:** `[object Object]`
 <Collapsible content={() => import('/content/models/shared/container_port/typescript.mdx')}>
 </Collapsible>
 
 ---
 ##### `appId`: *{`string`}*
 System generated unique identifier for an application.
-`app-af469a92-5b45-4565-b3c4-b79878de67d2`
+<br/>
+**Example value:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
 ##### `buildId`: *{`number`}*
 System generated id for a build. Increments by 1.
-`1`
+<br/>
+**Example value:** `1`
 
 ---
 ##### `containerPort`: *{`number`}*
@@ -28,7 +31,8 @@ When the deployment was created.
 ---
 ##### `createdBy`: *{`string`}*
 Email address for the user that created the deployment.
-`dev@hathora.dev`
+<br/>
+**Example value:** `dev@hathora.dev`
 
 ---
 ##### `defaultContainerPort`: *{`ContainerPort`}*
@@ -39,7 +43,8 @@ A container port object represents the transport configruations for how your ser
 ---
 ##### `deploymentId`: *{`number`}*
 System generated id for a deployment. Increments by 1.
-`1`
+<br/>
+**Example value:** `1`
 
 ---
 ##### `env`: *{`DeploymentEnv[]`}*
@@ -58,24 +63,28 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 `medium`: 2 core, 4gb memory
 
 `large`: 4 core, 8gb memory
-`tiny`
+<br/>
+**Example value:** `tiny`
 <Collapsible content={() => import('/content/models/shared/plan_name/typescript.mdx')}>
 </Collapsible>
 
 ---
 ##### `requestedCPU`: *{`number`}*
 The number of cores allocated to your process.
-`0.5`
+<br/>
+**Example value:** `0.5`
 
 ---
 ##### `requestedMemoryMB`: *{`number`}*
 The amount of memory allocated to your process.
-`1024`
+<br/>
+**Example value:** `1024`
 
 ---
 ##### `roomsPerProcess`: *{`number`}*
 Governs how many [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) can be scheduled in a process.
-`3`
+<br/>
+**Example value:** `3`
 
 ---
 ##### `transportType`: *{`DeploymentTransportType`}*

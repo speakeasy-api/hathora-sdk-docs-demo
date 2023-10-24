@@ -1,14 +1,14 @@
 {
   "get_process_info": {
-    "title": "resources/processes_v1/Get Process Info",
+    "title": "Get Process Info",
     "href": "/resources/processes_v1/get_process_info"
   },
   "get_running_processes": {
-    "title": "resources/processes_v1/Get Running Processes",
+    "title": "Get Running Processes",
     "href": "/resources/processes_v1/get_running_processes"
   },
   "get_stopped_processes": {
-    "title": "resources/processes_v1/Get Stopped Processes",
+    "title": "Get Stopped Processes",
     "href": "/resources/processes_v1/get_stopped_processes"
   }
 }

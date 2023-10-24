@@ -1,14 +1,14 @@
 {
   "login_anonymous": {
-    "title": "resources/auth_v1/Login Anonymous",
+    "title": "Login Anonymous",
     "href": "/resources/auth_v1/login_anonymous"
   },
   "login_google": {
-    "title": "resources/auth_v1/Login Google",
+    "title": "Login Google",
     "href": "/resources/auth_v1/login_google"
   },
   "login_nickname": {
-    "title": "resources/auth_v1/Login Nickname",
+    "title": "Login Nickname",
     "href": "/resources/auth_v1/login_nickname"
   }
 }

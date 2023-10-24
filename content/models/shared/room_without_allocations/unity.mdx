@@ -3,7 +3,8 @@ import Collapsible from "/components/Collapsible";
 
 ##### *{`string`}* `AppId`
 System generated unique identifier for an application.
-`app-af469a92-5b45-4565-b3c4-b79878de67d2`
+<br/>
+**Example value:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
 ##### *{`RoomWithoutAllocationsCurrentAllocation`}* `CurrentAllocation`
@@ -12,12 +13,14 @@ System generated unique identifier for an application.
 
 ---
 ##### *{`string`}* `RoomConfig`
-`{"name":"my-room"}`
+<br/>
+**Example value:** `{"name":"my-room"}`
 
 ---
 ##### *{`string`}* `RoomId`
 Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
-`2swovpy1fnunu`
+<br/>
+**Example value:** `2swovpy1fnunu`
 
 ---
 ##### *{`RoomStatus`}* `Status`
@@ -30,7 +33,8 @@ The allocation status of a room.
 `suspended`: room is unallocated from the process but can be rescheduled later with the same `roomId`
 
 `destroyed`: all associated metadata is deleted
-`active`
+<br/>
+**Example value:** `active`
 <Collapsible content={() => import('/content/models/shared/room_status/unity.mdx')}>
 </Collapsible>
 

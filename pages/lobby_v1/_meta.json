@@ -1,14 +1,14 @@
 {
   "create_private_lobby_deprecated": {
-    "title": "resources/lobby_v1/Create Private Lobby Deprecated",
+    "title": "Create Private Lobby Deprecated",
     "href": "/resources/lobby_v1/create_private_lobby_deprecated"
   },
   "create_public_lobby_deprecated": {
-    "title": "resources/lobby_v1/Create Public Lobby Deprecated",
+    "title": "Create Public Lobby Deprecated",
     "href": "/resources/lobby_v1/create_public_lobby_deprecated"
   },
   "list_active_public_lobbies_deprecated_v1": {
-    "title": "resources/lobby_v1/List Active Public Lobbies Deprecated V1",
+    "title": "List Active Public Lobbies Deprecated V1",
     "href": "/resources/lobby_v1/list_active_public_lobbies_deprecated_v1"
   }
 }
