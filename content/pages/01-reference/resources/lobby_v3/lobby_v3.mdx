@@ -7,10 +7,10 @@ import ListActivePublicLobbies from "./list_active_public_lobbies/list_active_pu
 
 ### Available Operations
 
-* [CreateLobby](/resources/lobby_v3/create_lobby) - Create a new lobby for an [application](https://hathora.dev/docs/concepts/hathora-entities#application). A lobby object is a wrapper around a [room](https://hathora.dev/docs/concepts/hathora-entities#room) object. With a lobby, you get additional functionality like configuring the visibility of the room, managing the state of a match, and retrieving a list of public lobbies to display to players.
-* [GetLobbyInfoByRoomId](/resources/lobby_v3/get_lobby_info_by_room_id) - Get details for a lobby.
-* [GetLobbyInfoByShortCode](/resources/lobby_v3/get_lobby_info_by_short_code) - Get details for a lobby. If 2 or more lobbies have the same `shortCode`, then the most recently created lobby will be returned.
-* [ListActivePublicLobbies](/resources/lobby_v3/list_active_public_lobbies) - Get all active lobbies for a given [application](https://hathora.dev/docs/concepts/hathora-entities#application). Filter the array by optionally passing in a `region`. Use this endpoint to display all public lobbies that a player can join in the game client.
+* [Create Lobby](/lobby_v3/create_lobby) - Create a new lobby for an [application](https://hathora.dev/docs/concepts/hathora-entities#application). A lobby object is a wrapper around a [room](https://hathora.dev/docs/concepts/hathora-entities#room) object. With a lobby, you get additional functionality like configuring the visibility of the room, managing the state of a match, and retrieving a list of public lobbies to display to players.
+* [Get Lobby Info By Room Id](/lobby_v3/get_lobby_info_by_room_id) - Get details for a lobby.
+* [Get Lobby Info By Short Code](/lobby_v3/get_lobby_info_by_short_code) - Get details for a lobby. If 2 or more lobbies have the same `shortCode`, then the most recently created lobby will be returned.
+* [List Active Public Lobbies](/lobby_v3/list_active_public_lobbies) - Get all active lobbies for a given [application](https://hathora.dev/docs/concepts/hathora-entities#application). Filter the array by optionally passing in a `region`. Use this endpoint to display all public lobbies that a player can join in the game client.
 
 ---
 <CreateLobby />

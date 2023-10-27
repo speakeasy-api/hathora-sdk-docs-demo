@@ -4,7 +4,7 @@ import Collapsible from "/components/Collapsible";
 ##### *{`List<ContainerPort>`}* `AdditionalContainerPorts`
 Additional ports your server listens on.
 <br/>
-**Example value:** `[object Object]`
+**Example:** `[object Object]`
 <Collapsible content={() => import('/content/models/shared/container_port/unity.mdx')}>
 </Collapsible>
 
@@ -12,13 +12,13 @@ Additional ports your server listens on.
 ##### *{`string`}* `AppId`
 System generated unique identifier for an application.
 <br/>
-**Example value:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
 ##### *{`int`}* `BuildId`
 System generated id for a build. Increments by 1.
 <br/>
-**Example value:** `1`
+**Example:** `1`
 
 ---
 ##### *{`double`}* `ContainerPort`
@@ -32,7 +32,7 @@ When the deployment was created.
 ##### *{`string`}* `CreatedBy`
 Email address for the user that created the deployment.
 <br/>
-**Example value:** `dev@hathora.dev`
+**Example:** `dev@hathora.dev`
 
 ---
 ##### *{`ContainerPort`}* `DefaultContainerPort`
@@ -44,7 +44,7 @@ A container port object represents the transport configruations for how your ser
 ##### *{`int`}* `DeploymentId`
 System generated id for a deployment. Increments by 1.
 <br/>
-**Example value:** `1`
+**Example:** `1`
 
 ---
 ##### *{`List<DeploymentEnv>`}* `Env`
@@ -64,7 +64,7 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 
 `large`: 4 core, 8gb memory
 <br/>
-**Example value:** `tiny`
+**Example:** `tiny`
 <Collapsible content={() => import('/content/models/shared/plan_name/unity.mdx')}>
 </Collapsible>
 
@@ -72,19 +72,19 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 ##### *{`double`}* `RequestedCPU`
 The number of cores allocated to your process.
 <br/>
-**Example value:** `0.5`
+**Example:** `0.5`
 
 ---
 ##### *{`double`}* `RequestedMemoryMB`
 The amount of memory allocated to your process.
 <br/>
-**Example value:** `1024`
+**Example:** `1024`
 
 ---
 ##### *{`int`}* `RoomsPerProcess`
 Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
 <br/>
-**Example value:** `3`
+**Example:** `3`
 
 ---
 ##### *{`DeploymentTransportType`}* `TransportType`

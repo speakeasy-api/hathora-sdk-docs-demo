@@ -1,18 +1,14 @@
 {
   "create_lobby": {
-    "title": "resources/lobby_v3/Create Lobby",
-    "href": "/resources/lobby_v3/create_lobby"
+    "title": "Create Lobby"
   },
   "get_lobby_info_by_room_id": {
-    "title": "resources/lobby_v3/Get Lobby Info By Room Id",
-    "href": "/resources/lobby_v3/get_lobby_info_by_room_id"
+    "title": "Get Lobby Info By Room Id"
   },
   "get_lobby_info_by_short_code": {
-    "title": "resources/lobby_v3/Get Lobby Info By Short Code",
-    "href": "/resources/lobby_v3/get_lobby_info_by_short_code"
+    "title": "Get Lobby Info By Short Code"
   },
   "list_active_public_lobbies": {
-    "title": "resources/lobby_v3/List Active Public Lobbies",
-    "href": "/resources/lobby_v3/list_active_public_lobbies"
+    "title": "List Active Public Lobbies"
   }
 }

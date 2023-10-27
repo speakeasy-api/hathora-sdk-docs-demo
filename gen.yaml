@@ -9,7 +9,7 @@ generation:
   tagNamespacingDisabled: false
 features:
   docs:
-    core: 0.26.0
+    core: 0.27.0
     deprecations: 0.1.0
     globalSecurity: 0.1.0
     globalServerURLs: 0.1.0
@@ -22,6 +22,7 @@ typescript:
   author: Hathora
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  installationURL: https://github.com/hathora/cloud-sdk-typescript
   maxMethodParams: "3"
   packageName: '@hathora/cloud-sdk-typescript'
 unity:

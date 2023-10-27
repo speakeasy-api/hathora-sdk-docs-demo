@@ -1,34 +1,26 @@
 {
   "create_room": {
-    "title": "resources/room_v2/Create Room",
-    "href": "/resources/room_v2/create_room"
+    "title": "Create Room"
   },
   "destroy_room": {
-    "title": "resources/room_v2/Destroy Room",
-    "href": "/resources/room_v2/destroy_room"
+    "title": "Destroy Room"
   },
   "get_active_rooms_for_process": {
-    "title": "resources/room_v2/Get Active Rooms For Process",
-    "href": "/resources/room_v2/get_active_rooms_for_process"
+    "title": "Get Active Rooms For Process"
   },
   "get_connection_info": {
-    "title": "resources/room_v2/Get Connection Info",
-    "href": "/resources/room_v2/get_connection_info"
+    "title": "Get Connection Info"
   },
   "get_inactive_rooms_for_process": {
-    "title": "resources/room_v2/Get Inactive Rooms For Process",
-    "href": "/resources/room_v2/get_inactive_rooms_for_process"
+    "title": "Get Inactive Rooms For Process"
   },
   "get_room_info": {
-    "title": "resources/room_v2/Get Room Info",
-    "href": "/resources/room_v2/get_room_info"
+    "title": "Get Room Info"
   },
   "suspend_room": {
-    "title": "resources/room_v2/Suspend Room",
-    "href": "/resources/room_v2/suspend_room"
+    "title": "Suspend Room"
   },
   "update_room_config": {
-    "title": "resources/room_v2/Update Room Config",
-    "href": "/resources/room_v2/update_room_config"
+    "title": "Update Room Config"
   }
 }

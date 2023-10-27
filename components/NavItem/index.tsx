@@ -1,38 +1,35 @@
-import React, { FC, useContext } from 'react';
+import React, { FC, useContext, useMemo } from 'react';
 import cn from 'classnames';
-
-import { toRouteFormat } from '@/utils/routesHelpers';
+import { getPagesUnderRoute } from 'nextra/context';
 
 import styles from './styles.module.scss';
 
 import { ScrollContext } from '../scrollManager';
 
 export const NavItem: FC<Record<string, string>> = ({ route, title, type }) => {
-  // const nextraRoute = useContext(OnFocusContext);
-  const { currentHeading, visibleHeadings } = useContext(ScrollContext);
+  const { scrollTo } = useContext(ScrollContext);
 
-  const pageTitle = title.split('/').pop();
-
-  const titleSlug = '/' + toRouteFormat(title.toLowerCase());
-
-  const baseCurrentHeading = currentHeading?.split('#')[0];
-  const headings = visibleHeadings.map((heading) => heading?.split('#')[0]);
-
-  const selected = baseCurrentHeading === titleSlug;
+  const isFolder = useMemo(() => getPagesUnderRoute(route).length > 0, []);
 
   const classForItem = {
-    [styles['selected']]: selected,
     [styles['visible']]: false,
     [styles['separator']]: type === 'separator',
   };
 
-  if (titleSlug == '/home' || route == '/') {
+  if (route == '/') {
     return null;
   }
 
+  const handleClick = (e: any) => {
+    if (!isFolder) {
+      e.stopPropagation();
+      scrollTo(route);
+    }
+  };
+
   return (
-    <div className={cn(styles.nav_item, classForItem, 'active')}>
-      <p>{pageTitle}</p>
+    <div onClick={handleClick} className={cn(styles.nav_item, classForItem)}>
+      <p>{title}</p>
     </div>
   );
 };

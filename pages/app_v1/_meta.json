@@ -1,22 +1,17 @@
 {
   "create_app": {
-    "title": "resources/app_v1/Create App",
-    "href": "/resources/app_v1/create_app"
+    "title": "Create App"
   },
   "delete_app": {
-    "title": "resources/app_v1/Delete App",
-    "href": "/resources/app_v1/delete_app"
+    "title": "Delete App"
   },
   "get_app_info": {
-    "title": "resources/app_v1/Get App Info",
-    "href": "/resources/app_v1/get_app_info"
+    "title": "Get App Info"
   },
   "get_apps": {
-    "title": "resources/app_v1/Get Apps",
-    "href": "/resources/app_v1/get_apps"
+    "title": "Get Apps"
   },
   "update_app": {
-    "title": "resources/app_v1/Update App",
-    "href": "/resources/app_v1/update_app"
+    "title": "Update App"
   }
 }
