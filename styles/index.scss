@@ -1,45 +1,62 @@
 @import 'utils/mixins';
-@import 'libs/codeThemes';
-@import 'libs/nextra';
-
-@import './globals.css';
+@import './nextra';
 @import './codehike-styles';
+@import './background-gradients';
+@import './theme.js';
 
 :root {
+  --primary-lightness: #{map-get($primaryColor, lightness)};
+  --primary-chroma: #{map-get($primaryColor, chroma)};
+  --primary-hue: #{map-get($primaryColor, hue)};
+
+  --primary-color: #{$primaryHex};
+  --secondary-color: #{primary-color($lightness: 1.4, $hue: 1.1)};
+
+  --primary-color-contrast-text: #{text-contrast($primaryHex)};
+
+  --font-family: #{$mainFont}, serif;
+  --font-family-mono: #{$codeFont}, sans-serif;
+  --base-border-radius: 8px;
+
   --color-page-background: #ffffff;
   --color-footer-background: #ffffff;
   --color-footer-text: #222;
+  --color-paper: #e5e5e5;
+
   --component-highlights-item-width: calc(100vw - 100px);
   --text-heading: #222;
+  --text-subheading: #313131;
   --text-body: #4C4C4C;
-  --text-heading-opacity: 1;
-  --text-link: oklch(50% .2 145);
-  --text-link-hover: oklch(70% .25 145);
-  --text-emphasis: oklch(40% .1 145);
-  --gradient-heading: linear-gradient(90deg, #34FF00 -1.69%, #00DCE4 5.47%, #01D2EF 15.51%);
-  --select-hover: #11D8641F;
-  --select-text: #4C4C4C;
-  --stroke-opacity: 1;
   --hr-color: rgb(207, 207, 215);
-  --font-family: Inter, serif;
-  --font-family-mono: IBM Plex Mono, sans-serif;
-  --base-border-radius: 8px;
+
+  --text-heading-opacity: 1;
+  --text-link: var(--primary-color);
+  --text-emphasis: #{primary-color($lightness: .6, $chroma: .5)};
+  --gradient-heading: linear-gradient(45deg, var(--primary-color) 20%, var(--secondary-color));
+  --heading-sidebar-bg-color: var(--primary-color);
+
+  --stroke-opacity: 1;
 
   &.dark {
+    --secondary-color: #{primary-color($lightness: .7, $hue: 1.1)};
+
     --color-page-background: #171717;
     --color-footer-background: #121212;
     --color-footer-text: #CCD9E0;
-    --text-body: #ACACAC;
+    --color-paper: #262626;
+
     --text-heading: #ffffff;
-    --text-heading-opacity: 1;
-    --text-link: oklch(90% .2 145);
-    --text-link-hover: oklch(100% .5 145);
-    --text-emphasis: oklch(80% .1 145);
-    --gradient-heading: linear-gradient(90deg, #91FF75 -1.69%, #4AEBF1 6.75%, #42E8FF 15.51%);
-    --select-hover: #3148367A;
-    --select-text: #E3E5E8;
-    --stroke-opacity: 0.87;
+    --text-subheading: #e7e7e7;
+    --text-body: #ACACAC;
     --hr-color: rgba(201, 201, 208, 0.15);
+
+    --text-heading-opacity: 1;
+    --text-link: var(--primary-color);
+    --text-emphasis: #{primary-color($lightness: 1.65)};
+
+    --gradient-heading: linear-gradient(45deg, var(--primary-color) 20%, var(--secondary-color));
+
+    --stroke-opacity: 0.87;
   }
 }
 
@@ -98,40 +115,6 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 152%;
-  }
-}
-
-body::before, body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  width: 50%; /* Equal width left and right */
-  height: 110%;
-  background-repeat: repeat-y; /* The image will repeat vertically */
-  @include desktopMax1400 {
-    background-size: contain;
-    scale: 1.5;
-    top: 50%;
-    width: 70%;
-    background-repeat: no-repeat;
-  }
-}
-
-/* Background image on the left */
-body::before {
-  background-image: url('../icons/gradient.png');
-  left: 0;
-  z-index: -1;
-}
-
-/* Background image on the right */
-body::after {
-  background-image: url('../icons/gradient.png');
-  rotate: -90deg;
-  right: 0;
-  z-index: -1;
-  @include desktopMax1400 {
-    display: none;
   }
 }
 
@@ -197,15 +180,19 @@ h5 {
 h6 {
   @include generatePxToRem(font-size, 12);
   @include generatePxToRem(margin-bottom, 8);
-  font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 152%;
   letter-spacing: 2.4px;
-  background: var(--gradient-heading);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
+  color: var(--text-body);
+
+  em {
+    font-style: normal;
+    background: var(--gradient-heading);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+  }
 }
 
 section {

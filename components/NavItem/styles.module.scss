@@ -4,36 +4,35 @@
   width: 100%;
   @include generatePxToRem('padding', 8);
   @include generatePxToRem('border-radius', 8);
-  border: 1px solid transparent;
+  border: 2px solid transparent;
+  transition: all 0.15s ease;
 
   &:hover {
     @include generatePxToRem('border-radius', 8);
-    border: 1px solid var(--heading-sidebar-bg-color);
+    border: 2px solid var(--heading-sidebar-bg-color);
   }
 
   &.separator {
-    @include generatePxToRem('padding', 14 16 14 0);
+    @include generatePxToRem('padding', 14 16 0 4);
+
     &:hover {
-      border: 1px solid transparent;
+      border: 2px solid transparent;
     }
 
     > p {
-      @include sidebar-heading-separator(var(--heading-h5-color));
+      @include sidebar-heading-separator(var(--text-heading));
+      text-transform: uppercase;
     }
   }
 
   &.selected {
     width: 100%;
-    background-image: var(--bcg-btn-image-grad);
 
     &:hover {
-      border: 1px solid transparent;
+      border: 2px solid transparent;
     }
 
-    > p {
-      @include heading-h5(var(--heading-h5-color-selected));
-      font-weight: bold;
-    }
+    // Check /styles/libs/nextra.scss for the rest of the styling
   }
 
   &.visible {
@@ -42,7 +41,8 @@
 
   > p {
     margin: 0;
-    @include heading-h5(var(--heading-h5-color));
+    @include heading-h5(var(--text-subheading));
+
     &:first-letter {
       text-transform: uppercase;
     }

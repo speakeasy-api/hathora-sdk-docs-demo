@@ -28,7 +28,7 @@ const Index: FC<ILanguageSelector> = ({ style = 'large' }) => {
 
   return (
     <Menu
-      transition
+      transition={false}
       onItemClick={handleChange}
       menuButton={button}
       menuClassName={styles.menu}
