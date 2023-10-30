@@ -11,11 +11,11 @@ import { Parameters, Response } from '@/components/Parameters';
 import { LanguageContext } from '@/utils/contexts/languageContext';
 import { LinkableContext } from '@/utils/contexts/linkableContext';
 
-export const Languages = ['unity', 'typescript'];
+export const Languages = ['typescript', 'unity'];
 export type Language = (typeof Languages)[number];
 
 export const LanguageProvider = (props: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('unity');
+  const [language, setLanguage] = useState<Language>('typescript');
   const context = {
     language,
     setLanguage,
