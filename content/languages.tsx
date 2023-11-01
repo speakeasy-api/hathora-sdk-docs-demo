@@ -6,10 +6,14 @@ import React, {
   useState,
 } from 'react';
 
-import { Columns, RHS } from '@/components/Columns';
-import { Parameters, Response } from '@/components/Parameters';
-import { LanguageContext } from '@/utils/contexts/languageContext';
-import { LinkableContext } from '@/utils/contexts/linkableContext';
+import { Columns, RHS } from '@/src/components/Columns';
+import {
+  Authentication,
+  Parameters,
+  Response,
+} from '@/src/components/Parameters';
+import { LanguageContext } from '@/src/utils/contexts/languageContext';
+import { LinkableContext } from '@/src/utils/contexts/linkableContext';
 
 export const Languages = ['typescript', 'unity'];
 export type Language = (typeof Languages)[number];
@@ -45,10 +49,14 @@ export const LanguageSwitch = (props: {
 
 export const LanguageOperation = (props: {
   usage: ReactElement;
+  authentication?: ReactElement;
   parameters: ReactElement;
   response: ReactElement;
 }) => (
   <Columns>
+    {props.authentication ? (
+      <Authentication>{props.authentication}</Authentication>
+    ) : null}
     <Parameters>{props.parameters}</Parameters>
     <Response>{props.response}</Response>
     <RHS>{props.usage}</RHS>

@@ -1,5 +1,5 @@
 {
-  "name": "<no value>",
+  "name": "hathora-sdk-docs",
   "version": "",
   "description": "Nextra docs template",
   "private": true,
@@ -41,6 +41,8 @@
     "@types/lodash": "4.14.199",
     "chroma-js": "2.4.2",
     "classnames": "2.3.2",
+    "js-yaml": "4.1.0",
+    "js-yaml-loader": "1.2.2",
     "lodash": "4.17.21",
     "next": "13.5.5",
     "next-compose-plugins": "^2.2.1",
