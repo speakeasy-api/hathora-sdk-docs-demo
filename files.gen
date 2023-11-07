@@ -1001,7 +1001,6 @@ tsconfig.json
 public/favicon.png
 public/logo-dark.png
 public/logo-light.png
-theme.yaml
 src/pages/404.mdx
 src/pages/[...rest].mdx
 src/pages/index.mdx
