@@ -1,6 +1,6 @@
 ```typescript SuspendRoomDeprecated.ts
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { SuspendRoomDeprecatedRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
+import { SuspendRoomDeprecatedRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
   const sdk = new HathoraCloud({
@@ -11,7 +11,6 @@ const roomId: string = "2swovpy1fnunu";
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
 
   const res = await sdk.roomV1.suspendRoomDeprecated(roomId, appId);
-
 
   if (res.statusCode == 200) {
     // handle response

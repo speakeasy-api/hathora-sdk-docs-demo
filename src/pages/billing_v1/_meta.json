@@ -2,13 +2,13 @@
   "get_balance": {
     "title": "Get Balance"
   },
-  "get_invoices": {
-    "title": "Get Invoices"
-  },
   "get_payment_method": {
     "title": "Get Payment Method"
   },
   "init_stripe_customer_portal_url": {
     "title": "Init Stripe Customer Portal Url"
+  },
+  "get_invoices": {
+    "title": "Get Invoices"
   }
 }

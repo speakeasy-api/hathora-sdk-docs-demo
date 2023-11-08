@@ -1,11 +1,11 @@
 {
-  "create_deployment": {
-    "title": "Create Deployment"
+  "get_deployments": {
+    "title": "Get Deployments"
   },
   "get_deployment_info": {
     "title": "Get Deployment Info"
   },
-  "get_deployments": {
-    "title": "Get Deployments"
+  "create_deployment": {
+    "title": "Create Deployment"
   }
 }

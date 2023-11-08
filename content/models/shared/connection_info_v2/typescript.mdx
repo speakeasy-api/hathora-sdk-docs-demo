@@ -2,16 +2,24 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `additionalExposedPorts`: *{`ExposedPort[]`}*
+##### `additionalExposedPorts`: *{`components.ExposedPort[]`}*
 <br/>
 **Example:** `[object Object]`
 <Collapsible content={() => import('/content/models/shared/exposed_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 ---
-##### `exposedPort?`: *{`ExposedPort`}*
+##### `exposedPort?`: *{`components.ExposedPort`}*
 Connection details for an active process.
 <Collapsible content={() => import('/content/models/shared/exposed_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `status`: *{`components.ConnectionInfoV2Status`}*
+`exposedPort` will only be available when the `status` of a room is "active".
+<br/>
+**Example:** `active`
+<Collapsible content={() => import('/content/models/shared/connection_info_v2_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 ---
@@ -19,13 +27,5 @@ Connection details for an active process.
 Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
 <br/>
 **Example:** `2swovpy1fnunu`
-
----
-##### `status`: *{`ConnectionInfoV2Status`}*
-`exposedPort` will only be available when the `status` of a room is "active".
-<br/>
-**Example:** `active`
-<Collapsible content={() => import('/content/models/shared/connection_info_v2_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
 
 

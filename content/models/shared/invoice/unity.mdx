@@ -2,26 +2,26 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### *{`Status`}* `Status`
+<Collapsible content={() => import('/content/models/shared/status/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### *{`double`}* `AmountDue`
-
----
-##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `DueDate`
-
----
-##### *{`string`}* `Id`
-
----
-##### *{`double`}* `Month`
 
 ---
 ##### *{`string`}* `PdfUrl`
 
 ---
-##### *{`InvoiceStatus`}* `Status`
-<Collapsible content={() => import('/content/models/shared/invoice_status/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `DueDate`
 
 ---
 ##### *{`double`}* `Year`
+
+---
+##### *{`double`}* `Month`
+
+---
+##### *{`string`}* `Id`
 
 

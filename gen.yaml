@@ -1,15 +1,11 @@
 configVersion: 1.0.0
 generation:
-  comments:
-    disableComments: false
-    omitDescriptionIfSummaryPresent: false
-  baseServerURL: ""
+  comments: {}
   sdkClassName: Hathora-Cloud
-  singleTagPerOp: false
-  tagNamespacingDisabled: false
+  maintainOpenAPIOrder: true
 features:
   docs:
-    core: 1.2.1
+    core: 1.2.2
     deprecations: 0.1.0
     globalSecurity: 0.1.0
     globalServerURLs: 0.1.0
@@ -17,17 +13,41 @@ features:
     methodSecurity: 0.2.0
 docs:
   version: ""
+  imports:
+    option: openapi
+    paths:
+      callbacks: callbacks
+      errors: errors
+      operations: operations
+      shared: shared
+      webhooks: webhooks
   packageName: hathora-sdk-docs
 typescript:
   version: 1.22.2
   author: Hathora
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
+  imports:
+    option: openapi
+    paths:
+      callbacks: models/callbacks
+      errors: models/errors
+      operations: models/operations
+      shared: models/components
+      webhooks: models/webhooks
   installationURL: https://github.com/hathora/cloud-sdk-typescript
   maxMethodParams: "3"
   packageName: '@hathora/cloud-sdk-typescript'
 unity:
   version: 0.21.4
   author: Hathora
+  imports:
+    option: openapi
+    paths:
+      callbacks: Models/Callbacks
+      errors: Models/Errors
+      operations: Models/Requests
+      shared: Models/Components
+      webhooks: Models/Webhooks
   maxMethodParams: 0
   packageName: hathora-unity-sdk

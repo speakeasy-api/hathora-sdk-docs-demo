@@ -1,17 +1,17 @@
 {
+  "get_apps": {
+    "title": "Get Apps"
+  },
   "create_app": {
     "title": "Create App"
   },
-  "delete_app": {
-    "title": "Delete App"
+  "update_app": {
+    "title": "Update App"
   },
   "get_app_info": {
     "title": "Get App Info"
   },
-  "get_apps": {
-    "title": "Get Apps"
-  },
-  "update_app": {
-    "title": "Update App"
+  "delete_app": {
+    "title": "Delete App"
   }
 }

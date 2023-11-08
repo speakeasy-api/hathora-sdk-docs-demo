@@ -2,7 +2,35 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `additionalContainerPorts`: *{`ContainerPort[]`}*
+##### `env`: *{`components.Env[]`}*
+The environment variable that our process will have access to at runtime.
+<Collapsible content={() => import('/content/models/shared/env/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `roomsPerProcess`: *{`number`}*
+Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
+<br/>
+**Example:** `3`
+
+---
+##### `planName`: *{`components.PlanName`}*
+A plan defines how much CPU and memory is required to run an instance of your game server.
+
+`tiny`: shared core, 1gb memory
+
+`small`: 1 core, 2gb memory
+
+`medium`: 2 core, 4gb memory
+
+`large`: 4 core, 8gb memory
+<br/>
+**Example:** `tiny`
+<Collapsible content={() => import('/content/models/shared/plan_name/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `additionalContainerPorts`: *{`components.ContainerPort[]`}*
 Additional ports your server listens on.
 <br/>
 **Example:** `[object Object]`
@@ -10,16 +38,16 @@ Additional ports your server listens on.
 </Collapsible>
 
 ---
-##### `appId`: *{`string`}*
-System generated unique identifier for an application.
-<br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+##### `defaultContainerPort`: *{`components.ContainerPort`}*
+A container port object represents the transport configruations for how your server will listen.
+<Collapsible content={() => import('/content/models/shared/container_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
-##### `buildId`: *{`number`}*
-System generated id for a build. Increments by 1.
-<br/>
-**Example:** `1`
+##### `transportType`: *{`components.DeploymentTransportType`}*
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+<Collapsible content={() => import('/content/models/shared/deployment_transport_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `containerPort`: *{`number`}*
@@ -36,38 +64,10 @@ Email address for the user that created the deployment.
 **Example:** `dev@hathora.dev`
 
 ---
-##### `defaultContainerPort`: *{`ContainerPort`}*
-A container port object represents the transport configruations for how your server will listen.
-<Collapsible content={() => import('/content/models/shared/container_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `deploymentId`: *{`number`}*
-System generated id for a deployment. Increments by 1.
+##### `requestedMemoryMB`: *{`number`}*
+The amount of memory allocated to your process.
 <br/>
-**Example:** `1`
-
----
-##### `env`: *{`Env[]`}*
-The environment variable that our process will have access to at runtime.
-<Collapsible content={() => import('/content/models/shared/env/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `planName`: *{`PlanName`}*
-A plan defines how much CPU and memory is required to run an instance of your game server.
-
-`tiny`: shared core, 1gb memory
-
-`small`: 1 core, 2gb memory
-
-`medium`: 2 core, 4gb memory
-
-`large`: 4 core, 8gb memory
-<br/>
-**Example:** `tiny`
-<Collapsible content={() => import('/content/models/shared/plan_name/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+**Example:** `1024`
 
 ---
 ##### `requestedCPU`: *{`number`}*
@@ -76,21 +76,21 @@ The number of cores allocated to your process.
 **Example:** `0.5`
 
 ---
-##### `requestedMemoryMB`: *{`number`}*
-The amount of memory allocated to your process.
+##### `deploymentId`: *{`number`}*
+System generated id for a deployment. Increments by 1.
 <br/>
-**Example:** `1024`
+**Example:** `1`
 
 ---
-##### `roomsPerProcess`: *{`number`}*
-Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
+##### `buildId`: *{`number`}*
+System generated id for a build. Increments by 1.
 <br/>
-**Example:** `3`
+**Example:** `1`
 
 ---
-##### `transportType`: *{`DeploymentTransportType`}*
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-<Collapsible content={() => import('/content/models/shared/deployment_transport_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+##### `appId`: *{`string`}*
+System generated unique identifier for an application.
+<br/>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 

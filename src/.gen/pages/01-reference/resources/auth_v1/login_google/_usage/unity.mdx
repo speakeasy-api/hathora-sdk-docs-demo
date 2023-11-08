@@ -1,7 +1,7 @@
 ```csharp LoginGoogle.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Shared;
-using HathoraUnitySDK.Models.Operations;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
 
 var sdk = new HathoraCloud(
     security: new Security() {
@@ -10,8 +10,8 @@ var sdk = new HathoraCloud(
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
 );
 
-using(var res = await sdk.AuthV1.LoginGoogleAsync(new Models.Operations.LoginGoogleRequest() {
-    LoginGoogleRequest = new Models.Shared.LoginGoogleRequest() {
+using(var res = await sdk.AuthV1.LoginGoogleAsync(new HathoraUnitySDK.Models.Requests.LoginGoogleRequest() {
+    LoginGoogleRequest = new HathoraUnitySDK.Models.Components.LoginGoogleRequest() {
         IdToken = "eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkNDhhNzUxMzhkOWQ0OGYwYWE2MzVlZjU2OWM0ZTE5NmY3YWU4ZDYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiODQ4NDEyODI2Nzg4LW00bXNyYjZxNDRkbTJ1ZTNrZ3Z1aTBmcTdrZGE1NWxzLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiODQ4NDEyODI2Nzg4LW00bXNyYjZxNDRkbTJ1ZTNrZ3Z1aTBmcTdrZGE1NWxzLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTE0NTQyMzMwNzI3MTU2MTMzNzc2IiwiZW1haWwiOiJocGFdkeivmeuzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoidno1NGhhdTNxbnVR",
     },
 }))

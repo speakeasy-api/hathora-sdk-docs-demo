@@ -2,11 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `connectionInfoV2?`: *{`shared.ConnectionInfoV2`}*
-<Collapsible content={() => import('/content/models/shared/connection_info_v2/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `contentType`: *{`string`}*
 HTTP response content type for this operation
 
@@ -17,5 +12,10 @@ HTTP response status code for this operation
 ---
 ##### `rawResponse?`: [*{ `AxiosResponse` }*](https://axios-http.com/docs/res_schema)
 Raw HTTP response; suitable for custom response parsing
+
+---
+##### `connectionInfoV2?`: *{`components.ConnectionInfoV2`}*
+<Collapsible content={() => import('/content/models/shared/connection_info_v2/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

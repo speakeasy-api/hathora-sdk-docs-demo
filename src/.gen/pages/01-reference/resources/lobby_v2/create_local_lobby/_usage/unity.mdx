@@ -1,7 +1,7 @@
 ```csharp CreateLocalLobby.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Operations;
-using HathoraUnitySDK.Models.Shared;
+using HathoraUnitySDK.Models.Requests;
+using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
@@ -10,11 +10,11 @@ var sdk = new HathoraCloud(
 using(var res = await sdk.LobbyV2.CreateLocalLobbyAsync(new CreateLocalLobbySecurity() {
     PlayerAuth = "",
 }, new CreateLocalLobbyRequest() {
+    RoomId = "2swovpy1fnunu",
     RequestBody = new CreateLocalLobbyRequestBody() {
         InitialConfig = new LobbyInitialConfig() {},
-        Region = HathoraUnitySDK.Models.Shared.Region.Sydney,
+        Region = Region.Sydney,
     },
-    RoomId = "2swovpy1fnunu",
 }))
 {
     // handle response

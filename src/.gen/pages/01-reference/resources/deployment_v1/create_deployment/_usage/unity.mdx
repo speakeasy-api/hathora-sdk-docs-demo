@@ -1,7 +1,8 @@
 ```csharp CreateDeployment.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Shared;
-using HathoraUnitySDK.Models.Operations;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+using System.Collections.Generic;
 
 var sdk = new HathoraCloud(
     security: new Security() {
@@ -11,26 +12,26 @@ var sdk = new HathoraCloud(
 );
 
 using(var res = await sdk.DeploymentV1.CreateDeploymentAsync(new CreateDeploymentRequest() {
+    BuildId = 1,
     DeploymentConfig = new DeploymentConfig() {
-        AdditionalContainerPorts = new List<ContainerPort>() {
-            new ContainerPort() {
-                Name = "default",
-                Port = 8000,
-                TransportType = HathoraUnitySDK.Models.Shared.TransportType.Udp,
-            },
-        },
-        ContainerPort = 4000,
         Env = new List<DeploymentConfigEnv>() {
             new DeploymentConfigEnv() {
-                Name = "EULA",
                 Value = "TRUE",
+                Name = "EULA",
             },
         },
-        PlanName = HathoraUnitySDK.Models.Shared.PlanName.Tiny,
         RoomsPerProcess = 3,
-        TransportType = HathoraUnitySDK.Models.Shared.TransportType.Udp,
+        PlanName = PlanName.Tiny,
+        AdditionalContainerPorts = new List<ContainerPort>() {
+            new ContainerPort() {
+                TransportType = TransportType.Tcp,
+                Port = 8000,
+                Name = "default",
+            },
+        },
+        TransportType = TransportType.Udp,
+        ContainerPort = 4000,
     },
-    BuildId = 1,
 }))
 {
     // handle response

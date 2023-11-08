@@ -1,11 +1,11 @@
 ```typescript CreatePublicLobby.ts
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { LobbyInitialConfig, Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
 import {
   CreatePublicLobbyRequest,
   CreatePublicLobbyRequestBody,
   CreatePublicLobbySecurity,
-} from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
-import { LobbyInitialConfig, Region } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+} from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
   const sdk = new HathoraCloud({
@@ -13,14 +13,13 @@ import { LobbyInitialConfig, Region } from "@hathora/cloud-sdk-typescript/dist/s
   });
 const requestBody: CreatePublicLobbyRequestBody = {
   initialConfig: {},
-  region: Region.SaoPaulo,
+  region: Region.Frankfurt,
 };
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
 const roomId: string = "2swovpy1fnunu";
 const operationSecurity: CreatePublicLobbySecurity = "";
 
   const res = await sdk.lobbyV2.createPublicLobby(operationSecurity, requestBody, appId, roomId);
-
 
   if (res.statusCode == 200) {
     // handle response

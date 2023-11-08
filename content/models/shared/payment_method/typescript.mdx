@@ -2,17 +2,17 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `ach?`: *{`AchPaymentMethod`}*
-<Collapsible content={() => import('/content/models/shared/ach_payment_method/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `card?`: *{`CardPaymentMethod`}*
+##### `card?`: *{`components.CardPaymentMethod`}*
 <Collapsible content={() => import('/content/models/shared/card_payment_method/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 ---
-##### `link?`: *{`LinkPaymentMethod`}*
+##### `ach?`: *{`components.AchPaymentMethod`}*
+<Collapsible content={() => import('/content/models/shared/ach_payment_method/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `link?`: *{`components.LinkPaymentMethod`}*
 <Collapsible content={() => import('/content/models/shared/link_payment_method/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 

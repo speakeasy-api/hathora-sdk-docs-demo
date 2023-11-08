@@ -1,7 +1,7 @@
 ```csharp LoginNickname.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Shared;
-using HathoraUnitySDK.Models.Operations;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
 
 var sdk = new HathoraCloud(
     security: new Security() {
@@ -10,8 +10,8 @@ var sdk = new HathoraCloud(
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
 );
 
-using(var res = await sdk.AuthV1.LoginNicknameAsync(new Models.Operations.LoginNicknameRequest() {
-    LoginNicknameRequest = new Models.Shared.LoginNicknameRequest() {
+using(var res = await sdk.AuthV1.LoginNicknameAsync(new HathoraUnitySDK.Models.Requests.LoginNicknameRequest() {
+    LoginNicknameRequest = new HathoraUnitySDK.Models.Components.LoginNicknameRequest() {
         Nickname = "squiddytwoshoes",
     },
 }))

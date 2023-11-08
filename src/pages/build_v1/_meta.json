@@ -1,17 +1,17 @@
 {
-  "create_build": {
-    "title": "Create Build"
-  },
-  "delete_build": {
-    "title": "Delete Build"
+  "get_builds": {
+    "title": "Get Builds"
   },
   "get_build_info": {
     "title": "Get Build Info"
   },
-  "get_builds": {
-    "title": "Get Builds"
+  "create_build": {
+    "title": "Create Build"
   },
   "run_build": {
     "title": "Run Build"
+  },
+  "delete_build": {
+    "title": "Delete Build"
   }
 }

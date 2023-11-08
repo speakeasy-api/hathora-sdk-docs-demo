@@ -6,17 +6,17 @@ import Labels from "/src/lib/labels";
 HTTP response content type for this operation
 
 ---
-##### `room?`: *{`shared.Room`}*
-Ok
-<Collapsible content={() => import('/content/models/shared/room/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `statusCode`: *{`number`}*
 HTTP response status code for this operation
 
 ---
 ##### `rawResponse?`: [*{ `AxiosResponse` }*](https://axios-http.com/docs/res_schema)
 Raw HTTP response; suitable for custom response parsing
+
+---
+##### `room?`: *{`components.Room`}*
+Ok
+<Collapsible content={() => import('/content/models/shared/room/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

@@ -2,19 +2,29 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `allocations`: *{`RoomAllocation[]`}*
-<Collapsible content={() => import('/content/models/shared/room_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+##### `currentAllocation`: *{`components.RoomCurrentAllocation`}*
+<Collapsible content={() => import('/content/models/shared/room_current_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 ---
-##### `appId`: *{`string`}*
-System generated unique identifier for an application.
+##### `status`: *{`components.RoomStatus`}*
+The allocation status of a room.
+
+`scheduling`: a process is not allocated yet and the room is waiting to be scheduled
+
+`active`: ready to accept connections
+
+`suspended`: room is unallocated from the process but can be rescheduled later with the same `roomId`
+
+`destroyed`: all associated metadata is deleted
 <br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+**Example:** `active`
+<Collapsible content={() => import('/content/models/shared/room_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
-##### `currentAllocation`: *{`CurrentAllocation`}*
-<Collapsible content={() => import('/content/models/shared/current_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+##### `allocations`: *{`components.RoomAllocation[]`}*
+<Collapsible content={() => import('/content/models/shared/room_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 ---
@@ -29,19 +39,9 @@ Unique identifier to a game session or match. Use the default system generated I
 **Example:** `2swovpy1fnunu`
 
 ---
-##### `status`: *{`RoomStatus`}*
-The allocation status of a room.
-
-`scheduling`: a process is not allocated yet and the room is waiting to be scheduled
-
-`active`: ready to accept connections
-
-`suspended`: room is unallocated from the process but can be rescheduled later with the same `roomId`
-
-`destroyed`: all associated metadata is deleted
+##### `appId`: *{`string`}*
+System generated unique identifier for an application.
 <br/>
-**Example:** `active`
-<Collapsible content={() => import('/content/models/shared/room_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 

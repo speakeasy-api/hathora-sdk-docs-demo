@@ -250,6 +250,8 @@ content/models/shared/auth_configuration/typescript.mdx
 content/models/shared/auth_configuration/unity.mdx
 content/models/shared/build/typescript.mdx
 content/models/shared/build/unity.mdx
+content/models/shared/build_status/typescript.mdx
+content/models/shared/build_status/unity.mdx
 content/models/shared/card_brand/typescript.mdx
 content/models/shared/card_brand/unity.mdx
 content/models/shared/card_payment_method/typescript.mdx
@@ -290,8 +292,6 @@ content/models/shared/google/typescript.mdx
 content/models/shared/google/unity.mdx
 content/models/shared/invoice/typescript.mdx
 content/models/shared/invoice/unity.mdx
-content/models/shared/invoice_status/typescript.mdx
-content/models/shared/invoice_status/unity.mdx
 content/models/shared/link_payment_method/typescript.mdx
 content/models/shared/link_payment_method/unity.mdx
 content/models/shared/lobby/typescript.mdx
@@ -332,12 +332,12 @@ content/models/shared/room/typescript.mdx
 content/models/shared/room/unity.mdx
 content/models/shared/room_allocation/typescript.mdx
 content/models/shared/room_allocation/unity.mdx
+content/models/shared/room_current_allocation/typescript.mdx
+content/models/shared/room_current_allocation/unity.mdx
 content/models/shared/room_status/typescript.mdx
 content/models/shared/room_status/unity.mdx
 content/models/shared/room_without_allocations/typescript.mdx
 content/models/shared/room_without_allocations/unity.mdx
-content/models/shared/room_without_allocations_current_allocation/typescript.mdx
-content/models/shared/room_without_allocations_current_allocation/unity.mdx
 content/models/shared/security/typescript.mdx
 content/models/shared/security/unity.mdx
 content/models/shared/set_lobby_state_params/typescript.mdx
@@ -998,9 +998,6 @@ src/utils/theme.ts
 src/utils/themeLoader.js
 theme.config.tsx
 tsconfig.json
-public/favicon.png
-public/logo-dark.png
-public/logo-light.png
 src/pages/404.mdx
 src/pages/[...rest].mdx
 src/pages/index.mdx

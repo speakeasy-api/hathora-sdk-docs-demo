@@ -2,22 +2,16 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### *{`List<ContainerPort>`}* `AdditionalContainerPorts`
-Additional ports your server listens on.
-<Collapsible content={() => import('/content/models/shared/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### *{`int`}* `ContainerPort`
-Default port the server listens on.
-<br/>
-**Example:** `4000`
-
----
 ##### *{`List<DeploymentConfigEnv>`}* `Env`
 The environment variable that our process will have access to at runtime.
 <Collapsible content={() => import('/content/models/shared/deployment_config_env/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
+
+---
+##### *{`int`}* `RoomsPerProcess`
+Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
+<br/>
+**Example:** `3`
 
 ---
 ##### *{`PlanName`}* `PlanName`
@@ -36,15 +30,21 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 </Collapsible>
 
 ---
-##### *{`int`}* `RoomsPerProcess`
-Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
-<br/>
-**Example:** `3`
+##### *{`List<ContainerPort>`}* `AdditionalContainerPorts`
+Additional ports your server listens on.
+<Collapsible content={() => import('/content/models/shared/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### *{`TransportType`}* `TransportType`
 Transport type specifies the underlying communication protocol to the exposed port.
 <Collapsible content={() => import('/content/models/shared/transport_type/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
+
+---
+##### *{`int`}* `ContainerPort`
+Default port the server listens on.
+<br/>
+**Example:** `4000`
 
 

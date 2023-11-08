@@ -1,11 +1,11 @@
 {
-  "get_process_info": {
-    "title": "Get Process Info"
-  },
   "get_running_processes": {
     "title": "Get Running Processes"
   },
   "get_stopped_processes": {
     "title": "Get Stopped Processes"
+  },
+  "get_process_info": {
+    "title": "Get Process Info"
   }
 }

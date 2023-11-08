@@ -1,37 +1,36 @@
 ```typescript CreateDeployment.ts
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { CreateDeploymentRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
-import { ContainerPort, DeploymentConfig, DeploymentConfigEnv, PlanName, TransportType } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+import { ContainerPort, DeploymentConfig, DeploymentConfigEnv, PlanName, TransportType } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { CreateDeploymentRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
   const sdk = new HathoraCloud({
     hathoraDevToken: "",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
   });
+const buildId: number = 1;
 const deploymentConfig: DeploymentConfig = {
-  additionalContainerPorts: [
-    {
-      name: "default",
-      port: 8000,
-      transportType: TransportType.Udp,
-    },
-  ],
-  containerPort: 4000,
   env: [
     {
-      name: "EULA",
       value: "TRUE",
+      name: "EULA",
     },
   ],
-  planName: PlanName.Tiny,
   roomsPerProcess: 3,
+  planName: PlanName.Tiny,
+  additionalContainerPorts: [
+    {
+      transportType: TransportType.Tcp,
+      port: 8000,
+      name: "default",
+    },
+  ],
   transportType: TransportType.Udp,
+  containerPort: 4000,
 };
-const buildId: number = 1;
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
 
-  const res = await sdk.deploymentV1.createDeployment(deploymentConfig, buildId, appId);
-
+  const res = await sdk.deploymentV1.createDeployment(buildId, deploymentConfig, appId);
 
   if (res.statusCode == 200) {
     // handle response

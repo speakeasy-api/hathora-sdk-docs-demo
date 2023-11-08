@@ -2,17 +2,6 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### *{`LobbyInitialConfig`}* `InitialConfig`
-User input to initialize the game state. Object must be smaller than 64KB.
-<Collapsible content={() => import('/content/models/shared/lobby_initial_config/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### *{`Region`}* `Region`
-<Collapsible content={() => import('/content/models/shared/region/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### *{`LobbyVisibility`}* `Visibility`
 Types of lobbies a player can create.
 
@@ -24,6 +13,17 @@ Types of lobbies a player can create.
 <br/>
 **Example:** `private`
 <Collapsible content={() => import('/content/models/shared/lobby_visibility/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`LobbyInitialConfig`}* `InitialConfig`
+User input to initialize the game state. Object must be smaller than 64KB.
+<Collapsible content={() => import('/content/models/shared/lobby_initial_config/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`Region`}* `Region`
+<Collapsible content={() => import('/content/models/shared/region/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 

@@ -3,15 +3,15 @@ import DeploymentConfig from "/content/models/shared/deployment_config/typescrip
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `deploymentConfig`: *{`shared.DeploymentConfig`}*
-<Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-    <DeploymentConfig/>
-</Collapsible>
-
----
 ##### `buildId`: *{`number`}*
 <br/>
 **Example:** `1`
+
+---
+##### `deploymentConfig`: *{`components.DeploymentConfig`}*
+<Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+    <DeploymentConfig/>
+</Collapsible>
 
 ---
 ##### `appId?`: *{`string`}*

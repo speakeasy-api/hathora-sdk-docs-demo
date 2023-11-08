@@ -2,21 +2,45 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### *{`string`}* `AppId`
-System generated unique identifier for an application.
-<br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
-
----
-##### *{`int`}* `BuildId`
-System generated id for a build. Increments by 1.
-<br/>
-**Example:** `1`
-
----
 ##### *{`string`}* `BuildTag`
 <br/>
 **Example:** `0.1.14-14c793`
+
+---
+##### *{`List<RegionalContainerTags>`}* `RegionalContainerTags`
+Identifiers for the containers stored in Hathora's registries.
+<Collapsible content={() => import('/content/models/shared/regional_container_tags/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`double`}* `ImageSize`
+The size (in bytes) of the Docker image built by Hathora.
+
+---
+##### *{`BuildStatus`}* `Status`
+Current status of your build.
+
+`created`: a build was created but not yet run
+
+`running`: the build process is actively executing
+
+`succeeded`: the game server artifact was successfully built and stored in the Hathora registries
+
+`failed`: the build process was unsuccessful, most likely due to an error with the `Dockerfile`
+<Collapsible content={() => import('/content/models/shared/build_status/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `DeletedAt`
+When the build was deleted.
+
+---
+##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `FinishedAt`
+When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) finished executing.
+
+---
+##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `StartedAt`
+When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) is called.
 
 ---
 ##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `CreatedAt`
@@ -29,39 +53,15 @@ Email address for the user that created the build.
 **Example:** `dev@hathora.dev`
 
 ---
-##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `DeletedAt`
-When the build was deleted.
+##### *{`int`}* `BuildId`
+System generated id for a build. Increments by 1.
+<br/>
+**Example:** `1`
 
 ---
-##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `FinishedAt`
-When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) finished executing.
-
----
-##### *{`double`}* `ImageSize`
-The size (in bytes) of the Docker image built by Hathora.
-
----
-##### *{`List<RegionalContainerTags>`}* `RegionalContainerTags`
-Identifiers for the containers stored in Hathora's registries.
-<Collapsible content={() => import('/content/models/shared/regional_container_tags/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `StartedAt`
-When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) is called.
-
----
-##### *{`Status`}* `Status`
-Current status of your build.
-
-`created`: a build was created but not yet run
-
-`running`: the build process is actively executing
-
-`succeeded`: the game server artifact was successfully built and stored in the Hathora registries
-
-`failed`: the build process was unsuccessful, most likely due to an error with the `Dockerfile`
-<Collapsible content={() => import('/content/models/shared/status/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+##### *{`string`}* `AppId`
+System generated unique identifier for an application.
+<br/>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 

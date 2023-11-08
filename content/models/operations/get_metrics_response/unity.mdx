@@ -2,23 +2,8 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### *{`string`}* `FourHundredAndFourApplicationJsonRes`
-
----
-##### *{`string`}* `FourHundredAndTwentyTwoApplicationJsonRes`
-
----
-##### *{`string`}* `FiveHundredApplicationJsonRes`
-
----
 ##### *{`string`}* `ContentType`
 HTTP response content type for this operation
-
----
-##### *{`MetricsResponse`}* `MetricsResponse`
-Ok
-<Collapsible content={() => import('/content/models/shared/metrics_response/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
 
 ---
 ##### *{`int`}* `StatusCode`
@@ -27,5 +12,20 @@ HTTP response status code for this operation
 ---
 ##### [*{ `UnityWebRequest` }*](https://docs.unity3d.com/2021.3/Documentation/ScriptReference/Networking.UnityWebRequest.html) `RawResponse`
 Raw HTTP response; suitable for custom response parsing
+
+---
+##### *{`MetricsResponse`}* `MetricsResponse`
+Ok
+<Collapsible content={() => import('/content/models/shared/metrics_response/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`string`}* `FourHundredAndFourApplicationJsonRes`
+
+---
+##### *{`string`}* `FourHundredAndTwentyTwoApplicationJsonRes`
+
+---
+##### *{`string`}* `FiveHundredApplicationJsonRes`
 
 

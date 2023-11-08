@@ -1,21 +1,21 @@
 {
-  "create_lobby_deprecated": {
-    "title": "Create Lobby Deprecated"
-  },
-  "create_local_lobby": {
-    "title": "Create Local Lobby"
-  },
   "create_private_lobby": {
     "title": "Create Private Lobby"
   },
   "create_public_lobby": {
     "title": "Create Public Lobby"
   },
-  "get_lobby_info": {
-    "title": "Get Lobby Info"
+  "create_local_lobby": {
+    "title": "Create Local Lobby"
+  },
+  "create_lobby_deprecated": {
+    "title": "Create Lobby Deprecated"
   },
   "list_active_public_lobbies_deprecated_v2": {
     "title": "List Active Public Lobbies Deprecated V2"
+  },
+  "get_lobby_info": {
+    "title": "Get Lobby Info"
   },
   "set_lobby_state": {
     "title": "Set Lobby State"

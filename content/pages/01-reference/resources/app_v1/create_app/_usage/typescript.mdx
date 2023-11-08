@@ -8,16 +8,15 @@ import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
   });
 
   const res = await sdk.appV1.createApp({
-    appName: "minecraft",
     authConfiguration: {
-      anonymous: {},
       google: {
         clientId: "string",
       },
       nickname: {},
+      anonymous: {},
     },
+    appName: "minecraft",
   });
-
 
   if (res.statusCode == 200) {
     // handle response

@@ -2,23 +2,23 @@
   "create_room": {
     "title": "Create Room"
   },
-  "destroy_room": {
-    "title": "Destroy Room"
+  "get_room_info": {
+    "title": "Get Room Info"
   },
   "get_active_rooms_for_process": {
     "title": "Get Active Rooms For Process"
   },
-  "get_connection_info": {
-    "title": "Get Connection Info"
-  },
   "get_inactive_rooms_for_process": {
     "title": "Get Inactive Rooms For Process"
   },
-  "get_room_info": {
-    "title": "Get Room Info"
+  "destroy_room": {
+    "title": "Destroy Room"
   },
   "suspend_room": {
     "title": "Suspend Room"
+  },
+  "get_connection_info": {
+    "title": "Get Connection Info"
   },
   "update_room_config": {
     "title": "Update Room Config"

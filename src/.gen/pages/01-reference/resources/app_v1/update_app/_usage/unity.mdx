@@ -1,7 +1,7 @@
 ```csharp UpdateApp.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Shared;
-using HathoraUnitySDK.Models.Operations;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
 
 var sdk = new HathoraCloud(
     security: new Security() {
@@ -12,14 +12,14 @@ var sdk = new HathoraCloud(
 
 using(var res = await sdk.AppV1.UpdateAppAsync(new UpdateAppRequest() {
     AppConfig = new AppConfig() {
-        AppName = "minecraft",
         AuthConfiguration = new AuthConfiguration() {
-            Anonymous = new RecordStringNever() {},
             Google = new Google() {
                 ClientId = "string",
             },
             Nickname = new RecordStringNever() {},
+            Anonymous = new RecordStringNever() {},
         },
+        AppName = "minecraft",
     },
 }))
 {

@@ -1,19 +1,18 @@
 ```typescript CreatePublicLobbyDeprecated.ts
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { CreatePublicLobbyDeprecatedRequest, CreatePublicLobbyDeprecatedSecurity } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
-import { Region } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+import { Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { CreatePublicLobbyDeprecatedRequest, CreatePublicLobbyDeprecatedSecurity } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
   const sdk = new HathoraCloud({
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
   });
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+const region: Region = Region.Tokyo;
 const local: boolean = false;
-const region: Region = Region.Sydney;
 const operationSecurity: CreatePublicLobbyDeprecatedSecurity = "";
 
-  const res = await sdk.lobbyV1.createPublicLobbyDeprecated(operationSecurity, appId, local, region);
-
+  const res = await sdk.lobbyV1.createPublicLobbyDeprecated(operationSecurity, appId, region, local);
 
   if (res.statusCode == 200) {
     // handle response

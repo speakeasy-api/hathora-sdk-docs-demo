@@ -1,21 +1,20 @@
 ```typescript SetLobbyState.ts
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { SetLobbyStateRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
-import { SetLobbyStateParams, SetLobbyStateParamsState } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+import { SetLobbyStateParams, SetLobbyStateParamsState } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { SetLobbyStateRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
   const sdk = new HathoraCloud({
     hathoraDevToken: "",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
   });
+const roomId: string = "2swovpy1fnunu";
 const setLobbyStateParams: SetLobbyStateParams = {
   state: {},
 };
-const roomId: string = "2swovpy1fnunu";
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
 
-  const res = await sdk.lobbyV2.setLobbyState(setLobbyStateParams, roomId, appId);
-
+  const res = await sdk.lobbyV2.setLobbyState(roomId, setLobbyStateParams, appId);
 
   if (res.statusCode == 200) {
     // handle response

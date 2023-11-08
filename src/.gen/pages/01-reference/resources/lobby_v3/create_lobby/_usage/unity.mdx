@@ -1,7 +1,7 @@
 ```csharp CreateLobby.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Operations;
-using HathoraUnitySDK.Models.Shared;
+using HathoraUnitySDK.Models.Requests;
+using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
@@ -10,12 +10,12 @@ var sdk = new HathoraCloud(
 using(var res = await sdk.LobbyV3.CreateLobbyAsync(new CreateLobbySecurity() {
     PlayerAuth = "",
 }, new CreateLobbyRequest() {
-    CreateLobbyV3Params = new CreateLobbyV3Params() {
-        Region = HathoraUnitySDK.Models.Shared.Region.Mumbai,
-        RoomConfig = "{\"name\":\"my-room\"}",
-        Visibility = HathoraUnitySDK.Models.Shared.LobbyVisibility.Private,
-    },
     ShortCode = "LFG4",
+    CreateLobbyV3Params = new CreateLobbyV3Params() {
+        Visibility = LobbyVisibility.Private,
+        RoomConfig = "{\"name\":\"my-room\"}",
+        Region = Region.Frankfurt,
+    },
 }))
 {
     // handle response

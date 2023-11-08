@@ -1,7 +1,7 @@
 ```csharp SetLobbyState.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Shared;
-using HathoraUnitySDK.Models.Operations;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
 
 var sdk = new HathoraCloud(
     security: new Security() {
@@ -11,10 +11,10 @@ var sdk = new HathoraCloud(
 );
 
 using(var res = await sdk.LobbyV2.SetLobbyStateAsync(new SetLobbyStateRequest() {
+    RoomId = "2swovpy1fnunu",
     SetLobbyStateParams = new SetLobbyStateParams() {
         State = new SetLobbyStateParamsState() {},
     },
-    RoomId = "2swovpy1fnunu",
 }))
 {
     // handle response

@@ -6,17 +6,17 @@ import Labels from "/src/lib/labels";
 HTTP response content type for this operation
 
 ---
-##### `metricsResponse?`: *{`shared.MetricsResponse`}*
-Ok
-<Collapsible content={() => import('/content/models/shared/metrics_response/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `statusCode`: *{`number`}*
 HTTP response status code for this operation
 
 ---
 ##### `rawResponse?`: [*{ `AxiosResponse` }*](https://axios-http.com/docs/res_schema)
 Raw HTTP response; suitable for custom response parsing
+
+---
+##### `metricsResponse?`: *{`components.MetricsResponse`}*
+Ok
+<Collapsible content={() => import('/content/models/shared/metrics_response/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

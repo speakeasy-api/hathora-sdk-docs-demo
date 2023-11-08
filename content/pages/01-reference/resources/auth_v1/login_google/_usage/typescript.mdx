@@ -1,7 +1,7 @@
 ```typescript LoginGoogle.ts
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { LoginGoogleRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
-import { LoginGoogleRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+import { LoginGoogleRequest } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { LoginGoogleRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
   const sdk = new HathoraCloud({
@@ -14,7 +14,6 @@ const loginGoogleRequest: LoginGoogleRequest = {
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
 
   const res = await sdk.authV1.loginGoogle(loginGoogleRequest, appId);
-
 
   if (res.statusCode == 200) {
     // handle response

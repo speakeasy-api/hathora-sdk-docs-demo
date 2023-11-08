@@ -2,10 +2,9 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### *{`string`}* `AppId`
-System generated unique identifier for an application.
+##### *{`string`}* `ShortCode`
 <br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+**Example:** `LFG4`
 
 ---
 ##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `CreatedAt`
@@ -18,25 +17,9 @@ Email address for the user that created the lobby.
 **Example:** `dev@hathora.dev`
 
 ---
-##### *{`Region`}* `Region`
-<Collapsible content={() => import('/content/models/shared/region/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### *{`string`}* `RoomConfig`
 <br/>
 **Example:** `{"name":"my-room"}`
-
----
-##### *{`string`}* `RoomId`
-Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
-<br/>
-**Example:** `2swovpy1fnunu`
-
----
-##### *{`string`}* `ShortCode`
-<br/>
-**Example:** `LFG4`
 
 ---
 ##### *{`LobbyVisibility`}* `Visibility`
@@ -51,5 +34,22 @@ Types of lobbies a player can create.
 **Example:** `private`
 <Collapsible content={() => import('/content/models/shared/lobby_visibility/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
+
+---
+##### *{`Region`}* `Region`
+<Collapsible content={() => import('/content/models/shared/region/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`string`}* `RoomId`
+Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
+<br/>
+**Example:** `2swovpy1fnunu`
+
+---
+##### *{`string`}* `AppId`
+System generated unique identifier for an application.
+<br/>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 

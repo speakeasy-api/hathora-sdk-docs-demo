@@ -2,26 +2,26 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `status`: *{`components.Status`}*
+<Collapsible content={() => import('/content/models/shared/status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### `amountDue`: *{`number`}*
-
----
-##### `dueDate`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-
----
-##### `id`: *{`string`}*
-
----
-##### `month`: *{`number`}*
 
 ---
 ##### `pdfUrl`: *{`string`}*
 
 ---
-##### `status`: *{`InvoiceStatus`}*
-<Collapsible content={() => import('/content/models/shared/invoice_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+##### `dueDate`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 ---
 ##### `year`: *{`number`}*
+
+---
+##### `month`: *{`number`}*
+
+---
+##### `id`: *{`string`}*
 
 

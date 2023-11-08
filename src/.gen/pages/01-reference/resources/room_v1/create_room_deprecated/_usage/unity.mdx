@@ -1,7 +1,7 @@
 ```csharp CreateRoomDeprecated.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Shared;
-using HathoraUnitySDK.Models.Operations;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
 
 var sdk = new HathoraCloud(
     security: new Security() {
@@ -11,11 +11,11 @@ var sdk = new HathoraCloud(
 );
 
 using(var res = await sdk.RoomV1.CreateRoomDeprecatedAsync(new CreateRoomDeprecatedRequest() {
-    CreateRoomParams = new CreateRoomParams() {
-        Region = HathoraUnitySDK.Models.Shared.Region.SaoPaulo,
-        RoomConfig = "{\"name\":\"my-room\"}",
-    },
     RoomId = "2swovpy1fnunu",
+    CreateRoomParams = new CreateRoomParams() {
+        RoomConfig = "{\"name\":\"my-room\"}",
+        Region = Region.London,
+    },
 }))
 {
     // handle response

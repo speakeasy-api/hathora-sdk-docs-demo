@@ -2,10 +2,21 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### *{`string`}* `AppId`
-System generated unique identifier for an application.
+##### *{`string`}* `ShortCode`
 <br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+**Example:** `LFG4`
+
+---
+##### *{`State`}* `State`
+JSON blob to store metadata for a room. Must be smaller than 1MB.
+<Collapsible content={() => import('/content/models/shared/state/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`LobbyInitialConfig`}* `InitialConfig`
+User input to initialize the game state. Object must be smaller than 64KB.
+<Collapsible content={() => import('/content/models/shared/lobby_initial_config/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `CreatedAt`
@@ -18,38 +29,10 @@ Email address for the user that created the lobby.
 **Example:** `dev@hathora.dev`
 
 ---
-##### *{`LobbyInitialConfig`}* `InitialConfig`
-User input to initialize the game state. Object must be smaller than 64KB.
-<Collapsible content={() => import('/content/models/shared/lobby_initial_config/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### *{`bool`}* `Local`
 : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
 <br/>
 **Example:** `false`
-
----
-##### *{`Region`}* `Region`
-<Collapsible content={() => import('/content/models/shared/region/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### *{`string`}* `RoomId`
-Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
-<br/>
-**Example:** `2swovpy1fnunu`
-
----
-##### *{`string`}* `ShortCode`
-<br/>
-**Example:** `LFG4`
-
----
-##### *{`State`}* `State`
-JSON blob to store metadata for a room. Must be smaller than 1MB.
-<Collapsible content={() => import('/content/models/shared/state/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
 
 ---
 ##### *{`LobbyVisibility`}* `Visibility`
@@ -64,5 +47,22 @@ Types of lobbies a player can create.
 **Example:** `private`
 <Collapsible content={() => import('/content/models/shared/lobby_visibility/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
+
+---
+##### *{`Region`}* `Region`
+<Collapsible content={() => import('/content/models/shared/region/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`string`}* `RoomId`
+Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
+<br/>
+**Example:** `2swovpy1fnunu`
+
+---
+##### *{`string`}* `AppId`
+System generated unique identifier for an application.
+<br/>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 

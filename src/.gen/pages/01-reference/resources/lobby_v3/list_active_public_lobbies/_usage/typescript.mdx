@@ -1,7 +1,7 @@
 ```typescript ListActivePublicLobbies.ts
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { ListActivePublicLobbiesRequest } from "@hathora/cloud-sdk-typescript/dist/sdk/models/operations";
-import { Region } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
+import { Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { ListActivePublicLobbiesRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
   const sdk = new HathoraCloud({
@@ -9,10 +9,9 @@ import { Region } from "@hathora/cloud-sdk-typescript/dist/sdk/models/shared";
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
   });
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
-const region: Region = Region.London;
+const region: Region = Region.Seattle;
 
   const res = await sdk.lobbyV3.listActivePublicLobbies(appId, region);
-
 
   if (res.statusCode == 200) {
     // handle response

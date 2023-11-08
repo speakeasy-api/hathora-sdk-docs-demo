@@ -1,7 +1,8 @@
 ```csharp GetMetrics.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Shared;
-using HathoraUnitySDK.Models.Operations;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+using System.Collections.Generic;
 
 var sdk = new HathoraCloud(
     security: new Security() {
@@ -11,10 +12,10 @@ var sdk = new HathoraCloud(
 );
 
 using(var res = await sdk.MetricsV1.GetMetricsAsync(new GetMetricsRequest() {
-    Metrics = new List<MetricName>() {
-        HathoraUnitySDK.Models.Shared.MetricName.Memory,
-    },
     ProcessId = "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+    Metrics = new List<MetricName>() {
+        MetricName.RateEgress,
+    },
 }))
 {
     // handle response

@@ -1,7 +1,7 @@
 ```csharp UpdateRoomConfig.cs
 using HathoraUnitySDK;
-using HathoraUnitySDK.Models.Shared;
-using HathoraUnitySDK.Models.Operations;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
 
 var sdk = new HathoraCloud(
     security: new Security() {
@@ -11,10 +11,10 @@ var sdk = new HathoraCloud(
 );
 
 using(var res = await sdk.RoomV2.UpdateRoomConfigAsync(new UpdateRoomConfigRequest() {
+    RoomId = "2swovpy1fnunu",
     UpdateRoomConfigParams = new UpdateRoomConfigParams() {
         RoomConfig = "{\"name\":\"my-room\"}",
     },
-    RoomId = "2swovpy1fnunu",
 }))
 {
     // handle response
