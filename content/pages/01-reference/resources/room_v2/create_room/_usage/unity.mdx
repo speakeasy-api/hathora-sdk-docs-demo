@@ -1,5 +1,10 @@
-```csharp CreateRoom.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp CreateRoom.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -20,4 +25,19 @@ using(var res = await sdk.RoomV2.CreateRoomAsync(new CreateRoomRequest() {
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "additionalExposedPorts": [],
+    "exposedPort": {
+        "port": 6736.6,
+        "host": "string",
+        "name": "string"
+      },
+    "roomId": "2swovpy1fnunu"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

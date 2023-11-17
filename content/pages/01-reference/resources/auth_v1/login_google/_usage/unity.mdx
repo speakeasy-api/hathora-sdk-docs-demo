@@ -1,5 +1,10 @@
-```csharp LoginGoogle.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp LoginGoogle.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -18,4 +23,13 @@ using(var res = await sdk.AuthV1.LoginGoogleAsync(new HathoraUnitySDK.Models.Req
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYW5vbnltb3VzIiwiaWQiOiJ3aDA4eWN3eTJwOSIsIm5hbWUiOiJqaXR0ZXJ5LXNhbG1vbi1ndWxsIiwiaWF0IjoxNjg5MzQ5MTk3fQ.-LzlPhZw2tw0ycZ229IRHwwmINGKWNPFMDrXOphLjEk"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

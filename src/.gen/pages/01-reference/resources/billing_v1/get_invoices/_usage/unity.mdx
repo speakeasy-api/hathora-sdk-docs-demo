@@ -1,5 +1,10 @@
-```csharp GetInvoices.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp GetInvoices.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
@@ -13,4 +18,20 @@ using(var res = await sdk.BillingV1.GetInvoicesAsync())
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  [
+    {
+      "amountDue": 567.13,
+      "pdfUrl": "string",
+      "dueDate": "2023-11-22T05:03:26.782Z",
+      "year": 2726.56,
+      "month": 3834.41,
+      "id": "string"
+    }
+  ]
+  ```
+  </CH.Code>
+</WithStatusBar>

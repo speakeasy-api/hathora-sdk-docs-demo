@@ -1,0 +1,33 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "201"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.hathora.dev/builds/v1/app-af469a92-5b45-4565-b3c4-b79878de67d2/create \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "buildTag": "0.1.14-14c793",
+    "regionalContainerTags": [
+      {
+        "containerTag": "string"
+      }
+    ],
+    "imageSize": 8326.2,
+    "deletedAt": "2023-05-03T01:57:34.456Z",
+    "finishedAt": "2021-06-03T16:25:06.350Z",
+    "startedAt": "2023-08-11T15:55:09.039Z",
+    "createdAt": "2023-08-11T17:53:34.649Z",
+    "createdBy": "dev@hathora.dev",
+    "buildId": 1,
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

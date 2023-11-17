@@ -1,5 +1,10 @@
-```csharp ListActivePublicLobbiesDeprecatedV1.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp ListActivePublicLobbiesDeprecatedV1.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -14,4 +19,22 @@ using(var res = await sdk.LobbyV1.ListActivePublicLobbiesDeprecatedV1Async(new L
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  [
+    {
+      "shortCode": "LFG4",
+      "state": {},
+      "initialConfig": {},
+      "createdAt": "2021-06-06T23:19:27.634Z",
+      "createdBy": "dev@hathora.dev",
+      "local": true,
+      "roomId": "2swovpy1fnunu",
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+    }
+  ]
+  ```
+  </CH.Code>
+</WithStatusBar>

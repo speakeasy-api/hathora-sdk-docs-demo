@@ -1,5 +1,10 @@
-```csharp GetBalance.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp GetBalance.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
@@ -13,4 +18,11 @@ using(var res = await sdk.BillingV1.GetBalanceAsync())
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  4375.87
+  ```
+  </CH.Code>
+</WithStatusBar>

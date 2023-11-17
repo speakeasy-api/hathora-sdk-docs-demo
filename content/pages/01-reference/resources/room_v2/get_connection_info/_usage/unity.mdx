@@ -1,5 +1,10 @@
-```csharp GetConnectionInfo.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp GetConnectionInfo.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -16,4 +21,19 @@ using(var res = await sdk.RoomV2.GetConnectionInfoAsync(new GetConnectionInfoReq
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "additionalExposedPorts": [],
+    "exposedPort": {
+        "port": 4511.59,
+        "host": "string",
+        "name": "string"
+      },
+    "roomId": "2swovpy1fnunu"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

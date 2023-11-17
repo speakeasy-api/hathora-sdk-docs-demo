@@ -1,5 +1,10 @@
-```csharp GetMetrics.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp GetMetrics.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 using System.Collections.Generic;
@@ -20,4 +25,42 @@ using(var res = await sdk.MetricsV1.GetMetricsAsync(new GetMetricsRequest() {
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "cpu": [
+      {
+        "value": 9437.49,
+        "timestamp": 9025.99
+      }
+    ],
+    "memory": [
+      {
+        "value": 6818.2,
+        "timestamp": 4499.5
+      }
+    ],
+    "rate_egress": [
+      {
+        "value": 3595.08,
+        "timestamp": 6130.64
+      }
+    ],
+    "total_egress": [
+      {
+        "value": 4370.32,
+        "timestamp": 9023.49
+      }
+    ],
+    "active_connections": [
+      {
+        "value": 6976.31,
+        "timestamp": 992.8
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,5 +1,10 @@
-```typescript GetConnectionInfo.ts
-import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript GetConnectionInfo.ts
+  import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
 import { GetConnectionInfoRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
@@ -16,4 +21,19 @@ const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "additionalExposedPorts": [],
+    "exposedPort": {
+        "port": 4511.59,
+        "host": "string",
+        "name": "string"
+      },
+    "roomId": "2swovpy1fnunu"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

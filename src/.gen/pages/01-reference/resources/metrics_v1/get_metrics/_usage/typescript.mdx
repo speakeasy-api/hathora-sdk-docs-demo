@@ -1,5 +1,10 @@
-```typescript GetMetrics.ts
-import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript GetMetrics.ts
+  import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
 import { MetricName } from "@hathora/cloud-sdk-typescript/dist/models/components";
 
 (async() => {
@@ -19,4 +24,42 @@ import { MetricName } from "@hathora/cloud-sdk-typescript/dist/models/components
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "cpu": [
+      {
+        "value": 9437.49,
+        "timestamp": 9025.99
+      }
+    ],
+    "memory": [
+      {
+        "value": 6818.2,
+        "timestamp": 4499.5
+      }
+    ],
+    "rate_egress": [
+      {
+        "value": 3595.08,
+        "timestamp": 6130.64
+      }
+    ],
+    "total_egress": [
+      {
+        "value": 4370.32,
+        "timestamp": 9023.49
+      }
+    ],
+    "active_connections": [
+      {
+        "value": 6976.31,
+        "timestamp": 992.8
+      }
+    ]
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

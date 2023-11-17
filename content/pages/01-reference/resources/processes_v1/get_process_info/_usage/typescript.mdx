@@ -1,5 +1,10 @@
-```typescript GetProcessInfo.ts
-import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript GetProcessInfo.ts
+  import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
 import { GetProcessInfoRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
@@ -16,4 +21,37 @@ const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "egressedBytes": 435,
+    "idleSince": "2022-03-30T17:36:23.375Z",
+    "activeConnectionsUpdatedAt": "2022-05-26T14:38:49.594Z",
+    "activeConnections": 10,
+    "roomsAllocatedUpdatedAt": "2022-06-04T19:03:01.565Z",
+    "roomsAllocated": 1,
+    "roomSlotsAvailableUpdatedAt": "2021-09-25T15:30:16.034Z",
+    "roomSlotsAvailable": 6235.1,
+    "draining": false,
+    "terminatedAt": "2021-06-24T01:43:14.638Z",
+    "stoppingAt": "2022-01-06T02:50:24.677Z",
+    "startedAt": "2021-05-01T20:39:31.166Z",
+    "startingAt": "2023-01-09T20:29:27.704Z",
+    "roomsPerProcess": 3,
+    "additionalExposedPorts": [],
+    "exposedPort": {
+        "port": 3172.02,
+        "host": "string",
+        "name": "string"
+      },
+    "port": 1381.83,
+    "host": "string",
+    "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+    "deploymentId": 1,
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

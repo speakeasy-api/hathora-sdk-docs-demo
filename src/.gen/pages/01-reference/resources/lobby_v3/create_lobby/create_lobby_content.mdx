@@ -2,7 +2,7 @@ import CurlHeader from './_header/curl.mdx';
 import SDKHeader from './_header/sdk.mdx';
 import OperationHeader from '/src/components/OperationHeader';
 
-###### *LobbyV3*
+###### *Lobby V3*
 
 <OperationHeader
   sdkHeader={<SDKHeader />}
@@ -19,11 +19,16 @@ import TypescriptUsage from "./_usage/typescript.mdx";
 import UnityParameters from "./_parameters/unity.mdx";
 import UnityResponse from "./_response/unity.mdx";
 import UnityUsage from "./_usage/unity.mdx";
+import CurlAuthentication from "./_authentication/curl.mdx";
+import CurlParameters from "./_parameters/curl.mdx";
+import CurlResponse from "./_response/curl.mdx";
+import CurlUsage from "./_usage/curl.mdx";
 
 export const Operation = () => {
     const typescript = <LanguageOperation  parameters={<TypescriptParameters/>} response={<TypescriptResponse/>} usage={<TypescriptUsage/>}/>
     const unity = <LanguageOperation  parameters={<UnityParameters/>} response={<UnityResponse/>} usage={<UnityUsage/>}/>
-    return <LanguageSwitch langToContent={{typescript, unity}}/>
+    const curl = <LanguageOperation authentication={<CurlAuthentication/>} parameters={<CurlParameters/>} response={<CurlResponse/>} usage={<CurlUsage/>}/>
+    return <LanguageSwitch langToContent={{typescript, unity, curl}}/>
 }
 
 <Operation />

@@ -1,5 +1,10 @@
-```typescript GetPingServiceEndpoints.ts
-import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript GetPingServiceEndpoints.ts
+  import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
 
 (async() => {
   const sdk = new HathoraCloud({
@@ -13,4 +18,11 @@ import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  []
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,5 +1,10 @@
-```csharp GetDeployments.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp GetDeployments.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -14,4 +19,34 @@ using(var res = await sdk.DeploymentV1.GetDeploymentsAsync(new GetDeploymentsReq
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  [
+    {
+      "env": [
+        {
+          "value": "TRUE",
+          "name": "EULA"
+        }
+      ],
+      "roomsPerProcess": 3,
+      "additionalContainerPorts": [],
+      "defaultContainerPort": {
+          "port": 8000,
+          "name": "default"
+        },
+      "containerPort": 7991.59,
+      "createdAt": "2023-05-27T23:56:04.473Z",
+      "createdBy": "dev@hathora.dev",
+      "requestedMemoryMB": 1024,
+      "requestedCPU": 0.5,
+      "deploymentId": 1,
+      "buildId": 1,
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+    }
+  ]
+  ```
+  </CH.Code>
+</WithStatusBar>

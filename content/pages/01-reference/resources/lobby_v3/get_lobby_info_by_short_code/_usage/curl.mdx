@@ -1,0 +1,24 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.hathora.dev/lobby/v3/app-af469a92-5b45-4565-b3c4-b79878de67d2/info/shortcode/LFG4 \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "shortCode": "LFG4",
+    "createdAt": "2022-11-07T13:01:31.745Z",
+    "createdBy": "dev@hathora.dev",
+    "roomConfig": "{\"name\":\"my-room\"}",
+    "roomId": "2swovpy1fnunu",
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

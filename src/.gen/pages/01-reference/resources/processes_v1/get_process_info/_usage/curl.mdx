@@ -1,0 +1,43 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.hathora.dev/processes/v1/app-af469a92-5b45-4565-b3c4-b79878de67d2/info/cbfcddd2-0006-43ae-996c-995fff7bed2e \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "egressedBytes": 435,
+    "idleSince": "2021-09-25T15:30:16.034Z",
+    "activeConnectionsUpdatedAt": "2022-11-14T17:50:44.109Z",
+    "activeConnections": 10,
+    "roomsAllocatedUpdatedAt": "2021-06-24T01:43:14.638Z",
+    "roomsAllocated": 1,
+    "roomSlotsAvailableUpdatedAt": "2022-01-06T02:50:24.677Z",
+    "roomSlotsAvailable": 1103.75,
+    "draining": false,
+    "terminatedAt": "2023-01-09T20:29:27.704Z",
+    "stoppingAt": "2022-12-20T16:20:30.039Z",
+    "startedAt": "2021-12-14T08:03:42.669Z",
+    "startingAt": "2021-06-01T07:26:52.487Z",
+    "roomsPerProcess": 3,
+    "additionalExposedPorts": [],
+    "exposedPort": {
+        "port": 1965.82,
+        "host": "string",
+        "name": "string"
+      },
+    "port": 9495.72,
+    "host": "string",
+    "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+    "deploymentId": 1,
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

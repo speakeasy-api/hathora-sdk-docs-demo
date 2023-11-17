@@ -1,5 +1,10 @@
-```typescript GetInvoices.ts
-import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```typescript GetInvoices.ts
+  import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
 
 (async() => {
   const sdk = new HathoraCloud({
@@ -13,4 +18,20 @@ import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
     // handle response
   }
 })();
-```
+  ```
+  ---
+
+  ```json Example Response
+  [
+    {
+      "amountDue": 567.13,
+      "pdfUrl": "string",
+      "dueDate": "2023-11-22T05:03:26.782Z",
+      "year": 2726.56,
+      "month": 3834.41,
+      "id": "string"
+    }
+  ]
+  ```
+  </CH.Code>
+</WithStatusBar>

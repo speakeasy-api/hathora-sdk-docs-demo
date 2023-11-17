@@ -1,5 +1,10 @@
-```csharp GetLobbyInfoByShortCode.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp GetLobbyInfoByShortCode.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -16,4 +21,18 @@ using(var res = await sdk.LobbyV3.GetLobbyInfoByShortCodeAsync(new GetLobbyInfoB
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "shortCode": "LFG4",
+    "createdAt": "2022-11-07T13:01:31.745Z",
+    "createdBy": "dev@hathora.dev",
+    "roomConfig": "{\"name\":\"my-room\"}",
+    "roomId": "2swovpy1fnunu",
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>
