@@ -1,0 +1,34 @@
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "200"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```bash Example Request
+  curl https://api.hathora.dev/apps/v1/update/app-af469a92-5b45-4565-b3c4-b79878de67d2 \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "deletedBy": "dev@hathora.dev",
+    "deletedAt": "2022-04-09T21:38:53.014Z",
+    "createdAt": "2022-11-14T19:15:14.189Z",
+    "createdBy": "dev@hathora.dev",
+    "orgId": "google-oauth2|107030234048588177467",
+    "authConfiguration": {
+      "google": {
+        "clientId": "string"
+      },
+      "nickname": {},
+      "anonymous": {}
+    },
+    "appSecret": "secret-6f706e83-0ec1-437a-9a46-7d4281eb2f39",
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "appName": "minecraft"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>
