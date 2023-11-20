@@ -7,7 +7,7 @@ generation:
     optionalPropertyRendering: withExample
 features:
   docs:
-    core: 1.5.3
+    core: 1.5.4
     deprecations: 0.1.0
     globalSecurity: 0.1.0
     globalServerURLs: 0.1.1
