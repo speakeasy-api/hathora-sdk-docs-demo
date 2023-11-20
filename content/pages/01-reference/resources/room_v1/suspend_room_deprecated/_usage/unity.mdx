@@ -1,5 +1,10 @@
-```csharp SuspendRoomDeprecated.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "404"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp SuspendRoomDeprecated.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -16,4 +21,13 @@ using(var res = await sdk.RoomV1.SuspendRoomDeprecatedAsync(new SuspendRoomDepre
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "message": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,5 +1,10 @@
-```csharp DeleteApp.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "404"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp DeleteApp.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -14,4 +19,13 @@ using(var res = await sdk.AppV1.DeleteAppAsync(new DeleteAppRequest() {}))
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "message": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -1,5 +1,10 @@
-```csharp UpdateRoomConfig.cs
-using HathoraUnitySDK;
+
+import WithStatusBar from '@/src/components/WithStatusBar';
+
+<WithStatusBar statusItems={[["Status", "404"], ["Content-Type", "application/json"]]}>
+  <CH.Code>
+  ```csharp UpdateRoomConfig.cs
+  using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
@@ -19,4 +24,13 @@ using(var res = await sdk.RoomV2.UpdateRoomConfigAsync(new UpdateRoomConfigReque
 {
     // handle response
 }
-```
+  ```
+  ---
+
+  ```json Example Response
+  {
+    "message": "string"
+  }
+  ```
+  </CH.Code>
+</WithStatusBar>

@@ -16,6 +16,7 @@ using(var res = await sdk.LobbyV3.CreateLobbyAsync(new CreateLobbySecurity() {
     PlayerAuth = "",
 }, new CreateLobbyRequest() {
     ShortCode = "LFG4",
+    RoomId = "2swovpy1fnunu",
     CreateLobbyV3Params = new CreateLobbyV3Params() {
         Visibility = LobbyVisibility.Private,
         RoomConfig = "{\"name\":\"my-room\"}",

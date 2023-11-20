@@ -483,6 +483,7 @@ content/pages/01-reference/resources/room_v2/update_room_config/_usage/unity.mdx
 content/pages/01-reference/resources/room_v2/update_room_config/update_room_config.mdx
 content/types/models/components/ach_payment_method/typescript.mdx
 content/types/models/components/ach_payment_method/unity.mdx
+content/types/models/components/api_error/unity.mdx
 content/types/models/components/app_config/typescript.mdx
 content/types/models/components/app_config/unity.mdx
 content/types/models/components/application/typescript.mdx
@@ -601,6 +602,7 @@ content/types/models/components/verification_email_response/typescript.mdx
 content/types/models/components/verification_email_response/unity.mdx
 content/types/models/components/verification_email_response_status/typescript.mdx
 content/types/models/components/verification_email_response_status/unity.mdx
+content/types/models/errors/api_error/typescript.mdx
 content/types/models/operations/create_app_response/typescript.mdx
 content/types/models/operations/create_build_request/typescript.mdx
 content/types/models/operations/create_build_response/typescript.mdx

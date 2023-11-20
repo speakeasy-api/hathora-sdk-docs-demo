@@ -5,23 +5,24 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```typescript CreateLobby.ts
   import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { CreateLobbyV3Params, LobbyVisibility, Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
-import { CreateLobbyRequest, CreateLobbySecurity } from "@hathora/cloud-sdk-typescript/dist/models/operations";
+import { LobbyVisibility, Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { CreateLobbySecurity } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 (async() => {
   const sdk = new HathoraCloud({
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
   });
-const createLobbyV3Params: CreateLobbyV3Params = {
-  visibility: LobbyVisibility.Private,
-  roomConfig: "{\"name\":\"my-room\"}",
-  region: Region.Sydney,
-};
-const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
-const shortCode: string = "LFG4";
 const operationSecurity: CreateLobbySecurity = "";
 
-  const res = await sdk.lobbyV3.createLobby(operationSecurity, createLobbyV3Params, appId, shortCode);
+  const res = await sdk.lobbyV3.createLobby({
+    shortCode: "LFG4",
+    roomId: "2swovpy1fnunu",
+    createLobbyV3Params: {
+      visibility: LobbyVisibility.Private,
+      roomConfig: "{\"name\":\"my-room\"}",
+      region: Region.Sydney,
+    },
+  }, operationSecurity);
 
   if (res.statusCode == 200) {
     // handle response

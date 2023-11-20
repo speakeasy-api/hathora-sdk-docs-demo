@@ -15,7 +15,7 @@ import { ListActivePublicLobbiesDeprecatedV1Request } from "@hathora/cloud-sdk-t
   });
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
 const local: boolean = false;
-const region: Region = Region.Sydney;
+const region: Region = Region.Tokyo;
 
   const res = await sdk.lobbyV1.listActivePublicLobbiesDeprecatedV1(appId, local, region);
 
@@ -34,7 +34,7 @@ const region: Region = Region.Sydney;
       "initialConfig": {},
       "createdAt": "2021-06-06T23:19:27.634Z",
       "createdBy": "dev@hathora.dev",
-      "local": true,
+      "local": false,
       "roomId": "2swovpy1fnunu",
       "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
     }

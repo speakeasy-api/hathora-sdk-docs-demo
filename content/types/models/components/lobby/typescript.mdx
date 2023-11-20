@@ -31,8 +31,6 @@ Email address for the user that created the lobby.
 ---
 ##### `local`: *{`boolean`}*
 : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-<br/>
-**Example:** `false`
 
 ---
 ##### `visibility`: *{`components.LobbyVisibility`}*
@@ -56,6 +54,7 @@ Types of lobbies a player can create.
 ---
 ##### `roomId`: *{`string`}*
 Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
+Note: error will be returned if `roomId` is not globally unique.
 <br/>
 **Example:** `2swovpy1fnunu`
 
