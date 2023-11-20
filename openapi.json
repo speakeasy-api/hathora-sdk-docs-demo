@@ -1504,6 +1504,174 @@
 	},
 	"openapi": "3.0.0",
 	"paths": {
+		"/billing/v1/paymentmethod": {
+			"get": {
+				"operationId": "GetPaymentMethod",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/PaymentMethod"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"BillingV1"
+				],
+				"security": [
+					{
+						"hathoraDevToken": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/billing/v1/balance": {
+			"get": {
+				"operationId": "GetBalance",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "number",
+									"format": "double"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"BillingV1"
+				],
+				"security": [
+					{
+						"hathoraDevToken": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/billing/v1/customerportalurl": {
+			"post": {
+				"operationId": "InitStripeCustomerPortalUrl",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"BillingV1"
+				],
+				"security": [
+					{
+						"hathoraDevToken": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CustomerPortalUrl"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/billing/v1/invoices": {
+			"get": {
+				"operationId": "GetInvoices",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"items": {
+										"$ref": "#/components/schemas/Invoice"
+									},
+									"type": "array"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				},
+				"tags": [
+					"BillingV1"
+				],
+				"security": [
+					{
+						"hathoraDevToken": []
+					}
+				],
+				"parameters": []
+			}
+		},
 		"/apps/v1/list": {
 			"get": {
 				"operationId": "GetApps",
@@ -1906,174 +2074,6 @@
 						}
 					}
 				}
-			}
-		},
-		"/billing/v1/balance": {
-			"get": {
-				"operationId": "GetBalance",
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "number",
-									"format": "double"
-								}
-							}
-						}
-					},
-					"404": {
-						"description": "",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "string"
-								}
-							}
-						}
-					}
-				},
-				"tags": [
-					"BillingV1"
-				],
-				"security": [
-					{
-						"hathoraDevToken": []
-					}
-				],
-				"parameters": []
-			}
-		},
-		"/billing/v1/paymentmethod": {
-			"get": {
-				"operationId": "GetPaymentMethod",
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/PaymentMethod"
-								}
-							}
-						}
-					},
-					"404": {
-						"description": "",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "string"
-								}
-							}
-						}
-					},
-					"500": {
-						"description": "",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "string"
-								}
-							}
-						}
-					}
-				},
-				"tags": [
-					"BillingV1"
-				],
-				"security": [
-					{
-						"hathoraDevToken": []
-					}
-				],
-				"parameters": []
-			}
-		},
-		"/billing/v1/customerportalurl": {
-			"post": {
-				"operationId": "InitStripeCustomerPortalUrl",
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "string"
-								}
-							}
-						}
-					},
-					"404": {
-						"description": "",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "string"
-								}
-							}
-						}
-					}
-				},
-				"tags": [
-					"BillingV1"
-				],
-				"security": [
-					{
-						"hathoraDevToken": []
-					}
-				],
-				"parameters": [],
-				"requestBody": {
-					"required": true,
-					"content": {
-						"application/json": {
-							"schema": {
-								"$ref": "#/components/schemas/CustomerPortalUrl"
-							}
-						}
-					}
-				}
-			}
-		},
-		"/billing/v1/invoices": {
-			"get": {
-				"operationId": "GetInvoices",
-				"responses": {
-					"200": {
-						"description": "Ok",
-						"content": {
-							"application/json": {
-								"schema": {
-									"items": {
-										"$ref": "#/components/schemas/Invoice"
-									},
-									"type": "array"
-								}
-							}
-						}
-					},
-					"404": {
-						"description": "",
-						"content": {
-							"application/json": {
-								"schema": {
-									"type": "string"
-								}
-							}
-						}
-					}
-				},
-				"tags": [
-					"BillingV1"
-				],
-				"security": [
-					{
-						"hathoraDevToken": []
-					}
-				],
-				"parameters": []
 			}
 		},
 		"/builds/v1/{appId}/list": {

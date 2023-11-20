@@ -1,9 +1,9 @@
 {
-  "get_balance": {
-    "title": "Get Balance"
-  },
   "get_payment_method": {
     "title": "Get Payment Method"
+  },
+  "get_balance": {
+    "title": "Get Balance"
   },
   "init_stripe_customer_portal_url": {
     "title": "Init Stripe Customer Portal Url"

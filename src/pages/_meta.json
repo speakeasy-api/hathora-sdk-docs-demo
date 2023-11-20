@@ -13,14 +13,14 @@
     "title": "Resources",
     "type": "separator"
   },
+  "billing_v1": {
+    "title": "Billing V1"
+  },
   "app_v1": {
     "title": "App V1"
   },
   "auth_v1": {
     "title": "Auth V1"
-  },
-  "billing_v1": {
-    "title": "Billing V1"
   },
   "build_v1": {
     "title": "Build V1"
