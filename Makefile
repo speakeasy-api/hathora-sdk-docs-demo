@@ -1,2 +1,2 @@
 builddocs:
-	speakeasy docs generate --schema openapi.json --out ./ --langs typescript,unity --compile
+	speakeasy docs generate --schema openapi.json --out ./ --langs typescript,unity,curl --compile
