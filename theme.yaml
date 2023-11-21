@@ -31,3 +31,9 @@ fonts:
   code:
     name: IBM Plex Mono
     url: https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap
+
+navLinks:
+  custom:
+    title: Custom Link
+    href: https://www.speakeasyapi.dev/
+    new_window: true

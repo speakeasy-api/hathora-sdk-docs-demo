@@ -1,3 +1,6 @@
+content/pages/01-reference/client_sdks/_snippets/typescript.mdx
+content/pages/01-reference/client_sdks/_snippets/unity.mdx
+content/pages/01-reference/client_sdks/client_sdks.mdx
 content/pages/01-reference/globals/_snippets/typescript.mdx
 content/pages/01-reference/globals/_snippets/unity.mdx
 content/pages/01-reference/globals/globals.mdx
@@ -843,6 +846,7 @@ content/types/models/requests/update_app_request/unity.mdx
 content/types/models/requests/update_app_response/unity.mdx
 content/types/models/requests/update_room_config_request/unity.mdx
 content/types/models/requests/update_room_config_response/unity.mdx
+content/pages/01-reference/client_sdks/_snippets/curl.mdx
 content/pages/01-reference/globals/_snippets/curl.mdx
 content/pages/01-reference/resources/app_v1/get_apps/_authentication/curl.mdx
 content/pages/01-reference/resources/app_v1/get_apps/_response/curl.mdx
@@ -1343,7 +1347,6 @@ src/components/Footer/index.tsx
 src/components/Footer/styles.module.scss
 src/components/Header/index.tsx
 src/components/Header/styles.module.scss
-src/components/LanguageSelector/data.ts
 src/components/LanguageSelector/index.tsx
 src/components/LanguageSelector/styles.module.scss
 src/components/LinkWrapper/index.tsx
@@ -1359,6 +1362,8 @@ src/components/NavItem/styles.module.scss
 src/components/OperationHeader/index.tsx
 src/components/Parameters/index.tsx
 src/components/Parameters/styles.module.scss
+src/components/SDKPicker/index.tsx
+src/components/SDKPicker/styles.module.scss
 src/components/Section/section.tsx
 src/components/Section/styles.module.scss
 src/components/StatusCode/index.tsx
@@ -1406,6 +1411,7 @@ src/icons/languages/python.tsx
 src/icons/languages/typescript.tsx
 src/icons/languages/unity.tsx
 src/lib/labels.ts
+src/lib/languageData.ts
 src/styles/background-gradients.scss
 src/styles/codehike-styles.scss
 src/styles/index.scss
@@ -1426,6 +1432,11 @@ src/pages/404.mdx
 src/pages/[...rest].mdx
 src/pages/index.mdx
 src/pages/_app.mdx
+src/.gen/pages/01-reference/client_sdks/_snippets/curl.mdx
+src/.gen/pages/01-reference/client_sdks/_snippets/typescript.mdx
+src/.gen/pages/01-reference/client_sdks/_snippets/unity.mdx
+src/.gen/pages/01-reference/client_sdks/client_sdks.mdx
+src/.gen/pages/01-reference/client_sdks/client_sdks_content.mdx
 src/.gen/pages/01-reference/globals/_snippets/curl.mdx
 src/.gen/pages/01-reference/globals/_snippets/typescript.mdx
 src/.gen/pages/01-reference/globals/_snippets/unity.mdx
@@ -2282,6 +2293,7 @@ src/.gen/pages/01-reference/resources/resources.mdx
 src/.gen/pages/01-reference/resources/resources_content.mdx
 src/.gen/pages/01-reference/reference.mdx
 src/.gen/pages/01-reference/reference_content.mdx
+src/pages/client_sdks/_meta.json
 src/pages/globals/_meta.json
 src/pages/installation/_meta.json
 src/pages/app_v1/create_app/_meta.json
