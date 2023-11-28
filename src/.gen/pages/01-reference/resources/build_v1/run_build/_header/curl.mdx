@@ -1,6 +1,7 @@
-import MethodPill from '/src/components/MethodPill';
+import OperationInfo from '/src/components/OperationInfo';
 
-<MethodPill method="post" />
-## /builds/v1/{'{'}appId{'}'}/run/{'{'}buildId{'}'}
+## Run Build
+
+<OperationInfo method='post' path='/builds/v1/{appId}/run/{buildId}' />
 
 Builds a game server artifact from a tarball you provide. Pass in the `buildId` generated from [`CreateBuild()`](https://hathora.dev/api#tag/BuildV1/operation/CreateBuild).

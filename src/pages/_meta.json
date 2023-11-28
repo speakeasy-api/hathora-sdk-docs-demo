@@ -1,4 +1,10 @@
 {
+  "custom": {
+    "title": "Custom Link",
+    "type": "page",
+    "href": "https://www.speakeasyapi.dev/",
+    "newWindow": true
+  },
   "-- guides": {
     "title": "Guides",
     "type": "separator"
@@ -9,8 +15,8 @@
   "installation": {
     "title": "Installation"
   },
-  "globals": {
-    "title": "Globals"
+  "global_parameters": {
+    "title": "Global Parameters"
   },
   "-- resources": {
     "title": "Resources",

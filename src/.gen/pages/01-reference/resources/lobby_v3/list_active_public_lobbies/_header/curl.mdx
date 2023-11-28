@@ -1,6 +1,7 @@
-import MethodPill from '/src/components/MethodPill';
+import OperationInfo from '/src/components/OperationInfo';
 
-<MethodPill method="get" />
-## /lobby/v3/{'{'}appId{'}'}/list/public
+## List Active Public Lobbies
+
+<OperationInfo method='get' path='/lobby/v3/{appId}/list/public' />
 
 Get all active lobbies for a given [application](https://hathora.dev/docs/concepts/hathora-entities#application). Filter the array by optionally passing in a `region`. Use this endpoint to display all public lobbies that a player can join in the game client.

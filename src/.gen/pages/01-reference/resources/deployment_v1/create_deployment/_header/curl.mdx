@@ -1,6 +1,7 @@
-import MethodPill from '/src/components/MethodPill';
+import OperationInfo from '/src/components/OperationInfo';
 
-<MethodPill method="post" />
-## /deployments/v1/{'{'}appId{'}'}/create/{'{'}buildId{'}'}
+## Create Deployment
+
+<OperationInfo method='post' path='/deployments/v1/{appId}/create/{buildId}' />
 
 Create a new [deployment](https://hathora.dev/docs/concepts/hathora-entities#deployment). Creating a new deployment means all new rooms created will use the latest deployment configuration, but existing games in progress will not be affected.

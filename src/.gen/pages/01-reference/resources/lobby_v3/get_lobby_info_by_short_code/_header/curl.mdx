@@ -1,6 +1,7 @@
-import MethodPill from '/src/components/MethodPill';
+import OperationInfo from '/src/components/OperationInfo';
 
-<MethodPill method="get" />
-## /lobby/v3/{'{'}appId{'}'}/info/shortcode/{'{'}shortCode{'}'}
+## Get Lobby Info By Short Code
+
+<OperationInfo method='get' path='/lobby/v3/{appId}/info/shortcode/{shortCode}' />
 
 Get details for a lobby. If 2 or more lobbies have the same `shortCode`, then the most recently created lobby will be returned.
