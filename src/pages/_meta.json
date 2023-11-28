@@ -1,10 +1,19 @@
 {
+  "custom": {
+    "title": "Custom Link",
+    "type": "page",
+    "href": "https://www.speakeasyapi.dev/",
+    "newWindow": true
+  },
   "-- guides": {
     "title": "Guides",
     "type": "separator"
   },
   "client_sdks": {
     "title": "Client SDKs"
+  },
+  "global_parameters": {
+    "title": "Global Parameters"
   },
   "installation": {
     "title": "Installation"

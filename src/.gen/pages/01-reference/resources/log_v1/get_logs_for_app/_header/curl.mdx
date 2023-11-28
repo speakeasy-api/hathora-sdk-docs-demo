@@ -1,6 +1,7 @@
-import MethodPill from '/src/components/MethodPill';
+import OperationInfo from '/src/components/OperationInfo';
 
-<MethodPill method="get" />
-## /logs/v1/{'{'}appId{'}'}/all
+## Get Logs For App
+
+<OperationInfo method='get' path='/logs/v1/{appId}/all' />
 
 Returns a stream of logs for an [application](https://hathora.dev/docs/concepts/hathora-entities#application) using `appId`.
