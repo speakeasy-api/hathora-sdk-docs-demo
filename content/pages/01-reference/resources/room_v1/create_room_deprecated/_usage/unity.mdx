@@ -7,17 +7,19 @@ var sdk = new HathoraCloud(
     security: new Security() {
         HathoraDevToken = "",
     },
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
-);
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
-using(var res = await sdk.RoomV1.CreateRoomDeprecatedAsync(new CreateRoomDeprecatedRequest() {
+CreateRoomDeprecatedRequest req = new CreateRoomDeprecatedRequest() {
     RoomId = "2swovpy1fnunu",
     CreateRoomParams = new CreateRoomParams() {
         RoomConfig = "{\"name\":\"my-room\"}",
         Region = Region.London,
     },
-}))
+};
+
+using(var res = await sdk.RoomV1.CreateRoomDeprecatedAsync(req))
 {
+
     // handle response
 }
 ```

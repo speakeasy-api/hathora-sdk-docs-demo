@@ -8,7 +8,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
 import { LobbyInitialConfig, Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
 import { CreateLocalLobbyRequest, CreateLocalLobbyRequestBody, CreateLocalLobbySecurity } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new HathoraCloud({
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
   });
@@ -25,7 +25,9 @@ const operationSecurity: CreateLocalLobbySecurity = "";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 

@@ -8,7 +8,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
 import { AppConfig, AuthConfiguration, Google, RecordStringNever } from "@hathora/cloud-sdk-typescript/dist/models/components";
 import { UpdateAppRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new HathoraCloud({
     hathoraDevToken: "",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
@@ -30,7 +30,9 @@ const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 

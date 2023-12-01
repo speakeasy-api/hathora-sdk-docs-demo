@@ -12,16 +12,18 @@ var sdk = new HathoraCloud(
     security: new Security() {
         HathoraDevToken = "",
     },
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
-);
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
-using(var res = await sdk.LobbyV2.SetLobbyStateAsync(new SetLobbyStateRequest() {
+SetLobbyStateRequest req = new SetLobbyStateRequest() {
     RoomId = "2swovpy1fnunu",
     SetLobbyStateParams = new SetLobbyStateParams() {
         State = new SetLobbyStateParamsState() {},
     },
-}))
+};
+
+using(var res = await sdk.LobbyV2.SetLobbyStateAsync(req))
 {
+
     // handle response
 }
   ```

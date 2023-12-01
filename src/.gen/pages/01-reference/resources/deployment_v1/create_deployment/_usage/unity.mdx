@@ -13,10 +13,9 @@ var sdk = new HathoraCloud(
     security: new Security() {
         HathoraDevToken = "",
     },
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
-);
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
-using(var res = await sdk.DeploymentV1.CreateDeploymentAsync(new CreateDeploymentRequest() {
+CreateDeploymentRequest req = new CreateDeploymentRequest() {
     BuildId = 1,
     DeploymentConfig = new DeploymentConfig() {
         Env = new List<DeploymentConfigEnv>() {
@@ -37,8 +36,11 @@ using(var res = await sdk.DeploymentV1.CreateDeploymentAsync(new CreateDeploymen
         TransportType = TransportType.Udp,
         ContainerPort = 4000,
     },
-}))
+};
+
+using(var res = await sdk.DeploymentV1.CreateDeploymentAsync(req))
 {
+
     // handle response
 }
   ```

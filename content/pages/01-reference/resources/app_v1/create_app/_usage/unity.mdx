@@ -11,10 +11,9 @@ var sdk = new HathoraCloud(
     security: new Security() {
         HathoraDevToken = "",
     },
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
-);
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
-using(var res = await sdk.AppV1.CreateAppAsync(new AppConfig() {
+AppConfig req = new AppConfig() {
     AuthConfiguration = new AuthConfiguration() {
         Google = new Google() {
             ClientId = "string",
@@ -23,8 +22,11 @@ using(var res = await sdk.AppV1.CreateAppAsync(new AppConfig() {
         Anonymous = new RecordStringNever() {},
     },
     AppName = "minecraft",
-}))
+};
+
+using(var res = await sdk.AppV1.CreateAppAsync(req))
 {
+
     // handle response
 }
   ```

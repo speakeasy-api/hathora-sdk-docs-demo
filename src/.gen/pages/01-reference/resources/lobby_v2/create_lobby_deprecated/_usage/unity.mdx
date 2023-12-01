@@ -9,20 +9,22 @@ using HathoraUnitySDK.Models.Requests;
 using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
-);
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
-using(var res = await sdk.LobbyV2.CreateLobbyDeprecatedAsync(new CreateLobbyDeprecatedSecurity() {
-    PlayerAuth = "",
-}, new CreateLobbyDeprecatedRequest() {
+CreateLobbyDeprecatedRequest req = new CreateLobbyDeprecatedRequest() {
     RoomId = "2swovpy1fnunu",
     CreateLobbyParams = new CreateLobbyParams() {
         Visibility = LobbyVisibility.Private,
         InitialConfig = new LobbyInitialConfig() {},
         Region = Region.Frankfurt,
     },
-}))
+};
+
+using(var res = await sdk.LobbyV2.CreateLobbyDeprecatedAsync(new CreateLobbyDeprecatedSecurity() {
+    PlayerAuth = "",
+}, req))
 {
+
     // handle response
 }
   ```

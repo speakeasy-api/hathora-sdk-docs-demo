@@ -9,12 +9,9 @@ using HathoraUnitySDK.Models.Requests;
 using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
-);
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
-using(var res = await sdk.LobbyV3.CreateLobbyAsync(new CreateLobbySecurity() {
-    PlayerAuth = "",
-}, new CreateLobbyRequest() {
+CreateLobbyRequest req = new CreateLobbyRequest() {
     ShortCode = "LFG4",
     RoomId = "2swovpy1fnunu",
     CreateLobbyV3Params = new CreateLobbyV3Params() {
@@ -22,8 +19,13 @@ using(var res = await sdk.LobbyV3.CreateLobbyAsync(new CreateLobbySecurity() {
         RoomConfig = "{\"name\":\"my-room\"}",
         Region = Region.Frankfurt,
     },
-}))
+};
+
+using(var res = await sdk.LobbyV3.CreateLobbyAsync(new CreateLobbySecurity() {
+    PlayerAuth = "",
+}, req))
 {
+
     // handle response
 }
   ```

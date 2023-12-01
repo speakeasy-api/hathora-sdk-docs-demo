@@ -9,19 +9,21 @@ using HathoraUnitySDK.Models.Requests;
 using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
-);
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
-using(var res = await sdk.LobbyV2.CreatePrivateLobbyAsync(new CreatePrivateLobbySecurity() {
-    PlayerAuth = "",
-}, new CreatePrivateLobbyRequest() {
+CreatePrivateLobbyRequest req = new CreatePrivateLobbyRequest() {
     RoomId = "2swovpy1fnunu",
     RequestBody = new CreatePrivateLobbyRequestBody() {
         InitialConfig = new LobbyInitialConfig() {},
         Region = Region.Frankfurt,
     },
-}))
+};
+
+using(var res = await sdk.LobbyV2.CreatePrivateLobbyAsync(new CreatePrivateLobbySecurity() {
+    PlayerAuth = "",
+}, req))
 {
+
     // handle response
 }
   ```

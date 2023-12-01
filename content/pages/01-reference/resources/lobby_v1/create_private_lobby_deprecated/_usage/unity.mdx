@@ -4,13 +4,15 @@ using HathoraUnitySDK.Models.Requests;
 using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2"
-);
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+CreatePrivateLobbyDeprecatedRequest req = new CreatePrivateLobbyDeprecatedRequest() {};
 
 using(var res = await sdk.LobbyV1.CreatePrivateLobbyDeprecatedAsync(new CreatePrivateLobbyDeprecatedSecurity() {
     PlayerAuth = "",
-}, new CreatePrivateLobbyDeprecatedRequest() {}))
+}, req))
 {
+
     // handle response
 }
 ```

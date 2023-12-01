@@ -6,7 +6,7 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   ```typescript GetPingServiceEndpoints.ts
   import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
 
-(async() => {
+async function run() {
   const sdk = new HathoraCloud({
     hathoraDevToken: "",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
@@ -17,7 +17,9 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
   ```
   ---
 
