@@ -1,0 +1,41 @@
+
+<CH.Code>
+```csharp GetActiveRoomsForProcessDeprecated.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetActiveRoomsForProcessDeprecatedRequest req = new GetActiveRoomsForProcessDeprecatedRequest() {
+    ProcessId = "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+};
+
+using(var res = await sdk.RoomV1.GetActiveRoomsForProcessDeprecatedAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  [
+    {
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+      "roomId": "2swovpy1fnunu",
+      "roomConfig": "{\"name\":\"my-room\"}",
+      "currentAllocation": {
+        "unscheduledAt": "2023-06-18T23:42:07.590Z",
+        "scheduledAt": "2021-01-15T20:39:45.894Z",
+        "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+        "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
+      }
+    }
+  ]
+```
+</CH.Code>

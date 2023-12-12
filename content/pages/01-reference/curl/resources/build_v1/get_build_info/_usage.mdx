@@ -1,0 +1,28 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/builds/v1/app-af469a92-5b45-4565-b3c4-b79878de67d2/info/1 \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+```
+---
+
+```json Example Response
+  {
+    "buildTag": "0.1.14-14c793",
+    "regionalContainerTags": [
+      {
+        "containerTag": "string"
+      }
+    ],
+    "imageSize": 8360.79,
+    "deletedAt": "2022-01-05T10:46:16.059Z",
+    "finishedAt": "2021-04-06T09:45:28.527Z",
+    "startedAt": "2022-12-11T17:57:24.897Z",
+    "createdAt": "2021-01-23T03:20:22.304Z",
+    "createdBy": "dev@hathora.dev",
+    "buildId": 1,
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+```
+</CH.Code>

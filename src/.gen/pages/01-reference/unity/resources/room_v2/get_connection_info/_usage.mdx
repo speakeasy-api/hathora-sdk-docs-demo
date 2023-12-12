@@ -1,0 +1,37 @@
+
+<CH.Code>
+```csharp GetConnectionInfo.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetConnectionInfoRequest req = new GetConnectionInfoRequest() {
+    RoomId = "2swovpy1fnunu",
+};
+
+using(var res = await sdk.RoomV2.GetConnectionInfoAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "additionalExposedPorts": [],
+    "exposedPort": {
+        "port": 4511.59,
+        "host": "string",
+        "name": "string"
+      },
+    "roomId": "2swovpy1fnunu"
+  }
+```
+</CH.Code>

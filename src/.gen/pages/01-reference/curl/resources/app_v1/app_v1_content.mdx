@@ -1,0 +1,31 @@
+import GetApps from "./get_apps/get_apps.mdx";
+import CreateApp from "./create_app/create_app.mdx";
+import UpdateApp from "./update_app/update_app.mdx";
+import GetAppInfo from "./get_app_info/get_app_info.mdx";
+import DeleteApp from "./delete_app/delete_app.mdx";
+
+## App V1
+Operations that allow you manage your [applications](https://hathora.dev/docs/concepts/hathora\-entities\#application).
+
+### Available Operations
+
+* [Get Apps](/app_v1/get_apps) - Returns an unsorted list of your organization’s [applications](https://hathora.dev/docs/concepts/hathora-entities#application). An application is uniquely identified by an `appId`.
+* [Create App](/app_v1/create_app) - Create a new [application](https://hathora.dev/docs/concepts/hathora-entities#application).
+* [Update App](/app_v1/update_app) - Update data for an existing [application](https://hathora.dev/docs/concepts/hathora-entities#application) using `appId`.
+* [Get App Info](/app_v1/get_app_info) - Get details for an [application](https://hathora.dev/docs/concepts/hathora-entities#application) using `appId`.
+* [Delete App](/app_v1/delete_app) - Delete an [application](https://hathora.dev/docs/concepts/hathora-entities#application) using `appId`. Your organization will lose access to this application.
+
+---
+<GetApps />
+
+---
+<CreateApp />
+
+---
+<UpdateApp />
+
+---
+<GetAppInfo />
+
+---
+<DeleteApp />

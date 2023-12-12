@@ -1,0 +1,14 @@
+{
+  "create_lobby": {
+    "title": "Create Lobby"
+  },
+  "list_active_public_lobbies": {
+    "title": "List Active Public Lobbies"
+  },
+  "get_lobby_info_by_room_id": {
+    "title": "Get Lobby Info By Room Id"
+  },
+  "get_lobby_info_by_short_code": {
+    "title": "Get Lobby Info By Short Code"
+  }
+}

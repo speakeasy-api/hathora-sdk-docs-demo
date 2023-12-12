@@ -1,0 +1,21 @@
+import GetDeployments from "./get_deployments/get_deployments.mdx";
+import GetDeploymentInfo from "./get_deployment_info/get_deployment_info.mdx";
+import CreateDeployment from "./create_deployment/create_deployment.mdx";
+
+## Deployment V1
+Operations that allow you configure and manage an application's [build](https://hathora.dev/docs/concepts/hathora\-entities\#build) at runtime.
+
+### Available Operations
+
+* [Get Deployments](/deployment_v1/get_deployments) - Returns an array of [deployments](https://hathora.dev/docs/concepts/hathora-entities#deployment) for an [application](https://hathora.dev/docs/concepts/hathora-entities#application).
+* [Get Deployment Info](/deployment_v1/get_deployment_info) - Get details for a [deployment](https://hathora.dev/docs/concepts/hathora-entities#deployment).
+* [Create Deployment](/deployment_v1/create_deployment) - Create a new [deployment](https://hathora.dev/docs/concepts/hathora-entities#deployment). Creating a new deployment means all new rooms created will use the latest deployment configuration, but existing games in progress will not be affected.
+
+---
+<GetDeployments />
+
+---
+<GetDeploymentInfo />
+
+---
+<CreateDeployment />

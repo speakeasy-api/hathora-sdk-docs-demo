@@ -1,0 +1,26 @@
+
+<CH.Code>
+```typescript GetPingServiceEndpoints.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+
+  const res = await sdk.discoveryV1.getPingServiceEndpoints();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  []
+```
+</CH.Code>

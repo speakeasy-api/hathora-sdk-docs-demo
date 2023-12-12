@@ -1,70 +1,14 @@
 {
-  "custom": {
-    "title": "Custom Link",
+  "typescript": {
     "type": "page",
-    "href": "https://www.speakeasyapi.dev/",
-    "newWindow": true
+    "display": "hidden"
   },
-  "-- guides": {
-    "title": "Guides",
-    "type": "separator"
+  "unity": {
+    "type": "page",
+    "display": "hidden"
   },
-  "client_sdks": {
-    "title": "Client SDKs"
-  },
-  "installation": {
-    "title": "Installation"
-  },
-  "global_parameters": {
-    "title": "Global Parameters"
-  },
-  "-- resources": {
-    "title": "Resources",
-    "type": "separator"
-  },
-  "app_v1": {
-    "title": "App V1"
-  },
-  "auth_v1": {
-    "title": "Auth V1"
-  },
-  "billing_v1": {
-    "title": "Billing V1"
-  },
-  "build_v1": {
-    "title": "Build V1"
-  },
-  "deployment_v1": {
-    "title": "Deployment V1"
-  },
-  "discovery_v1": {
-    "title": "Discovery V1"
-  },
-  "lobby_v1": {
-    "title": "Lobby V1"
-  },
-  "lobby_v2": {
-    "title": "Lobby V2"
-  },
-  "lobby_v3": {
-    "title": "Lobby V3"
-  },
-  "log_v1": {
-    "title": "Log V1"
-  },
-  "management_v1": {
-    "title": "Management V1"
-  },
-  "metrics_v1": {
-    "title": "Metrics V1"
-  },
-  "processes_v1": {
-    "title": "Processes V1"
-  },
-  "room_v1": {
-    "title": "Room V1"
-  },
-  "room_v2": {
-    "title": "Room V2"
+  "curl": {
+    "type": "page",
+    "display": "hidden"
   }
 }

@@ -1,0 +1,34 @@
+
+<CH.Code>
+```typescript LoginGoogle.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { LoginGoogleRequest } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { LoginGoogleRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const loginGoogleRequest: LoginGoogleRequest = {
+  idToken: "eyJhbGciOiJSUzI1NiIsImtpZCI6ImZkNDhhNzUxMzhkOWQ0OGYwYWE2MzVlZjU2OWM0ZTE5NmY3YWU4ZDYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiODQ4NDEyODI2Nzg4LW00bXNyYjZxNDRkbTJ1ZTNrZ3Z1aTBmcTdrZGE1NWxzLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiODQ4NDEyODI2Nzg4LW00bXNyYjZxNDRkbTJ1ZTNrZ3Z1aTBmcTdrZGE1NWxzLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTE0NTQyMzMwNzI3MTU2MTMzNzc2IiwiZW1haWwiOiJocGFdkeivmeuzQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoidno1NGhhdTNxbnVR",
+};
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+
+  const res = await sdk.authV1.loginGoogle(loginGoogleRequest, appId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0eXBlIjoiYW5vbnltb3VzIiwiaWQiOiJ3aDA4eWN3eTJwOSIsIm5hbWUiOiJqaXR0ZXJ5LXNhbG1vbi1ndWxsIiwiaWF0IjoxNjg5MzQ5MTk3fQ.-LzlPhZw2tw0ycZ229IRHwwmINGKWNPFMDrXOphLjEk"
+  }
+```
+</CH.Code>

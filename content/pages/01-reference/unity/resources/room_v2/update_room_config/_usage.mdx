@@ -1,0 +1,34 @@
+
+<CH.Code>
+```csharp UpdateRoomConfig.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+UpdateRoomConfigRequest req = new UpdateRoomConfigRequest() {
+    RoomId = "2swovpy1fnunu",
+    UpdateRoomConfigParams = new UpdateRoomConfigParams() {
+        RoomConfig = "{\"name\":\"my-room\"}",
+    },
+};
+
+using(var res = await sdk.RoomV2.UpdateRoomConfigAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "message": "string"
+  }
+```
+</CH.Code>

@@ -1,0 +1,11 @@
+{
+  "login_anonymous": {
+    "title": "Login Anonymous"
+  },
+  "login_nickname": {
+    "title": "Login Nickname"
+  },
+  "login_google": {
+    "title": "Login Google"
+  }
+}

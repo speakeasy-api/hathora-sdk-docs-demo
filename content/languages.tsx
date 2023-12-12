@@ -1,11 +1,10 @@
 import React, {
-  Children,
   ReactElement,
   ReactNode,
+  useCallback,
   useContext,
-  useState,
+  useMemo,
 } from 'react';
-
 import { Columns, RHS } from '@/src/components/Columns';
 import {
   Authentication,
@@ -14,23 +13,47 @@ import {
 } from '@/src/components/Parameters';
 import { LanguageContext } from '@/src/utils/contexts/languageContext';
 import { LinkableContext } from '@/src/utils/contexts/linkableContext';
+import { usePathname } from 'next/navigation';
+import { useSetPage } from '@/src/components/scrollManager';
 
 export const Languages = ['typescript', 'unity', 'curl'];
 export type Language = (typeof Languages)[number];
 
 export const LanguageProvider = (props: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('typescript');
+  const slug = usePathname();
+  const setPage = useSetPage();
+
+  const language = useMemo(() => {
+    // slug is in the form "/typescript/installation" (or null)
+    const routeLang = slug?.split('/')[1];
+
+    return routeLang || 'typescript';
+  }, [slug]);
+
+  const setLanguage = useCallback(
+    (newLanguage: string) => {
+      const langRoutePrefix = (lang: string) => `/${lang}/`;
+
+      // Using window.location.pathname because router.asPath often has [...rest] in it
+      const newPath = window.location.pathname.replace(
+        langRoutePrefix(language),
+        langRoutePrefix(newLanguage),
+      );
+
+      setPage(newPath);
+    },
+    [language, setPage],
+  );
+
   const context = {
     language,
     setLanguage,
     languages: Languages,
   };
 
-  const childrenArray = Children.toArray(props.children);
-
   return (
     <LanguageContext.Provider value={context}>
-      {childrenArray.map((child) => child)}
+      {props.children}
     </LanguageContext.Provider>
   );
 };

@@ -1,0 +1,55 @@
+
+<CH.Code>
+```csharp GetStoppedProcesses.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetStoppedProcessesRequest req = new GetStoppedProcessesRequest() {};
+
+using(var res = await sdk.ProcessesV1.GetStoppedProcessesAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  [
+    {
+      "egressedBytes": 435,
+      "idleSince": "2022-04-26T06:26:51.979Z",
+      "activeConnectionsUpdatedAt": "2022-11-26T12:43:19.621Z",
+      "activeConnections": 10,
+      "roomsAllocatedUpdatedAt": "2023-12-19T06:27:51.484Z",
+      "roomsAllocated": 1,
+      "roomSlotsAvailableUpdatedAt": "2023-11-17T01:11:12.467Z",
+      "roomSlotsAvailable": 1020.44,
+      "draining": false,
+      "terminatedAt": "2022-12-16T19:19:46.495Z",
+      "stoppingAt": "2021-08-17T17:16:52.376Z",
+      "startedAt": "2022-11-27T09:20:50.241Z",
+      "startingAt": "2021-06-26T15:12:50.232Z",
+      "roomsPerProcess": 3,
+      "additionalExposedPorts": [],
+      "exposedPort": {
+          "port": 6531.08,
+          "host": "string",
+          "name": "string"
+        },
+      "port": 5818.5,
+      "host": "string",
+      "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+      "deploymentId": 1,
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+    }
+  ]
+```
+</CH.Code>

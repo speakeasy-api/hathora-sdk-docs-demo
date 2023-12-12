@@ -1,0 +1,11 @@
+{
+  "get_logs_for_app": {
+    "title": "Get Logs For App"
+  },
+  "get_logs_for_process": {
+    "title": "Get Logs For Process"
+  },
+  "get_logs_for_deployment": {
+    "title": "Get Logs For Deployment"
+  }
+}
