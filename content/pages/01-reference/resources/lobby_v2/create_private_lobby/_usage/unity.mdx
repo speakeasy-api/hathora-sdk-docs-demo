@@ -20,7 +20,7 @@ CreatePrivateLobbyRequest req = new CreatePrivateLobbyRequest() {
 };
 
 using(var res = await sdk.LobbyV2.CreatePrivateLobbyAsync(new CreatePrivateLobbySecurity() {
-    PlayerAuth = "",
+    PlayerAuth = "<YOUR_BEARER_TOKEN_HERE>",
 }, req))
 {
 

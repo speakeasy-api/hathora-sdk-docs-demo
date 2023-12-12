@@ -9,7 +9,7 @@ var sdk = new HathoraCloud(
 CreatePublicLobbyDeprecatedRequest req = new CreatePublicLobbyDeprecatedRequest() {};
 
 using(var res = await sdk.LobbyV1.CreatePublicLobbyDeprecatedAsync(new CreatePublicLobbyDeprecatedSecurity() {
-    PlayerAuth = "",
+    PlayerAuth = "<YOUR_BEARER_TOKEN_HERE>",
 }, req))
 {
 

@@ -22,7 +22,7 @@ CreateLobbyRequest req = new CreateLobbyRequest() {
 };
 
 using(var res = await sdk.LobbyV3.CreateLobbyAsync(new CreateLobbySecurity() {
-    PlayerAuth = "",
+    PlayerAuth = "<YOUR_BEARER_TOKEN_HERE>",
 }, req))
 {
 

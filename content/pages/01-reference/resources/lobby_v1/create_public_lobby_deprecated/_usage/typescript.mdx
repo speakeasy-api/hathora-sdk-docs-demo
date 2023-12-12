@@ -10,7 +10,7 @@ async function run() {
 const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
 const region: Region = Region.Tokyo;
 const local: boolean = false;
-const operationSecurity: CreatePublicLobbyDeprecatedSecurity = "";
+const operationSecurity: CreatePublicLobbyDeprecatedSecurity = "<YOUR_BEARER_TOKEN_HERE>";
 
   const res = await sdk.lobbyV1.createPublicLobbyDeprecated(operationSecurity, appId, region, local);
 
