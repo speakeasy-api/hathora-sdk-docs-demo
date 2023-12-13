@@ -39,5 +39,5 @@ navLinks:
     new_window: true
 
 redirects:
-  - from: "/api#tag/AuthV1*"
+  - from: "/*/AuthV1*"
     to: "/curl/app_v1*"
