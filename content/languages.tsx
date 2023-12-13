@@ -16,7 +16,7 @@ import { LinkableContext } from '@/src/utils/contexts/linkableContext';
 import { usePathname } from 'next/navigation';
 import { useSetPage } from '@/src/components/scrollManager';
 
-export const Languages = ['typescript', 'unity', 'curl'];
+export const Languages = ['curl', 'typescript', 'unity'];
 export type Language = (typeof Languages)[number];
 
 export const LanguageProvider = (props: { children: ReactNode }) => {
@@ -27,7 +27,7 @@ export const LanguageProvider = (props: { children: ReactNode }) => {
     // slug is in the form "/typescript/installation" (or null)
     const routeLang = slug?.split('/')[1];
 
-    return routeLang || 'typescript';
+    return routeLang || 'curl';
   }, [slug]);
 
   const setLanguage = useCallback(

@@ -10,7 +10,9 @@ export const CustomRedirects = () => {
   const router = useRouter();
 
   // Static redirects defined from theme.yaml
-  const redirects: Redirect[] = [];
+  const redirects: Redirect[] = [
+    { from: '/apitag/AuthV1*', to: '/curl/app_v1*' },
+  ];
 
   useEffect(() => {
     const currentPath = window.location.pathname;

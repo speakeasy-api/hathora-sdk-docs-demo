@@ -29,6 +29,7 @@ docs:
       shared: shared
       webhooks: webhooks
   inputModelSuffix: input
+  maintainTagBasedOrdering: true
   outputModelSuffix: output
   packageName: hathora-sdk-docs
 typescript:

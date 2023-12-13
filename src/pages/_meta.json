@@ -1,4 +1,10 @@
 {
+  "docs": {
+    "title": "Docs",
+    "type": "page",
+    "href": "https://docs.hathora.dev/#/",
+    "newWindow": true
+  },
   "typescript": {
     "type": "page",
     "display": "hidden"
