@@ -5,26 +5,28 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```typescript CreateRoom.ts
   import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { CreateRoomParams, Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
-import { CreateRoomRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
+import { Region } from "@hathora/cloud-sdk-typescript/models/components";
 
 async function run() {
   const sdk = new HathoraCloud({
     hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
   });
-const createRoomParams: CreateRoomParams = {
-  roomConfig: "{\"name\":\"my-room\"}",
-  region: Region.London,
-};
-const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
-const roomId: string = "2swovpy1fnunu";
 
+  const createRoomParams = {
+    roomConfig: "{\"name\":\"my-room\"}",
+    region: Region.SaoPaulo,
+  };
+  const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+  const roomId = "2swovpy1fnunu";
+  
   const res = await sdk.roomV2.createRoom(createRoomParams, appId, roomId);
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();

@@ -5,7 +5,7 @@ import Labels from "/src/lib/labels";
 
 ##### `roomId`: *{`string`}*
 <br/>
-**Example:** `2swovpy1fnunu`
+**Example:** `[object Object]`
 
 ---
 ##### `updateRoomConfigParams`: *{`components.UpdateRoomConfigParams`}*
@@ -16,10 +16,14 @@ import Labels from "/src/lib/labels";
 ---
 ##### `appId?`: *{`string`}*
 <br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+**Example:** `[object Object]`
 
 ---
-##### `config?`: [*{ `AxiosRequestConfig` }*](https://axios-http.com/docs/req_config)
-Available config options for making requests.
+##### `options?`: *{`RequestOptions`}*
+Options for making HTTP requests.
+
+---
+##### `options.fetchOptions?`: [*{ `RequestInit` }*](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)
+Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed.
 
 

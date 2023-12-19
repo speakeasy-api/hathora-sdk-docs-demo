@@ -5,20 +5,22 @@ import WithStatusBar from '@/src/components/WithStatusBar';
   <CH.Code>
   ```typescript GetDeployments.ts
   import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import { GetDeploymentsRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
 
 async function run() {
   const sdk = new HathoraCloud({
     hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
   });
-const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
 
+  const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+  
   const res = await sdk.deploymentV1.getDeployments(appId);
 
-  if (res.statusCode == 200) {
-    // handle response
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
   }
+  
+  // handle response
 }
 
 run();

@@ -647,7 +647,7 @@ content/types/models/operations/destroy_room_deprecated_request/typescript.mdx
 content/types/models/operations/destroy_room_deprecated_response/typescript.mdx
 content/types/models/operations/destroy_room_request/typescript.mdx
 content/types/models/operations/destroy_room_response/typescript.mdx
-content/types/models/operations/file/typescript.mdx
+content/types/models/operations/file_t/typescript.mdx
 content/types/models/operations/get_active_rooms_for_process_deprecated_request/typescript.mdx
 content/types/models/operations/get_active_rooms_for_process_deprecated_response/typescript.mdx
 content/types/models/operations/get_active_rooms_for_process_request/typescript.mdx
