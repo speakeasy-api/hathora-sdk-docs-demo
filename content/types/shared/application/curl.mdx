@@ -2,14 +2,28 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `deletedBy` _string_
-Email address for the user that deleted the application.
+##### `appId` _string_
+System generated unique identifier for an application.
 <br/>
-**Example:** `dev@hathora.dev`
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
-##### `deletedAt` _date-time_
-When the application was deleted.
+##### `appName` _string_
+Readable name for an application. Must be unique within an organization.
+<br/>
+**Example:** `minecraft`
+
+---
+##### `appSecret` _string_
+Secret that is used for identity and access management.
+<br/>
+**Example:** `secret-6f706e83-0ec1-437a-9a46-7d4281eb2f39`
+
+---
+##### `authConfiguration` _object_
+Configure [player authentication](https://hathora.dev/docs/lobbies\-and\-matchmaking/auth\-service) for your application. Use Hathora's built\-in auth providers or use your own [custom authentication](https://hathora.dev/docs/lobbies\-and\-matchmaking/auth\-service\#custom\-auth\-provider).
+<Collapsible content={() => import('/content/types/shared/auth_configuration/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `createdAt` _date-time_
@@ -22,33 +36,19 @@ Email address for the user that deleted the application.
 **Example:** `dev@hathora.dev`
 
 ---
+##### `deletedAt` _date-time_
+When the application was deleted.
+
+---
+##### `deletedBy` _string_
+Email address for the user that deleted the application.
+<br/>
+**Example:** `dev@hathora.dev`
+
+---
 ##### `orgId` _string_
 System generated unique identifier for an organization.
 <br/>
 **Example:** `google-oauth2|107030234048588177467`
-
----
-##### `authConfiguration` _object_
-Configure [player authentication](https://hathora.dev/docs/lobbies\-and\-matchmaking/auth\-service) for your application. Use Hathora's built\-in auth providers or use your own [custom authentication](https://hathora.dev/docs/lobbies\-and\-matchmaking/auth\-service\#custom\-auth\-provider).
-<Collapsible content={() => import('/content/types/shared/auth_configuration/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `appSecret` _string_
-Secret that is used for identity and access management.
-<br/>
-**Example:** `secret-6f706e83-0ec1-437a-9a46-7d4281eb2f39`
-
----
-##### `appId` _string_
-System generated unique identifier for an application.
-<br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
-
----
-##### `appName` _string_
-Readable name for an application. Must be unique within an organization.
-<br/>
-**Example:** `minecraft`
 
 

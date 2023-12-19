@@ -2,16 +2,22 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `additionalContainerPorts?`: *{`components.ContainerPort[]`}*
+Additional ports your server listens on.
+<Collapsible content={() => import('/content/types/models/components/container_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `containerPort`: *{`number`}*
+Default port the server listens on.
+<br/>
+**Example:** `4000`
+
+---
 ##### `env`: *{`components.DeploymentConfigEnv[]`}*
 The environment variable that our process will have access to at runtime.
 <Collapsible content={() => import('/content/types/models/components/deployment_config_env/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### `roomsPerProcess`: *{`number`}*
-Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
-<br/>
-**Example:** `3`
 
 ---
 ##### `planName`: *{`components.PlanName`}*
@@ -30,21 +36,15 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 </Collapsible>
 
 ---
-##### `additionalContainerPorts?`: *{`components.ContainerPort[]`}*
-Additional ports your server listens on.
-<Collapsible content={() => import('/content/types/models/components/container_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+##### `roomsPerProcess`: *{`number`}*
+Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
+<br/>
+**Example:** `3`
 
 ---
 ##### `transportType`: *{`components.TransportType`}*
 Transport type specifies the underlying communication protocol to the exposed port.
 <Collapsible content={() => import('/content/types/models/components/transport_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### `containerPort`: *{`number`}*
-Default port the server listens on.
-<br/>
-**Example:** `4000`
 
 

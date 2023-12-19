@@ -1,0 +1,41 @@
+
+<CH.Code>
+```csharp CreatePublicLobby.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Requests;
+using HathoraUnitySDK.Models.Components;
+
+var sdk = new HathoraCloud(
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+CreatePublicLobbyRequest req = new CreatePublicLobbyRequest() {
+    RequestBody = new CreatePublicLobbyRequestBody() {
+        InitialConfig = new LobbyInitialConfig() {},
+        Region = Region.Frankfurt,
+    },
+    RoomId = "2swovpy1fnunu",
+};
+
+using(var res = await sdk.LobbyV2.CreatePublicLobbyAsync(new CreatePublicLobbySecurity() {
+    PlayerAuth = "",
+}, req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "createdAt": "2021-10-17T16:31:17.284Z",
+    "createdBy": "dev@hathora.dev",
+    "initialConfig": {},
+    "local": false,
+    "roomId": "2swovpy1fnunu",
+    "shortCode": "LFG4",
+    "state": {}
+  }
+```
+</CH.Code>

@@ -1,0 +1,72 @@
+
+<CH.Code>
+```typescript GetRunningProcesses.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { GetRunningProcessesRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+const region: Region = Region.Singapore;
+
+  const res = await sdk.processesV1.getRunningProcesses(appId, region);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  [
+    {
+      "activeConnections": 10,
+      "activeConnectionsUpdatedAt": "2021-12-22T22:14:28.104Z",
+      "additionalExposedPorts": [],
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+      "deploymentId": 1,
+      "draining": false,
+      "egressedBytes": 435,
+      "exposedPort": {
+          "host": "string",
+          "name": "string",
+          "port": 5701.97
+        },
+      "host": "string",
+      "idleSince": "2022-04-26T06:26:51.979Z",
+      "port": 6342.74,
+      "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+      "roomSlotsAvailable": 9589.5,
+      "roomSlotsAvailableUpdatedAt": "2021-04-22T17:44:15.083Z",
+      "rooms": [
+          {
+            "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+            "currentAllocation": {
+              "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+              "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78",
+              "scheduledAt": "2022-12-16T19:19:46.495Z",
+              "unscheduledAt": "2021-08-17T17:16:52.376Z"
+            },
+            "roomConfig": "{\"name\":\"my-room\"}",
+            "roomId": "2swovpy1fnunu"
+          }
+        ],
+      "roomsAllocated": 1,
+      "roomsAllocatedUpdatedAt": "2022-11-27T09:20:50.241Z",
+      "roomsPerProcess": 3,
+      "startedAt": "2021-06-26T15:12:50.232Z",
+      "startingAt": "2023-12-26T20:28:21.303Z",
+      "stoppingAt": "2022-12-17T03:41:12.134Z",
+      "terminatedAt": "2022-09-30T03:01:36.230Z",
+      "totalRooms": 2532.91
+    }
+  ]
+```
+</CH.Code>

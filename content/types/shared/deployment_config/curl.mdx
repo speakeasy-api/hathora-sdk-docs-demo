@@ -2,14 +2,18 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `env` _array_
-The environment variable that our process will have access to at runtime.
+##### `additionalContainerPorts` _array (optional)_
+Additional ports your server listens on.
 
 ---
-##### `roomsPerProcess` _integer (32-bit)_
-Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
+##### `containerPort` _integer (32-bit)_
+Default port the server listens on.
 <br/>
-**Example:** `3`
+**Example:** `4000`
+
+---
+##### `env` _array_
+The environment variable that our process will have access to at runtime.
 
 ---
 ##### `planName` _enumeration_
@@ -28,19 +32,15 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 </Collapsible>
 
 ---
-##### `additionalContainerPorts` _array (optional)_
-Additional ports your server listens on.
+##### `roomsPerProcess` _integer (32-bit)_
+Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
+<br/>
+**Example:** `3`
 
 ---
 ##### `transportType` _enumeration_
 Transport type specifies the underlying communication protocol to the exposed port.
 <Collapsible content={() => import('/content/types/shared/transport_type/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### `containerPort` _integer (32-bit)_
-Default port the server listens on.
-<br/>
-**Example:** `4000`
 
 

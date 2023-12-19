@@ -1,0 +1,5 @@
+{
+  "get_logs_for_app": "Get Logs For App",
+  "get_logs_for_deployment": "Get Logs For Deployment",
+  "get_logs_for_process": "Get Logs For Process"
+}

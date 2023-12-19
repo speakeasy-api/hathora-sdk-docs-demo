@@ -2,6 +2,17 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `apiError` _object (optional)_
+<Collapsible content={() => import('/content/types/shared/api_error/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `connectionInfoV2` _object (optional)_
+Ok
+<Collapsible content={() => import('/content/types/shared/connection_info_v2/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### `contentType` _string_
 HTTP response content type for this operation
 
@@ -12,16 +23,5 @@ HTTP response status code for this operation
 ---
 ##### `rawResponse` _HTTP response_
 Raw HTTP response; suitable for custom response parsing
-
----
-##### `connectionInfoV2` _object (optional)_
-Ok
-<Collapsible content={() => import('/content/types/shared/connection_info_v2/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `apiError` _object (optional)_
-<Collapsible content={() => import('/content/types/shared/api_error/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
 
 

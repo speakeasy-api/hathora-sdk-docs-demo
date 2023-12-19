@@ -1,0 +1,50 @@
+
+<CH.Code>
+```csharp GetDeployments.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetDeploymentsRequest req = new GetDeploymentsRequest() {};
+
+using(var res = await sdk.DeploymentV1.GetDeploymentsAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  [
+    {
+      "additionalContainerPorts": [],
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+      "buildId": 1,
+      "containerPort": 1182.74,
+      "createdAt": "2023-03-01T02:13:33.902Z",
+      "createdBy": "dev@hathora.dev",
+      "defaultContainerPort": {
+          "name": "default",
+          "port": 8000
+        },
+      "deploymentId": 1,
+      "env": [
+          {
+            "name": "EULA",
+            "value": "TRUE"
+          }
+        ],
+      "requestedCPU": 0.5,
+      "requestedMemoryMB": 1024,
+      "roomsPerProcess": 3
+    }
+  ]
+```
+</CH.Code>

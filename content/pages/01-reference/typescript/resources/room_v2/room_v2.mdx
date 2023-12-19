@@ -1,0 +1,46 @@
+import CreateRoom from "./create_room/create_room.mdx";
+import DestroyRoom from "./destroy_room/destroy_room.mdx";
+import GetActiveRoomsForProcess from "./get_active_rooms_for_process/get_active_rooms_for_process.mdx";
+import GetConnectionInfo from "./get_connection_info/get_connection_info.mdx";
+import GetInactiveRoomsForProcess from "./get_inactive_rooms_for_process/get_inactive_rooms_for_process.mdx";
+import GetRoomInfo from "./get_room_info/get_room_info.mdx";
+import SuspendRoom from "./suspend_room/suspend_room.mdx";
+import UpdateRoomConfig from "./update_room_config/update_room_config.mdx";
+
+## Room V2
+Operations to create, manage, and connect to [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room).
+
+### Available Operations
+
+* [Create Room](/typescript/room_v2/create_room) - Create a new [room](https://hathora.dev/docs/concepts/hathora-entities#room) for an existing [application](https://hathora.dev/docs/concepts/hathora-entities#application). Poll the [`GetConnectionInfo()`](https://hathora.dev/api#tag/RoomV2/operation/GetConnectionInfo) endpoint to get connection details for an active room.
+* [Destroy Room](/typescript/room_v2/destroy_room) - Destroy a [room](https://hathora.dev/docs/concepts/hathora-entities#room). All associated metadata is deleted.
+* [Get Active Rooms For Process](/typescript/room_v2/get_active_rooms_for_process) - Get all active [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) for a given [process](https://hathora.dev/docs/concepts/hathora-entities#process).
+* [Get Connection Info](/typescript/room_v2/get_connection_info) - Poll this endpoint to get connection details to a [room](https://hathora.dev/docs/concepts/hathora-entities#room). Clients can call this endpoint without authentication.
+* [Get Inactive Rooms For Process](/typescript/room_v2/get_inactive_rooms_for_process) - Get all inactive [rooms](https://hathora.dev/docs/concepts/hathora-entities#room) for a given [process](https://hathora.dev/docs/concepts/hathora-entities#process).
+* [Get Room Info](/typescript/room_v2/get_room_info) - Retreive current and historical allocation data for a [room](https://hathora.dev/docs/concepts/hathora-entities#room).
+* [Suspend Room](/typescript/room_v2/suspend_room) - Suspend a [room](https://hathora.dev/docs/concepts/hathora-entities#room). The room is unallocated from the process but can be rescheduled later using the same `roomId`.
+* [Update Room Config](/typescript/room_v2/update_room_config) - Update Room Config
+
+---
+<CreateRoom />
+
+---
+<DestroyRoom />
+
+---
+<GetActiveRoomsForProcess />
+
+---
+<GetConnectionInfo />
+
+---
+<GetInactiveRoomsForProcess />
+
+---
+<GetRoomInfo />
+
+---
+<SuspendRoom />
+
+---
+<UpdateRoomConfig />

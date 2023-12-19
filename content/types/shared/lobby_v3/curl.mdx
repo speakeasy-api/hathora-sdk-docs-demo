@@ -2,10 +2,10 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `shortCode` _string_
-User\-defined identifier for a lobby.
+##### `appId` _string_
+System generated unique identifier for an application.
 <br/>
-**Example:** `LFG4`
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
 ##### `createdAt` _date-time_
@@ -18,9 +18,27 @@ Email address for the user that created the lobby.
 **Example:** `dev@hathora.dev`
 
 ---
+##### `region` _enumeration_
+<Collapsible content={() => import('/content/types/shared/region/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### `roomConfig` _string_
 <br/>
 **Example:** `{"name":"my-room"}`
+
+---
+##### `roomId` _string_
+Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
+Note: error will be returned if `roomId` is not globally unique.
+<br/>
+**Example:** `2swovpy1fnunu`
+
+---
+##### `shortCode` _string_
+User\-defined identifier for a lobby.
+<br/>
+**Example:** `LFG4`
 
 ---
 ##### `visibility` _enumeration_
@@ -35,23 +53,5 @@ Types of lobbies a player can create.
 **Example:** `private`
 <Collapsible content={() => import('/content/types/shared/lobby_visibility/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### `region` _enumeration_
-<Collapsible content={() => import('/content/types/shared/region/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `roomId` _string_
-Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
-Note: error will be returned if `roomId` is not globally unique.
-<br/>
-**Example:** `2swovpy1fnunu`
-
----
-##### `appId` _string_
-System generated unique identifier for an application.
-<br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 

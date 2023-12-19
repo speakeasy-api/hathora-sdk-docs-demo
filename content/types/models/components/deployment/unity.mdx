@@ -2,16 +2,56 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### *{`List<ContainerPort>`}* `AdditionalContainerPorts`
+Additional ports your server listens on.
+<br/>
+**Example:** `{"transportType":"tcp","port":4000,"name":"debug"}`
+<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`string`}* `AppId`
+System generated unique identifier for an application.
+<br/>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+
+---
+##### *{`int`}* `BuildId`
+System generated id for a build. Increments by 1.
+<br/>
+**Example:** `1`
+
+---
+##### *{`double`}* `ContainerPort`
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+
+---
+##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `CreatedAt`
+When the deployment was created.
+
+---
+##### *{`string`}* `CreatedBy`
+Email address for the user that created the deployment.
+<br/>
+**Example:** `dev@hathora.dev`
+
+---
+##### *{`ContainerPort`}* `DefaultContainerPort`
+A container port object represents the transport configruations for how your server will listen.
+<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`int`}* `DeploymentId`
+System generated id for a deployment. Increments by 1.
+<br/>
+**Example:** `1`
+
+---
 ##### *{`List<Env>`}* `Env`
 The environment variable that our process will have access to at runtime.
 <Collapsible content={() => import('/content/types/models/components/env/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### *{`int`}* `RoomsPerProcess`
-Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
-<br/>
-**Example:** `3`
 
 ---
 ##### *{`PlanName`}* `PlanName`
@@ -30,38 +70,10 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 </Collapsible>
 
 ---
-##### *{`List<ContainerPort>`}* `AdditionalContainerPorts`
-Additional ports your server listens on.
+##### *{`double`}* `RequestedCPU`
+The number of cores allocated to your process.
 <br/>
-**Example:** `{"transportType":"tcp","port":4000,"name":"debug"}`
-<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### *{`ContainerPort`}* `DefaultContainerPort`
-A container port object represents the transport configruations for how your server will listen.
-<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### *{`DeploymentTransportType`}* `TransportType`
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-<Collapsible content={() => import('/content/types/models/components/deployment_transport_type/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### *{`double`}* `ContainerPort`
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-
----
-##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `CreatedAt`
-When the deployment was created.
-
----
-##### *{`string`}* `CreatedBy`
-Email address for the user that created the deployment.
-<br/>
-**Example:** `dev@hathora.dev`
+**Example:** `0.5`
 
 ---
 ##### *{`double`}* `RequestedMemoryMB`
@@ -70,27 +82,15 @@ The amount of memory allocated to your process.
 **Example:** `1024`
 
 ---
-##### *{`double`}* `RequestedCPU`
-The number of cores allocated to your process.
+##### *{`int`}* `RoomsPerProcess`
+Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
 <br/>
-**Example:** `0.5`
+**Example:** `3`
 
 ---
-##### *{`int`}* `DeploymentId`
-System generated id for a deployment. Increments by 1.
-<br/>
-**Example:** `1`
-
----
-##### *{`int`}* `BuildId`
-System generated id for a build. Increments by 1.
-<br/>
-**Example:** `1`
-
----
-##### *{`string`}* `AppId`
-System generated unique identifier for an application.
-<br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+##### *{`DeploymentTransportType`}* `TransportType`
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+<Collapsible content={() => import('/content/types/models/components/deployment_transport_type/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

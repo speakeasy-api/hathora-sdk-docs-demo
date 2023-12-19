@@ -1,0 +1,24 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/billing/v1/paymentmethod \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+```
+---
+
+```json Example Response
+  {
+    "ach": {
+      "bankName": "string",
+      "last4": "string"
+    },
+    "card": {
+      "last4": "string"
+    },
+    "link": {
+      "email": "string"
+    }
+  }
+```
+</CH.Code>

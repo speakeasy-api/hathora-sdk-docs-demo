@@ -1,0 +1,30 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/apps/v1/update/app-af469a92-5b45-4565-b3c4-b79878de67d2 \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+```
+---
+
+```json Example Response
+  {
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "appName": "minecraft",
+    "appSecret": "secret-6f706e83-0ec1-437a-9a46-7d4281eb2f39",
+    "authConfiguration": {
+      "anonymous": {},
+      "google": {
+          "clientId": "string"
+        },
+      "nickname": {}
+    },
+    "createdAt": "2022-12-09T06:05:50.441Z",
+    "createdBy": "dev@hathora.dev",
+    "deletedAt": "2022-02-25T21:33:04.651Z",
+    "deletedBy": "dev@hathora.dev",
+    "orgId": "google-oauth2|107030234048588177467"
+  }
+```
+</CH.Code>

@@ -1,0 +1,64 @@
+
+<CH.Code>
+```csharp GetMetrics.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+using System.Collections.Generic;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetMetricsRequest req = new GetMetricsRequest() {
+    Metrics = new List<MetricName>() {
+        MetricName.Memory,
+    },
+    ProcessId = "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+};
+
+using(var res = await sdk.MetricsV1.GetMetricsAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "active_connections": [
+      {
+        "timestamp": 9437.49,
+        "value": 9025.99
+      }
+    ],
+    "cpu": [
+      {
+        "timestamp": 6818.2,
+        "value": 4499.5
+      }
+    ],
+    "memory": [
+      {
+        "timestamp": 3595.08,
+        "value": 6130.64
+      }
+    ],
+    "rate_egress": [
+      {
+        "timestamp": 4370.32,
+        "value": 9023.49
+      }
+    ],
+    "total_egress": [
+      {
+        "timestamp": 6976.31,
+        "value": 992.8
+      }
+    ]
+  }
+```
+</CH.Code>

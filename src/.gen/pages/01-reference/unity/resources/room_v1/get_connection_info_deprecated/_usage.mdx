@@ -1,0 +1,29 @@
+
+<CH.Code>
+```csharp GetConnectionInfoDeprecated.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetConnectionInfoDeprecatedRequest req = new GetConnectionInfoDeprecatedRequest() {
+    RoomId = "2swovpy1fnunu",
+};
+
+using(var res = await sdk.RoomV1.GetConnectionInfoDeprecatedAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  "string"
+```
+</CH.Code>

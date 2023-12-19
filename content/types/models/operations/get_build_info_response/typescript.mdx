@@ -2,6 +2,12 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `build?`: *{`components.Build`}*
+Ok
+<Collapsible content={() => import('/content/types/models/components/build/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### `contentType`: *{`string`}*
 HTTP response content type for this operation
 
@@ -10,13 +16,7 @@ HTTP response content type for this operation
 HTTP response status code for this operation
 
 ---
-##### `rawResponse`: [*{ `Response` }*](https://developer.mozilla.org/en-US/docs/Web/API/Response)
+##### `rawResponse`: [*{ `AxiosResponse` }*](https://axios-http.com/docs/res_schema)
 Raw HTTP response; suitable for custom response parsing
-
----
-##### `build?`: *{`components.Build`}*
-Ok
-<Collapsible content={() => import('/content/types/models/components/build/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
 
 

@@ -2,8 +2,16 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### *{`ApiError`}* `ApiError`
+<Collapsible content={() => import('/content/types/models/components/api_error/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### *{`string`}* `ContentType`
 HTTP response content type for this operation
+
+---
+##### *{`string`}* `RoomId`
 
 ---
 ##### *{`int`}* `StatusCode`
@@ -12,13 +20,5 @@ HTTP response status code for this operation
 ---
 ##### [*{ `UnityWebRequest` }*](https://docs.unity3d.com/2021.3/Documentation/ScriptReference/Networking.UnityWebRequest.html) `RawResponse`
 Raw HTTP response; suitable for custom response parsing
-
----
-##### *{`string`}* `RoomId`
-
----
-##### *{`ApiError`}* `ApiError`
-<Collapsible content={() => import('/content/types/models/components/api_error/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
 
 

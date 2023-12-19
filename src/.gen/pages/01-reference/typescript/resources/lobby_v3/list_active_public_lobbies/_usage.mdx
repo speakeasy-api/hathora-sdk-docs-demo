@@ -1,0 +1,39 @@
+
+<CH.Code>
+```typescript ListActivePublicLobbies.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { ListActivePublicLobbiesRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+const region: Region = Region.Chicago;
+
+  const res = await sdk.lobbyV3.listActivePublicLobbies(appId, region);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  [
+    {
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+      "createdAt": "2022-11-07T13:01:31.745Z",
+      "createdBy": "dev@hathora.dev",
+      "roomConfig": "{\"name\":\"my-room\"}",
+      "roomId": "2swovpy1fnunu",
+      "shortCode": "LFG4"
+    }
+  ]
+```
+</CH.Code>

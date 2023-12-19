@@ -1,0 +1,31 @@
+import CreateBuild from "./create_build/create_build.mdx";
+import DeleteBuild from "./delete_build/delete_build.mdx";
+import GetBuildInfo from "./get_build_info/get_build_info.mdx";
+import GetBuilds from "./get_builds/get_builds.mdx";
+import RunBuild from "./run_build/run_build.mdx";
+
+## Build V1
+Operations that allow you create and manage your [builds](https://hathora.dev/docs/concepts/hathora\-entities\#build).
+
+### Available Operations
+
+* [Create Build](/typescript/build_v1/create_build) - Creates a new [build](https://hathora.dev/docs/concepts/hathora-entities#build). Responds with a `buildId` that you must pass to [`RunBuild()`](https://hathora.dev/api#tag/BuildV1/operation/RunBuild) to build the game server artifact. You can optionally pass in a `buildTag` to associate an external version with a build.
+* [Delete Build](/typescript/build_v1/delete_build) - Delete a [build](https://hathora.dev/docs/concepts/hathora-entities#build). All associated metadata is deleted.
+* [Get Build Info](/typescript/build_v1/get_build_info) - Get details for a [build](https://hathora.dev/docs/concepts/hathora-entities#build).
+* [Get Builds](/typescript/build_v1/get_builds) - Returns an array of [builds](https://hathora.dev/docs/concepts/hathora-entities#build) for an [application](https://hathora.dev/docs/concepts/hathora-entities#application).
+* [Run Build](/typescript/build_v1/run_build) - Builds a game server artifact from a tarball you provide. Pass in the `buildId` generated from [`CreateBuild()`](https://hathora.dev/api#tag/BuildV1/operation/CreateBuild).
+
+---
+<CreateBuild />
+
+---
+<DeleteBuild />
+
+---
+<GetBuildInfo />
+
+---
+<GetBuilds />
+
+---
+<RunBuild />

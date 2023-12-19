@@ -1,0 +1,73 @@
+{/* Start Typescript Security Schemas */}
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+
+
+To authenticate with the API the `hathoraDevToken` parameter must be set when initializing the SDK client instance. For example:
+```typescript
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+async function run() {
+    const sdk = new HathoraCloud({
+        hathoraDevToken: "",
+        appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    });
+
+    const res = await sdk.appV1.createApp({
+        appName: "minecraft",
+        authConfiguration: {
+            anonymous: {},
+            google: {
+                clientId: "string",
+            },
+            nickname: {},
+        },
+    });
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+}
+
+run();
+
+```
+
+### Per-Operation Security Schemes
+
+Some operations in this SDK require the security scheme to be specified at the request level. For example:
+```typescript
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { Region } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import {
+    CreatePrivateLobbyDeprecatedRequest,
+    CreatePrivateLobbyDeprecatedSecurity,
+} from "@hathora/cloud-sdk-typescript/dist/models/operations";
+
+async function run() {
+    const sdk = new HathoraCloud({
+        appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    });
+    const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+    const local: boolean = false;
+    const region: Region = Region.London;
+    const operationSecurity: CreatePrivateLobbyDeprecatedSecurity = "";
+
+    const res = await sdk.lobbyV1.createPrivateLobbyDeprecated(
+        operationSecurity,
+        appId,
+        local,
+        region
+    );
+
+    if (res.statusCode == 200) {
+        // handle response
+    }
+}
+
+run();
+
+```
+{/* End Typescript Security Schemas */}

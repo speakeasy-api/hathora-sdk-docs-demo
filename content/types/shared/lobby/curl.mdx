@@ -2,21 +2,10 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `shortCode` _string_
+##### `appId` _string_
+System generated unique identifier for an application.
 <br/>
-**Example:** `LFG4`
-
----
-##### `state` _object (optional)_
-JSON blob to store metadata for a room. Must be smaller than 1MB.
-<Collapsible content={() => import('/content/types/shared/state/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `initialConfig` _object_
-User input to initialize the game state. Object must be smaller than 64KB.
-<Collapsible content={() => import('/content/types/shared/lobby_initial_config/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
 ##### `createdAt` _date-time_
@@ -29,22 +18,14 @@ Email address for the user that created the lobby.
 **Example:** `dev@hathora.dev`
 
 ---
-##### `local` _boolean_
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+##### `initialConfig` _object_
+User input to initialize the game state. Object must be smaller than 64KB.
+<Collapsible content={() => import('/content/types/shared/lobby_initial_config/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
-##### `visibility` _enumeration_
-Types of lobbies a player can create.
-
-`private`: the player who created the room must share the roomId with their friends
-
-`public`: visible in the public lobby list, anyone can join
-
-`local`: for testing with a server running locally
-<br/>
-**Example:** `private`
-<Collapsible content={() => import('/content/types/shared/lobby_visibility/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+##### `local` _boolean_
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ---
 ##### `region` _enumeration_
@@ -59,9 +40,28 @@ Note: error will be returned if `roomId` is not globally unique.
 **Example:** `2swovpy1fnunu`
 
 ---
-##### `appId` _string_
-System generated unique identifier for an application.
+##### `shortCode` _string_
 <br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+**Example:** `LFG4`
+
+---
+##### `state` _object (optional)_
+JSON blob to store metadata for a room. Must be smaller than 1MB.
+<Collapsible content={() => import('/content/types/shared/state/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `visibility` _enumeration_
+Types of lobbies a player can create.
+
+`private`: the player who created the room must share the roomId with their friends
+
+`public`: visible in the public lobby list, anyone can join
+
+`local`: for testing with a server running locally
+<br/>
+**Example:** `private`
+<Collapsible content={() => import('/content/types/shared/lobby_visibility/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

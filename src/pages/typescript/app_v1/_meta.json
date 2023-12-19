@@ -1,0 +1,7 @@
+{
+  "create_app": "Create App",
+  "delete_app": "Delete App",
+  "get_app_info": "Get App Info",
+  "get_apps": "Get Apps",
+  "update_app": "Update App"
+}

@@ -1,0 +1,18 @@
+```csharp CreatePublicLobbyDeprecated.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Requests;
+using HathoraUnitySDK.Models.Components;
+
+var sdk = new HathoraCloud(
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+CreatePublicLobbyDeprecatedRequest req = new CreatePublicLobbyDeprecatedRequest() {};
+
+using(var res = await sdk.LobbyV1.CreatePublicLobbyDeprecatedAsync(new CreatePublicLobbyDeprecatedSecurity() {
+    PlayerAuth = "",
+}, req))
+{
+
+    // handle response
+}
+```

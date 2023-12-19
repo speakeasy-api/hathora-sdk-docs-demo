@@ -2,16 +2,56 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `additionalContainerPorts`: *{`components.ContainerPort[]`}*
+Additional ports your server listens on.
+<br/>
+**Example:** `{"transportType":"tcp","port":4000,"name":"debug"}`
+<Collapsible content={() => import('/content/types/models/components/container_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `appId`: *{`string`}*
+System generated unique identifier for an application.
+<br/>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+
+---
+##### `buildId`: *{`number`}*
+System generated id for a build. Increments by 1.
+<br/>
+**Example:** `1`
+
+---
+##### `containerPort`: *{`number`}*
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+
+---
+##### `createdAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+When the deployment was created.
+
+---
+##### `createdBy`: *{`string`}*
+Email address for the user that created the deployment.
+<br/>
+**Example:** `dev@hathora.dev`
+
+---
+##### `defaultContainerPort`: *{`components.ContainerPort`}*
+A container port object represents the transport configruations for how your server will listen.
+<Collapsible content={() => import('/content/types/models/components/container_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `deploymentId`: *{`number`}*
+System generated id for a deployment. Increments by 1.
+<br/>
+**Example:** `1`
+
+---
 ##### `env`: *{`components.Env[]`}*
 The environment variable that our process will have access to at runtime.
 <Collapsible content={() => import('/content/types/models/components/env/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
-
----
-##### `roomsPerProcess`: *{`number`}*
-Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
-<br/>
-**Example:** `3`
 
 ---
 ##### `planName`: *{`components.PlanName`}*
@@ -30,38 +70,10 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 </Collapsible>
 
 ---
-##### `additionalContainerPorts`: *{`components.ContainerPort[]`}*
-Additional ports your server listens on.
+##### `requestedCPU`: *{`number`}*
+The number of cores allocated to your process.
 <br/>
-**Example:** `{"transportType":"tcp","port":4000,"name":"debug"}`
-<Collapsible content={() => import('/content/types/models/components/container_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `defaultContainerPort`: *{`components.ContainerPort`}*
-A container port object represents the transport configruations for how your server will listen.
-<Collapsible content={() => import('/content/types/models/components/container_port/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `transportType`: *{`components.DeploymentTransportType`}*
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-<Collapsible content={() => import('/content/types/models/components/deployment_transport_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `containerPort`: *{`number`}*
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-
----
-##### `createdAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-When the deployment was created.
-
----
-##### `createdBy`: *{`string`}*
-Email address for the user that created the deployment.
-<br/>
-**Example:** `dev@hathora.dev`
+**Example:** `0.5`
 
 ---
 ##### `requestedMemoryMB`: *{`number`}*
@@ -70,27 +82,15 @@ The amount of memory allocated to your process.
 **Example:** `1024`
 
 ---
-##### `requestedCPU`: *{`number`}*
-The number of cores allocated to your process.
+##### `roomsPerProcess`: *{`number`}*
+Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
 <br/>
-**Example:** `0.5`
+**Example:** `3`
 
 ---
-##### `deploymentId`: *{`number`}*
-System generated id for a deployment. Increments by 1.
-<br/>
-**Example:** `1`
-
----
-##### `buildId`: *{`number`}*
-System generated id for a build. Increments by 1.
-<br/>
-**Example:** `1`
-
----
-##### `appId`: *{`string`}*
-System generated unique identifier for an application.
-<br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+##### `transportType`: *{`components.DeploymentTransportType`}*
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+<Collapsible content={() => import('/content/types/models/components/deployment_transport_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

@@ -2,6 +2,17 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `initialConfig`: *{`components.LobbyInitialConfig`}*
+User input to initialize the game state. Object must be smaller than 64KB.
+<Collapsible content={() => import('/content/types/models/components/lobby_initial_config/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `region`: *{`components.Region`}*
+<Collapsible content={() => import('/content/types/models/components/region/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### `visibility`: *{`components.LobbyVisibility`}*
 Types of lobbies a player can create.
 
@@ -13,17 +24,6 @@ Types of lobbies a player can create.
 <br/>
 **Example:** `private`
 <Collapsible content={() => import('/content/types/models/components/lobby_visibility/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `initialConfig`: *{`components.LobbyInitialConfig`}*
-User input to initialize the game state. Object must be smaller than 64KB.
-<Collapsible content={() => import('/content/types/models/components/lobby_initial_config/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `region`: *{`components.Region`}*
-<Collapsible content={() => import('/content/types/models/components/region/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 

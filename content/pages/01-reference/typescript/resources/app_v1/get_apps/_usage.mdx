@@ -1,0 +1,66 @@
+
+<CH.Code>
+```typescript GetApps.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+
+  const res = await sdk.appV1.getApps();
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  [
+    {
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+      "appName": "minecraft",
+      "appSecret": "secret-6f706e83-0ec1-437a-9a46-7d4281eb2f39",
+      "authConfiguration": {
+        "anonymous": {},
+        "google": {
+            "clientId": "string"
+          },
+        "nickname": {}
+      },
+      "createdAt": "2022-10-23T00:37:16.945Z",
+      "createdBy": "dev@hathora.dev",
+      "deletedAt": "2023-07-29T10:48:39.203Z",
+      "deletedBy": "dev@hathora.dev",
+      "deployment": {
+        "additionalContainerPorts": [],
+        "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+        "buildId": 1,
+        "containerPort": 5448.83,
+        "createdAt": "2023-07-17T17:46:32.359Z",
+        "createdBy": "dev@hathora.dev",
+        "defaultContainerPort": {
+            "name": "default",
+            "port": 8000
+          },
+        "deploymentId": 1,
+        "env": [
+            {
+              "name": "EULA",
+              "value": "TRUE"
+            }
+          ],
+        "requestedCPU": 0.5,
+        "requestedMemoryMB": 1024,
+        "roomsPerProcess": 3
+      },
+      "orgId": "google-oauth2|107030234048588177467"
+    }
+  ]
+```
+</CH.Code>

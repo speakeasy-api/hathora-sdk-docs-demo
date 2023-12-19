@@ -1,0 +1,36 @@
+
+<CH.Code>
+```csharp GetLobbyInfoByShortCode.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetLobbyInfoByShortCodeRequest req = new GetLobbyInfoByShortCodeRequest() {
+    ShortCode = "LFG4",
+};
+
+using(var res = await sdk.LobbyV3.GetLobbyInfoByShortCodeAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "createdAt": "2022-11-02T05:52:32.111Z",
+    "createdBy": "dev@hathora.dev",
+    "roomConfig": "{\"name\":\"my-room\"}",
+    "roomId": "2swovpy1fnunu",
+    "shortCode": "LFG4"
+  }
+```
+</CH.Code>

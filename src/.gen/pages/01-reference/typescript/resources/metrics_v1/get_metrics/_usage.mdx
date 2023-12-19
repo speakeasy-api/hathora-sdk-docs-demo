@@ -1,0 +1,63 @@
+
+<CH.Code>
+```typescript GetMetrics.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { MetricName } from "@hathora/cloud-sdk-typescript/dist/models/components";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+
+  const res = await sdk.metricsV1.getMetrics({
+    metrics: [
+      MetricName.Cpu,
+    ],
+    processId: "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+  });
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "active_connections": [
+      {
+        "timestamp": 9437.49,
+        "value": 9025.99
+      }
+    ],
+    "cpu": [
+      {
+        "timestamp": 6818.2,
+        "value": 4499.5
+      }
+    ],
+    "memory": [
+      {
+        "timestamp": 3595.08,
+        "value": 6130.64
+      }
+    ],
+    "rate_egress": [
+      {
+        "timestamp": 4370.32,
+        "value": 9023.49
+      }
+    ],
+    "total_egress": [
+      {
+        "timestamp": 6976.31,
+        "value": 992.8
+      }
+    ]
+  }
+```
+</CH.Code>

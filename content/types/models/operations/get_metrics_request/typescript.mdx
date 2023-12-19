@@ -7,9 +7,8 @@ import Labels from "/src/lib/labels";
 **Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
-##### `processId`: *{`string`}*
-<br/>
-**Example:** `cbfcddd2-0006-43ae-996c-995fff7bed2e`
+##### `end?`: *{`number`}*
+Unix timestamp. Default is current time.
 
 ---
 ##### `metrics?`: *{`components.MetricName[]`}*
@@ -18,8 +17,9 @@ Available metrics to query over time.
 </Collapsible>
 
 ---
-##### `end?`: *{`number`}*
-Unix timestamp. Default is current time.
+##### `processId`: *{`string`}*
+<br/>
+**Example:** `cbfcddd2-0006-43ae-996c-995fff7bed2e`
 
 ---
 ##### `start?`: *{`number`}*

@@ -8,16 +8,21 @@ System generated unique identifier for an application.
 **Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
-##### `roomId`: *{`string`}*
-Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
-Note: error will be returned if `roomId` is not globally unique.
-<br/>
-**Example:** `2swovpy1fnunu`
+##### `currentAllocation`: *{`components.RoomWithoutAllocationsCurrentAllocation`}*
+<Collapsible content={() => import('/content/types/models/components/room_without_allocations_current_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
 ##### `roomConfig`: *{`string`}*
 <br/>
 **Example:** `{"name":"my-room"}`
+
+---
+##### `roomId`: *{`string`}*
+Unique identifier to a game session or match. Use the default system generated ID or overwrite it with your own.
+Note: error will be returned if `roomId` is not globally unique.
+<br/>
+**Example:** `2swovpy1fnunu`
 
 ---
 ##### `status`: *{`components.RoomStatus`}*
@@ -33,11 +38,6 @@ The allocation status of a room.
 <br/>
 **Example:** `active`
 <Collapsible content={() => import('/content/types/models/components/room_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `currentAllocation`: *{`components.CurrentAllocation`}*
-<Collapsible content={() => import('/content/types/models/components/current_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 

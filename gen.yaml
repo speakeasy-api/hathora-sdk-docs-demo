@@ -7,16 +7,16 @@ management:
 generation:
   comments: {}
   sdkClassName: Hathora-Cloud
-  maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
+  maintainTagBasedOrdering: true
 features:
   docs:
-    core: 1.18.0
+    core: 1.16.0
     deprecations: 0.1.0
-    globalSecurity: 0.1.1
+    globalSecurity: 0.1.0
     globalServerURLs: 0.1.1
     globals: 0.1.0
     methodSecurity: 0.2.0

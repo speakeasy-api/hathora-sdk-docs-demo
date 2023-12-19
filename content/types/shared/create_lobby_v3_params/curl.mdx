@@ -2,6 +2,17 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `region` _enumeration_
+<Collapsible content={() => import('/content/types/shared/region/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `roomConfig` _string_
+Optional configuration parameters for the room. Can be any string including stringified JSON. It is accessible from the room via [`GetRoomInfo()`](https://hathora.dev/api\#tag/RoomV2/operation/GetRoomInfo).
+<br/>
+**Example:** `{"name":"my-room"}`
+
+---
 ##### `visibility` _enumeration_
 Types of lobbies a player can create.
 
@@ -13,17 +24,6 @@ Types of lobbies a player can create.
 <br/>
 **Example:** `private`
 <Collapsible content={() => import('/content/types/shared/lobby_visibility/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `roomConfig` _string_
-Optional configuration parameters for the room. Can be any string including stringified JSON. It is accessible from the room via [`GetRoomInfo()`](https://hathora.dev/api\#tag/RoomV2/operation/GetRoomInfo).
-<br/>
-**Example:** `{"name":"my-room"}`
-
----
-##### `region` _enumeration_
-<Collapsible content={() => import('/content/types/shared/region/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 

@@ -2,14 +2,52 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `env` _array_
-The environment variable that our process will have access to at runtime.
+##### `additionalContainerPorts` _array_
+Additional ports your server listens on.
+<br/>
+**Example:** `{"transportType":"tcp","port":4000,"name":"debug"}`
 
 ---
-##### `roomsPerProcess` _integer (32-bit)_
-Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
+##### `appId` _string_
+System generated unique identifier for an application.
 <br/>
-**Example:** `3`
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+
+---
+##### `buildId` _integer (32-bit)_
+System generated id for a build. Increments by 1.
+<br/>
+**Example:** `1`
+
+---
+##### `containerPort` _number_
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+
+---
+##### `createdAt` _date-time_
+When the deployment was created.
+
+---
+##### `createdBy` _string_
+Email address for the user that created the deployment.
+<br/>
+**Example:** `dev@hathora.dev`
+
+---
+##### `defaultContainerPort` _object_
+A container port object represents the transport configruations for how your server will listen.
+<Collapsible content={() => import('/content/types/shared/container_port/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `deploymentId` _integer (32-bit)_
+System generated id for a deployment. Increments by 1.
+<br/>
+**Example:** `1`
+
+---
+##### `env` _array_
+The environment variable that our process will have access to at runtime.
 
 ---
 ##### `planName` _enumeration_
@@ -28,36 +66,10 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 </Collapsible>
 
 ---
-##### `additionalContainerPorts` _array_
-Additional ports your server listens on.
+##### `requestedCPU` _number_
+The number of cores allocated to your process.
 <br/>
-**Example:** `{"transportType":"tcp","port":4000,"name":"debug"}`
-
----
-##### `defaultContainerPort` _object_
-A container port object represents the transport configruations for how your server will listen.
-<Collapsible content={() => import('/content/types/shared/container_port/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `transportType` _enumeration_
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-<Collapsible content={() => import('/content/types/shared/deployment_transport_type/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `containerPort` _number_
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-
----
-##### `createdAt` _date-time_
-When the deployment was created.
-
----
-##### `createdBy` _string_
-Email address for the user that created the deployment.
-<br/>
-**Example:** `dev@hathora.dev`
+**Example:** `0.5`
 
 ---
 ##### `requestedMemoryMB` _number_
@@ -66,27 +78,15 @@ The amount of memory allocated to your process.
 **Example:** `1024`
 
 ---
-##### `requestedCPU` _number_
-The number of cores allocated to your process.
+##### `roomsPerProcess` _integer (32-bit)_
+Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#room) can be scheduled in a process.
 <br/>
-**Example:** `0.5`
+**Example:** `3`
 
 ---
-##### `deploymentId` _integer (32-bit)_
-System generated id for a deployment. Increments by 1.
-<br/>
-**Example:** `1`
-
----
-##### `buildId` _integer (32-bit)_
-System generated id for a build. Increments by 1.
-<br/>
-**Example:** `1`
-
----
-##### `appId` _string_
-System generated unique identifier for an application.
-<br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+##### `transportType` _enumeration_
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+<Collapsible content={() => import('/content/types/shared/deployment_transport_type/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

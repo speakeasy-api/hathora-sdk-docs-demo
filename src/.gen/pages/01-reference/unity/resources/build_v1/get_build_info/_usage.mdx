@@ -1,0 +1,44 @@
+
+<CH.Code>
+```csharp GetBuildInfo.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetBuildInfoRequest req = new GetBuildInfoRequest() {
+    BuildId = 1,
+};
+
+using(var res = await sdk.BuildV1.GetBuildInfoAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "buildId": 1,
+    "buildTag": "0.1.14-14c793",
+    "createdAt": "2023-10-11T12:40:46.277Z",
+    "createdBy": "dev@hathora.dev",
+    "deletedAt": "2023-07-05T12:09:00.162Z",
+    "finishedAt": "2021-03-19T18:49:39.442Z",
+    "imageSize": 3373.96,
+    "regionalContainerTags": [
+      {
+        "containerTag": "string"
+      }
+    ],
+    "startedAt": "2022-12-11T17:57:24.897Z"
+  }
+```
+</CH.Code>

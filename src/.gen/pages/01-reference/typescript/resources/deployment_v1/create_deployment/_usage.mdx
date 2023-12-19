@@ -1,0 +1,70 @@
+
+<CH.Code>
+```typescript CreateDeployment.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { ContainerPort, DeploymentConfig, DeploymentConfigEnv, PlanName, TransportType } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { CreateDeploymentRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const deploymentConfig: DeploymentConfig = {
+  additionalContainerPorts: [
+    {
+      name: "default",
+      port: 8000,
+      transportType: TransportType.Udp,
+    },
+  ],
+  containerPort: 4000,
+  env: [
+    {
+      name: "EULA",
+      value: "TRUE",
+    },
+  ],
+  planName: PlanName.Tiny,
+  roomsPerProcess: 3,
+  transportType: TransportType.Udp,
+};
+const buildId: number = 1;
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+
+  const res = await sdk.deploymentV1.createDeployment(deploymentConfig, buildId, appId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "additionalContainerPorts": [],
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "buildId": 1,
+    "containerPort": 9786.19,
+    "createdAt": "2022-06-03T14:25:09.450Z",
+    "createdBy": "dev@hathora.dev",
+    "defaultContainerPort": {
+        "name": "default",
+        "port": 8000
+      },
+    "deploymentId": 1,
+    "env": [
+        {
+          "name": "EULA",
+          "value": "TRUE"
+        }
+      ],
+    "requestedCPU": 0.5,
+    "requestedMemoryMB": 1024,
+    "roomsPerProcess": 3
+  }
+```
+</CH.Code>

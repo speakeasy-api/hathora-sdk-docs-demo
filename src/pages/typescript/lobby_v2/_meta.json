@@ -1,0 +1,9 @@
+{
+  "create_lobby_deprecated": "Create Lobby Deprecated",
+  "create_local_lobby": "Create Local Lobby",
+  "create_private_lobby": "Create Private Lobby",
+  "create_public_lobby": "Create Public Lobby",
+  "get_lobby_info": "Get Lobby Info",
+  "list_active_public_lobbies_deprecated_v2": "List Active Public Lobbies Deprecated V2",
+  "set_lobby_state": "Set Lobby State"
+}

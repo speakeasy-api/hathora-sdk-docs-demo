@@ -1,0 +1,55 @@
+
+<CH.Code>
+```csharp GetProcessInfo.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetProcessInfoRequest req = new GetProcessInfoRequest() {
+    ProcessId = "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+};
+
+using(var res = await sdk.ProcessesV1.GetProcessInfoAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "activeConnections": 10,
+    "activeConnectionsUpdatedAt": "2021-03-07T22:43:30.934Z",
+    "additionalExposedPorts": [],
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "deploymentId": 1,
+    "draining": false,
+    "egressedBytes": 435,
+    "exposedPort": {
+        "host": "string",
+        "name": "string",
+        "port": 9698.1
+      },
+    "host": "string",
+    "idleSince": "2022-12-17T04:31:12.166Z",
+    "port": 6706.38,
+    "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+    "roomSlotsAvailable": 2103.82,
+    "roomSlotsAvailableUpdatedAt": "2022-01-28T04:14:20.518Z",
+    "roomsAllocated": 1,
+    "roomsAllocatedUpdatedAt": "2021-05-22T04:10:59.234Z",
+    "roomsPerProcess": 3,
+    "startedAt": "2023-04-03T00:01:54.226Z",
+    "startingAt": "2021-12-12T09:27:25.304Z",
+    "stoppingAt": "2022-10-28T13:47:23.716Z",
+    "terminatedAt": "2022-02-03T06:19:08.851Z"
+  }
+```
+</CH.Code>

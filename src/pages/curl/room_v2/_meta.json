@@ -1,0 +1,10 @@
+{
+  "create_room": "Create Room",
+  "destroy_room": "Destroy Room",
+  "get_active_rooms_for_process": "Get Active Rooms For Process",
+  "get_connection_info": "Get Connection Info",
+  "get_inactive_rooms_for_process": "Get Inactive Rooms For Process",
+  "get_room_info": "Get Room Info",
+  "suspend_room": "Suspend Room",
+  "update_room_config": "Update Room Config"
+}

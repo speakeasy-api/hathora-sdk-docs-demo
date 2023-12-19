@@ -2,6 +2,11 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `apiError` _object (optional)_
+<Collapsible content={() => import('/content/types/shared/api_error/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### `contentType` _string_
 HTTP response content type for this operation
 
@@ -16,10 +21,5 @@ Raw HTTP response; suitable for custom response parsing
 ---
 ##### `classes` _array (optional)_
 Ok
-
----
-##### `apiError` _object (optional)_
-<Collapsible content={() => import('/content/types/shared/api_error/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
 
 

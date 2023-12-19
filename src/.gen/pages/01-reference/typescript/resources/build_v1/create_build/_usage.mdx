@@ -1,0 +1,47 @@
+
+<CH.Code>
+```typescript CreateBuild.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { CreateBuildParams } from "@hathora/cloud-sdk-typescript/dist/models/components";
+import { CreateBuildRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const createBuildParams: CreateBuildParams = {
+  buildTag: "0.1.14-14c793",
+};
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+
+  const res = await sdk.buildV1.createBuild(createBuildParams, appId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "buildId": 1,
+    "buildTag": "0.1.14-14c793",
+    "createdAt": "2022-06-08T01:02:20.883Z",
+    "createdBy": "dev@hathora.dev",
+    "deletedAt": "2023-05-17T22:32:01.963Z",
+    "finishedAt": "2023-06-09T07:47:38.874Z",
+    "imageSize": 5288.95,
+    "regionalContainerTags": [
+      {
+        "containerTag": "string"
+      }
+    ],
+    "startedAt": "2022-09-15T00:12:40.088Z"
+  }
+```
+</CH.Code>

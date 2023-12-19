@@ -2,26 +2,26 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `status` _enumeration_
-<Collapsible content={() => import('/content/types/shared/status/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
 ##### `amountDue` _number_
-
----
-##### `pdfUrl` _string_
 
 ---
 ##### `dueDate` _date-time_
 
 ---
-##### `year` _number_
+##### `id` _string_
 
 ---
 ##### `month` _number_
 
 ---
-##### `id` _string_
+##### `pdfUrl` _string_
+
+---
+##### `status` _enumeration_
+<Collapsible content={() => import('/content/types/shared/invoice_status/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `year` _number_
 
 

@@ -6,17 +6,17 @@ import Labels from "/src/lib/labels";
 HTTP response content type for this operation
 
 ---
-##### `statusCode`: *{`number`}*
-HTTP response status code for this operation
-
----
-##### `rawResponse`: [*{ `Response` }*](https://developer.mozilla.org/en-US/docs/Web/API/Response)
-Raw HTTP response; suitable for custom response parsing
-
----
 ##### `lobbyV3?`: *{`components.LobbyV3`}*
 Ok
 <Collapsible content={() => import('/content/types/models/components/lobby_v3/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
+
+---
+##### `statusCode`: *{`number`}*
+HTTP response status code for this operation
+
+---
+##### `rawResponse`: [*{ `AxiosResponse` }*](https://axios-http.com/docs/res_schema)
+Raw HTTP response; suitable for custom response parsing
 
 

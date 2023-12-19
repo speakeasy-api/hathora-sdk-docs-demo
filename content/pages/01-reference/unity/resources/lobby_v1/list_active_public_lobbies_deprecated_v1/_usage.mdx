@@ -1,0 +1,38 @@
+
+<CH.Code>
+```csharp ListActivePublicLobbiesDeprecatedV1.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+ListActivePublicLobbiesDeprecatedV1Request req = new ListActivePublicLobbiesDeprecatedV1Request() {};
+
+using(var res = await sdk.LobbyV1.ListActivePublicLobbiesDeprecatedV1Async(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  [
+    {
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+      "createdAt": "2021-06-06T23:19:27.634Z",
+      "createdBy": "dev@hathora.dev",
+      "initialConfig": {},
+      "local": false,
+      "roomId": "2swovpy1fnunu",
+      "shortCode": "LFG4",
+      "state": {}
+    }
+  ]
+```
+</CH.Code>

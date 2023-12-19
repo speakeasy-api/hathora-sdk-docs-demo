@@ -1,0 +1,21 @@
+import GetProcessInfo from "./get_process_info/get_process_info.mdx";
+import GetRunningProcesses from "./get_running_processes/get_running_processes.mdx";
+import GetStoppedProcesses from "./get_stopped_processes/get_stopped_processes.mdx";
+
+## Processes V1
+Operations to get data on active and stopped [processes](https://hathora.dev/docs/concepts/hathora\-entities\#process).
+
+### Available Operations
+
+* [Get Process Info](/typescript/processes_v1/get_process_info) - Get details for a [process](https://hathora.dev/docs/concepts/hathora-entities#process).
+* [Get Running Processes](/typescript/processes_v1/get_running_processes) - Retrieve 10 most recently started [process](https://hathora.dev/docs/concepts/hathora-entities#process) objects for an [application](https://hathora.dev/docs/concepts/hathora-entities#application). Filter the array by optionally passing in a `region`.
+* [Get Stopped Processes](/typescript/processes_v1/get_stopped_processes) - Retrieve 10 most recently stopped [process](https://hathora.dev/docs/concepts/hathora-entities#process) objects for an [application](https://hathora.dev/docs/concepts/hathora-entities#application). Filter the array by optionally passing in a `region`.
+
+---
+<GetProcessInfo />
+
+---
+<GetRunningProcesses />
+
+---
+<GetStoppedProcesses />

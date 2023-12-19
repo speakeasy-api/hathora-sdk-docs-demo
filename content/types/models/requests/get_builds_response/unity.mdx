@@ -2,6 +2,11 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### *{`ApiError`}* `ApiError`
+<Collapsible content={() => import('/content/types/models/components/api_error/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
 ##### *{`string`}* `ContentType`
 HTTP response content type for this operation
 
@@ -17,11 +22,6 @@ Raw HTTP response; suitable for custom response parsing
 ##### *{`List<Build>`}* `Classes`
 Ok
 <Collapsible content={() => import('/content/types/models/components/build/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### *{`ApiError`}* `ApiError`
-<Collapsible content={() => import('/content/types/models/components/api_error/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
 </Collapsible>
 
 

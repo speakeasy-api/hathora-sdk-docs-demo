@@ -2,45 +2,21 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
+##### `appId`: *{`string`}*
+System generated unique identifier for an application.
+<br/>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+
+---
+##### `buildId`: *{`number`}*
+System generated id for a build. Increments by 1.
+<br/>
+**Example:** `1`
+
+---
 ##### `buildTag`: *{`string`}*
 <br/>
 **Example:** `0.1.14-14c793`
-
----
-##### `regionalContainerTags`: *{`components.RegionalContainerTags[]`}*
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-<Collapsible content={() => import('/content/types/models/components/regional_container_tags/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `imageSize`: *{`number`}*
-The size (in bytes) of the Docker image built by Hathora.
-
----
-##### `status`: *{`components.BuildStatus`}*
-Current status of your build.
-
-`created`: a build was created but not yet run
-
-`running`: the build process is actively executing
-
-`succeeded`: the game server artifact was successfully built and stored in the Hathora registries
-
-`failed`: the build process was unsuccessful, most likely due to an error with the `Dockerfile`
-<Collapsible content={() => import('/content/types/models/components/build_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### `deletedAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-When the build was deleted.
-
----
-##### `finishedAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) finished executing.
-
----
-##### `startedAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
-When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) is called.
 
 ---
 ##### `createdAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
@@ -53,15 +29,39 @@ Email address for the user that created the build.
 **Example:** `dev@hathora.dev`
 
 ---
-##### `buildId`: *{`number`}*
-System generated id for a build. Increments by 1.
-<br/>
-**Example:** `1`
+##### `deletedAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+When the build was deleted.
 
 ---
-##### `appId`: *{`string`}*
-System generated unique identifier for an application.
-<br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+##### `finishedAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) finished executing.
+
+---
+##### `imageSize`: *{`number`}*
+The size (in bytes) of the Docker image built by Hathora.
+
+---
+##### `regionalContainerTags`: *{`components.RegionalContainerTags[]`}*
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+<Collapsible content={() => import('/content/types/models/components/regional_container_tags/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### `startedAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) is called.
+
+---
+##### `status`: *{`components.Status`}*
+Current status of your build.
+
+`created`: a build was created but not yet run
+
+`running`: the build process is actively executing
+
+`succeeded`: the game server artifact was successfully built and stored in the Hathora registries
+
+`failed`: the build process was unsuccessful, most likely due to an error with the `Dockerfile`
+<Collapsible content={() => import('/content/types/models/components/status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

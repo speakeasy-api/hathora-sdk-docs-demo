@@ -1,0 +1,39 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/processes/v1/app-af469a92-5b45-4565-b3c4-b79878de67d2/info/cbfcddd2-0006-43ae-996c-995fff7bed2e \
+--header 'Accept: application/json' \
+--header 'Authorization: '
+```
+---
+
+```json Example Response
+  {
+    "activeConnections": 10,
+    "activeConnectionsUpdatedAt": "2022-12-17T04:31:12.166Z",
+    "additionalExposedPorts": [],
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "deploymentId": 1,
+    "draining": false,
+    "egressedBytes": 435,
+    "exposedPort": {
+        "host": "string",
+        "name": "string",
+        "port": 6706.38
+      },
+    "host": "string",
+    "idleSince": "2021-08-19T08:51:13.394Z",
+    "port": 3581.52,
+    "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+    "roomSlotsAvailable": 7506.86,
+    "roomSlotsAvailableUpdatedAt": "2021-12-12T09:27:25.304Z",
+    "roomsAllocated": 1,
+    "roomsAllocatedUpdatedAt": "2022-10-28T13:47:23.716Z",
+    "roomsPerProcess": 3,
+    "startedAt": "2022-02-03T06:19:08.851Z",
+    "startingAt": "2021-12-22T22:14:28.104Z",
+    "stoppingAt": "2022-09-17T08:46:16.579Z",
+    "terminatedAt": "2021-02-12T01:49:12.658Z"
+  }
+```
+</CH.Code>

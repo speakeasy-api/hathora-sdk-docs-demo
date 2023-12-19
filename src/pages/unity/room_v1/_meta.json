@@ -1,0 +1,9 @@
+{
+  "create_room_deprecated": "Create Room Deprecated",
+  "destroy_room_deprecated": "Destroy Room Deprecated",
+  "get_active_rooms_for_process_deprecated": "Get Active Rooms For Process Deprecated",
+  "get_connection_info_deprecated": "Get Connection Info Deprecated",
+  "get_inactive_rooms_for_process_deprecated": "Get Inactive Rooms For Process Deprecated",
+  "get_room_info_deprecated": "Get Room Info Deprecated",
+  "suspend_room_deprecated": "Suspend Room Deprecated"
+}

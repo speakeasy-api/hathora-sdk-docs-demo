@@ -1,0 +1,6 @@
+{
+  "get_balance": "Get Balance",
+  "get_invoices": "Get Invoices",
+  "get_payment_method": "Get Payment Method",
+  "init_stripe_customer_portal_url": "Init Stripe Customer Portal Url"
+}

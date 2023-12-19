@@ -2,21 +2,10 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### *{`string`}* `ShortCode`
+##### *{`string`}* `AppId`
+System generated unique identifier for an application.
 <br/>
-**Example:** `LFG4`
-
----
-##### *{`State`}* `State`
-JSON blob to store metadata for a room. Must be smaller than 1MB.
-<Collapsible content={() => import('/content/types/models/components/state/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
-
----
-##### *{`LobbyInitialConfig`}* `InitialConfig`
-User input to initialize the game state. Object must be smaller than 64KB.
-<Collapsible content={() => import('/content/types/models/components/lobby_initial_config/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
 
 ---
 ##### [*{ `DateTime` }*](https://learn.microsoft.com/en-us/dotnet/api/system.datetime?view=net-5.0) `CreatedAt`
@@ -29,22 +18,14 @@ Email address for the user that created the lobby.
 **Example:** `dev@hathora.dev`
 
 ---
-##### *{`bool`}* `Local`
-: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
+##### *{`LobbyInitialConfig`}* `InitialConfig`
+User input to initialize the game state. Object must be smaller than 64KB.
+<Collapsible content={() => import('/content/types/models/components/lobby_initial_config/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 ---
-##### *{`LobbyVisibility`}* `Visibility`
-Types of lobbies a player can create.
-
-`private`: the player who created the room must share the roomId with their friends
-
-`public`: visible in the public lobby list, anyone can join
-
-`local`: for testing with a server running locally
-<br/>
-**Example:** `private`
-<Collapsible content={() => import('/content/types/models/components/lobby_visibility/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+##### *{`bool`}* `Local`
+: warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ---
 ##### *{`Region`}* `Region`
@@ -59,9 +40,28 @@ Note: error will be returned if `roomId` is not globally unique.
 **Example:** `2swovpy1fnunu`
 
 ---
-##### *{`string`}* `AppId`
-System generated unique identifier for an application.
+##### *{`string`}* `ShortCode`
 <br/>
-**Example:** `app-af469a92-5b45-4565-b3c4-b79878de67d2`
+**Example:** `LFG4`
+
+---
+##### *{`State`}* `State`
+JSON blob to store metadata for a room. Must be smaller than 1MB.
+<Collapsible content={() => import('/content/types/models/components/state/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
+
+---
+##### *{`LobbyVisibility`}* `Visibility`
+Types of lobbies a player can create.
+
+`private`: the player who created the room must share the roomId with their friends
+
+`public`: visible in the public lobby list, anyone can join
+
+`local`: for testing with a server running locally
+<br/>
+**Example:** `private`
+<Collapsible content={() => import('/content/types/models/components/lobby_visibility/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

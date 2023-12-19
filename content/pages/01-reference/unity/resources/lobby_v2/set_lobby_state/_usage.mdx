@@ -1,0 +1,41 @@
+
+<CH.Code>
+```csharp SetLobbyState.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+SetLobbyStateRequest req = new SetLobbyStateRequest() {
+    SetLobbyStateParams = new SetLobbyStateParams() {
+        State = new SetLobbyStateParamsState() {},
+    },
+    RoomId = "2swovpy1fnunu",
+};
+
+using(var res = await sdk.LobbyV2.SetLobbyStateAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "createdAt": "2022-09-15T10:26:38.983Z",
+    "createdBy": "dev@hathora.dev",
+    "initialConfig": {},
+    "local": false,
+    "roomId": "2swovpy1fnunu",
+    "shortCode": "LFG4",
+    "state": {}
+  }
+```
+</CH.Code>

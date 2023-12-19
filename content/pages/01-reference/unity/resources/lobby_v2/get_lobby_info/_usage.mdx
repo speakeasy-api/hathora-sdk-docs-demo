@@ -1,0 +1,38 @@
+
+<CH.Code>
+```csharp GetLobbyInfo.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetLobbyInfoRequest req = new GetLobbyInfoRequest() {
+    RoomId = "2swovpy1fnunu",
+};
+
+using(var res = await sdk.LobbyV2.GetLobbyInfoAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "createdAt": "2023-04-28T18:51:40.613Z",
+    "createdBy": "dev@hathora.dev",
+    "initialConfig": {},
+    "local": false,
+    "roomId": "2swovpy1fnunu",
+    "shortCode": "LFG4",
+    "state": {}
+  }
+```
+</CH.Code>

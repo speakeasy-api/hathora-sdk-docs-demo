@@ -2,10 +2,10 @@
 import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
-##### `transportType`: *{`components.TransportType`}*
-Transport type specifies the underlying communication protocol to the exposed port.
-<Collapsible content={() => import('/content/types/models/components/transport_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+##### `name`: *{`string`}*
+Readable name for the port.
+<br/>
+**Example:** `default`
 
 ---
 ##### `port`: *{`number`}*
@@ -13,9 +13,9 @@ Transport type specifies the underlying communication protocol to the exposed po
 **Example:** `8000`
 
 ---
-##### `name`: *{`string`}*
-Readable name for the port.
-<br/>
-**Example:** `default`
+##### `transportType`: *{`components.TransportType`}*
+Transport type specifies the underlying communication protocol to the exposed port.
+<Collapsible content={() => import('/content/types/models/components/transport_type/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
+</Collapsible>
 
 

@@ -1,0 +1,50 @@
+
+<CH.Code>
+```typescript GetDeploymentInfo.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import { GetDeploymentInfoRequest } from "@hathora/cloud-sdk-typescript/dist/models/operations";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+const deploymentId: number = 1;
+const appId: string = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+
+  const res = await sdk.deploymentV1.getDeploymentInfo(deploymentId, appId);
+
+  if (res.statusCode == 200) {
+    // handle response
+  }
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "additionalContainerPorts": [],
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    "buildId": 1,
+    "containerPort": 4614.79,
+    "createdAt": "2022-07-24T22:08:53.474Z",
+    "createdBy": "dev@hathora.dev",
+    "defaultContainerPort": {
+        "name": "default",
+        "port": 8000
+      },
+    "deploymentId": 1,
+    "env": [
+        {
+          "name": "EULA",
+          "value": "TRUE"
+        }
+      ],
+    "requestedCPU": 0.5,
+    "requestedMemoryMB": 1024,
+    "roomsPerProcess": 3
+  }
+```
+</CH.Code>

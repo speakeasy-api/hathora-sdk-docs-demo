@@ -1,0 +1,21 @@
+import GetLogsForApp from "./get_logs_for_app/get_logs_for_app.mdx";
+import GetLogsForDeployment from "./get_logs_for_deployment/get_logs_for_deployment.mdx";
+import GetLogsForProcess from "./get_logs_for_process/get_logs_for_process.mdx";
+
+## Log V1
+Operations to get logs by [applications](https://hathora.dev/docs/concepts/hathora\-entities\#application), [processes](https://hathora.dev/docs/concepts/hathora\-entities\#process), and [deployments](https://hathora.dev/docs/concepts/hathora\-entities\#deployment). We store 20GB of logs data.
+
+### Available Operations
+
+* [Get Logs For App](/unity/log_v1/get_logs_for_app) - Returns a stream of logs for an [application](https://hathora.dev/docs/concepts/hathora-entities#application) using `appId`.
+* [Get Logs For Deployment](/unity/log_v1/get_logs_for_deployment) - Returns a stream of logs for a [deployment](https://hathora.dev/docs/concepts/hathora-entities#deployment) using `appId` and `deploymentId`.
+* [Get Logs For Process](/unity/log_v1/get_logs_for_process) - Returns a stream of logs for a [process](https://hathora.dev/docs/concepts/hathora-entities#process) using `appId` and `processId`.
+
+---
+<GetLogsForApp />
+
+---
+<GetLogsForDeployment />
+
+---
+<GetLogsForProcess />
