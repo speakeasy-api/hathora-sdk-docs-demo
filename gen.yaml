@@ -33,6 +33,7 @@ docs:
   inputModelSuffix: input
   outputModelSuffix: output
   packageName: hathora-sdk-docs
+  maintainTagBasedOrdering: true
 typescript:
   version: 1.22.2
   author: Hathora
