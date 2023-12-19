@@ -22,6 +22,7 @@ features:
     methodSecurity: 0.2.0
 docs:
   version: 0.7.0
+  maintainTagBasedOrdering: true
   imports:
     option: openapi
     paths:
@@ -33,7 +34,6 @@ docs:
   inputModelSuffix: input
   outputModelSuffix: output
   packageName: hathora-sdk-docs
-  maintainTagBasedOrdering: true
 typescript:
   version: 1.22.2
   author: Hathora
