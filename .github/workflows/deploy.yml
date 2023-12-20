@@ -40,7 +40,7 @@ jobs:
         uses: google-github-actions/auth@v0
         with:
           token_format: "access_token"
-          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          credentials_json: ${{ secrets.DOCS_REGISTRY_SERVICE_ACCOUNT }}
 
       - name: Echo
         run: |
@@ -56,7 +56,7 @@ jobs:
       
       - name: Extract Docker Metadata
         id: meta
-        uses: docker/metadata-action@v4.0.0s
+        uses: docker/metadata-action@v4.0.0
         with:
           images: ${{ env.REGISTRY }}/sdk-docs/${{ github.repository }}
           tags: |
@@ -99,7 +99,7 @@ jobs:
       - name: Authenticate with Google Cloud
         uses: google-github-actions/auth@v0
         with:
-          credentials_json: ${{ secrets.GCP_RUN_KEY }}
+          credentials_json: ${{ secrets.DOCS_CLOUD_RUN_SERVICE_ACCOUNT }}
 
       - name: Set Cloud Run Service Name
         run: |
@@ -115,5 +115,5 @@ jobs:
         uses: 'google-github-actions/deploy-cloudrun@v2'
         with:
           service: ${{ env.CLOUD_RUN_SERVICE_NAME }}
-          image: ${{ env.REGISTRY }}/sdk-docs/${{ github.repository }}:${{ env.IMAGE_TAG }}
+          image: ${{ env.REGISTRY }}/sdk-docs/${{ github.repository }}:sha-${{ env.IMAGE_TAG }}
           region: ${{ env.REGION }}
