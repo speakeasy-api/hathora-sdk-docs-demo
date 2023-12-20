@@ -1,0 +1,49 @@
+
+<CH.Code>
+```typescript GetRoomInfo.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+
+  const roomId = "2swovpy1fnunu";
+  const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+  
+  const res = await sdk.roomV2.getRoomInfo(roomId, appId);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "currentAllocation": {
+      "unscheduledAt": "2021-04-16T05:27:57.533Z",
+      "scheduledAt": "2023-12-01T06:42:52.461Z",
+      "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+      "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
+    },
+    "allocations": [
+      {
+        "unscheduledAt": "2023-12-06T05:21:17.086Z",
+        "scheduledAt": "2023-08-20T14:55:27.673Z",
+        "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+        "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
+      }
+    ],
+    "roomConfig": "{\"name\":\"my-room\"}",
+    "roomId": "2swovpy1fnunu",
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+```
+</CH.Code>

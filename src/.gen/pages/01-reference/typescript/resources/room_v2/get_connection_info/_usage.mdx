@@ -1,0 +1,39 @@
+
+<CH.Code>
+```typescript GetConnectionInfo.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+
+  const roomId = "2swovpy1fnunu";
+  const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
+  
+  const res = await sdk.roomV2.getConnectionInfo(roomId, appId);
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  {
+    "additionalExposedPorts": [],
+    "exposedPort": {
+        "port": 4511.59,
+        "host": "string",
+        "name": "string"
+      },
+    "roomId": "2swovpy1fnunu"
+  }
+```
+</CH.Code>

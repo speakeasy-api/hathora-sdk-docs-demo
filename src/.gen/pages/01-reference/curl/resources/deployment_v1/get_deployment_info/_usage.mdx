@@ -1,0 +1,34 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/deployments/v1/app-af469a92-5b45-4565-b3c4-b79878de67d2/info/1 \
+--header 'Accept: application/json' \
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+```
+---
+
+```json Example Response
+  {
+    "env": [
+      {
+        "value": "TRUE",
+        "name": "EULA"
+      }
+    ],
+    "roomsPerProcess": 3,
+    "additionalContainerPorts": [],
+    "defaultContainerPort": {
+        "port": 8000,
+        "name": "default"
+      },
+    "containerPort": 8700.88,
+    "createdAt": "2023-12-08T14:05:24.185Z",
+    "createdBy": "dev@hathora.dev",
+    "requestedMemoryMB": 1024,
+    "requestedCPU": 0.5,
+    "deploymentId": 1,
+    "buildId": 1,
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+```
+</CH.Code>

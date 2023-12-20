@@ -1,0 +1,55 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/processes/v1/app-af469a92-5b45-4565-b3c4-b79878de67d2/list/running \
+--header 'Accept: application/json' \
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+```
+---
+
+```json Example Response
+  [
+    {
+      "egressedBytes": 435,
+      "idleSince": "2022-09-15T10:26:38.983Z",
+      "activeConnectionsUpdatedAt": "2021-05-29T01:32:00.936Z",
+      "activeConnections": 10,
+      "roomsAllocatedUpdatedAt": "2021-01-21T13:47:45.211Z",
+      "roomsAllocated": 1,
+      "roomSlotsAvailableUpdatedAt": "2021-12-21T22:25:32.118Z",
+      "roomSlotsAvailable": 6176.36,
+      "draining": false,
+      "terminatedAt": "2021-06-13T21:27:19.513Z",
+      "stoppingAt": "2022-11-02T05:52:32.111Z",
+      "startedAt": "2021-09-01T10:36:21.641Z",
+      "startingAt": "2022-11-07T13:01:31.745Z",
+      "roomsPerProcess": 3,
+      "additionalExposedPorts": [],
+      "exposedPort": {
+          "port": 9437.49,
+          "host": "string",
+          "name": "string"
+        },
+      "port": 9025.99,
+      "host": "string",
+      "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+      "deploymentId": 1,
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+      "rooms": [
+          {
+            "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+            "roomId": "2swovpy1fnunu",
+            "roomConfig": "{\"name\":\"my-room\"}",
+            "currentAllocation": {
+              "unscheduledAt": "2022-05-08T16:41:08.612Z",
+              "scheduledAt": "2022-01-29T15:52:03.598Z",
+              "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+              "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
+            }
+          }
+        ],
+      "totalRooms": 6130.64
+    }
+  ]
+```
+</CH.Code>

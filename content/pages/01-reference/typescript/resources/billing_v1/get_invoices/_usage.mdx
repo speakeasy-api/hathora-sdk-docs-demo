@@ -1,0 +1,37 @@
+
+<CH.Code>
+```typescript GetInvoices.ts
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+async function run() {
+  const sdk = new HathoraCloud({
+    hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+  });
+
+  const res = await sdk.billingV1.getInvoices();
+
+  if (res?.statusCode !== 200) {
+    throw new Error("Unexpected status code: " + res?.statusCode || "-");
+  }
+  
+  // handle response
+}
+
+run();
+```
+---
+
+```json Example Response
+  [
+    {
+      "amountDue": 567.13,
+      "pdfUrl": "string",
+      "dueDate": "2023-11-22T05:03:26.782Z",
+      "year": 2726.56,
+      "month": 3834.41,
+      "id": "string"
+    }
+  ]
+```
+</CH.Code>

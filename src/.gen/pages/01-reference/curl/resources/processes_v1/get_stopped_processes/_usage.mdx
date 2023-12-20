@@ -1,0 +1,41 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/processes/v1/app-af469a92-5b45-4565-b3c4-b79878de67d2/list/stopped \
+--header 'Accept: application/json' \
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+```
+---
+
+```json Example Response
+  [
+    {
+      "egressedBytes": 435,
+      "idleSince": "2022-04-24T13:11:58.978Z",
+      "activeConnectionsUpdatedAt": "2023-09-16T01:43:14.288Z",
+      "activeConnections": 10,
+      "roomsAllocatedUpdatedAt": "2023-02-03T21:44:52.137Z",
+      "roomsAllocated": 1,
+      "roomSlotsAvailableUpdatedAt": "2021-04-19T17:05:15.498Z",
+      "roomSlotsAvailable": 602.25,
+      "draining": false,
+      "terminatedAt": "2023-11-28T22:34:56.363Z",
+      "stoppingAt": "2023-01-01T02:37:45.021Z",
+      "startedAt": "2022-12-17T04:31:12.166Z",
+      "startingAt": "2023-01-05T08:21:47.955Z",
+      "roomsPerProcess": 3,
+      "additionalExposedPorts": [],
+      "exposedPort": {
+          "port": 2103.82,
+          "host": "string",
+          "name": "string"
+        },
+      "port": 3581.52,
+      "host": "string",
+      "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+      "deploymentId": 1,
+      "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+    }
+  ]
+```
+</CH.Code>

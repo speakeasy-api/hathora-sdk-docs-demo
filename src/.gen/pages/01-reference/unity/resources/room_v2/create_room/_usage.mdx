@@ -1,0 +1,41 @@
+
+<CH.Code>
+```csharp CreateRoom.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "<YOUR_BEARER_TOKEN_HERE>",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+CreateRoomRequest req = new CreateRoomRequest() {
+    RoomId = "2swovpy1fnunu",
+    CreateRoomParams = new CreateRoomParams() {
+        RoomConfig = "{\"name\":\"my-room\"}",
+        Region = Region.SaoPaulo,
+    },
+};
+
+using(var res = await sdk.RoomV2.CreateRoomAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "additionalExposedPorts": [],
+    "exposedPort": {
+        "port": 6736.6,
+        "host": "string",
+        "name": "string"
+      },
+    "roomId": "2swovpy1fnunu"
+  }
+```
+</CH.Code>

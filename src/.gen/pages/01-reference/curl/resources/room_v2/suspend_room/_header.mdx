@@ -1,0 +1,7 @@
+import OperationInfo from '/src/components/OperationInfo';
+
+## Suspend Room
+
+<OperationInfo method='post' path='/rooms/v2/{appId}/suspend/{roomId}' />
+
+Suspend a [room](https://hathora.dev/docs/concepts/hathora-entities#room). The room is unallocated from the process but can be rescheduled later using the same `roomId`.

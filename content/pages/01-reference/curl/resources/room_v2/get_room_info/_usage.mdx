@@ -1,0 +1,31 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/rooms/v2/app-af469a92-5b45-4565-b3c4-b79878de67d2/info/2swovpy1fnunu \
+--header 'Accept: application/json' \
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+```
+---
+
+```json Example Response
+  {
+    "currentAllocation": {
+      "unscheduledAt": "2021-06-26T15:12:50.232Z",
+      "scheduledAt": "2023-12-26T20:28:21.303Z",
+      "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+      "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
+    },
+    "allocations": [
+      {
+        "unscheduledAt": "2022-12-17T03:41:12.134Z",
+        "scheduledAt": "2022-09-30T03:01:36.230Z",
+        "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+        "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
+      }
+    ],
+    "roomConfig": "{\"name\":\"my-room\"}",
+    "roomId": "2swovpy1fnunu",
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+```
+</CH.Code>

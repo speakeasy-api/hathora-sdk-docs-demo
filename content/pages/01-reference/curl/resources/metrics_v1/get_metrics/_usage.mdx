@@ -1,0 +1,44 @@
+
+<CH.Code>
+```bash Example Request
+curl https://api.hathora.dev/metrics/v1/app-af469a92-5b45-4565-b3c4-b79878de67d2/process/cbfcddd2-0006-43ae-996c-995fff7bed2e?end=5373.73&metrics=null&metrics=null&start=9446.69&step=758616 \
+--header 'Accept: application/json' \
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+```
+---
+
+```json Example Response
+  {
+    "cpu": [
+      {
+        "value": 5218.48,
+        "timestamp": 1059.07
+      }
+    ],
+    "memory": [
+      {
+        "value": 4146.62,
+        "timestamp": 4736
+      }
+    ],
+    "rate_egress": [
+      {
+        "value": 2645.55,
+        "timestamp": 1863.32
+      }
+    ],
+    "total_egress": [
+      {
+        "value": 7742.34,
+        "timestamp": 7369.18
+      }
+    ],
+    "active_connections": [
+      {
+        "value": 4561.5,
+        "timestamp": 2165.5
+      }
+    ]
+  }
+```
+</CH.Code>

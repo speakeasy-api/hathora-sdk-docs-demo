@@ -1,0 +1,47 @@
+
+<CH.Code>
+```csharp GetRoomInfoDeprecated.cs
+using HathoraUnitySDK;
+using HathoraUnitySDK.Models.Components;
+using HathoraUnitySDK.Models.Requests;
+
+var sdk = new HathoraCloud(
+    security: new Security() {
+        HathoraDevToken = "<YOUR_BEARER_TOKEN_HERE>",
+    },
+    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+
+GetRoomInfoDeprecatedRequest req = new GetRoomInfoDeprecatedRequest() {
+    RoomId = "2swovpy1fnunu",
+};
+
+using(var res = await sdk.RoomV1.GetRoomInfoDeprecatedAsync(req))
+{
+
+    // handle response
+}
+```
+---
+
+```json Example Response
+  {
+    "currentAllocation": {
+      "unscheduledAt": "2021-08-04T06:11:03.602Z",
+      "scheduledAt": "2023-11-06T18:43:38.031Z",
+      "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+      "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
+    },
+    "allocations": [
+      {
+        "unscheduledAt": "2022-02-08T18:05:50.479Z",
+        "scheduledAt": "2022-12-27T11:12:21.933Z",
+        "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
+        "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
+      }
+    ],
+    "roomConfig": "{\"name\":\"my-room\"}",
+    "roomId": "2swovpy1fnunu",
+    "appId": "app-af469a92-5b45-4565-b3c4-b79878de67d2"
+  }
+```
+</CH.Code>
