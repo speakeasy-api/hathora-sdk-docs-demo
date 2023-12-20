@@ -14,7 +14,7 @@ generation:
     nameResolutionDec2023: false
 features:
   docs:
-    core: 1.18.0
+    core: 1.19.0
     deprecations: 0.1.0
     globalSecurity: 0.1.1
     globalServerURLs: 0.1.1
@@ -22,7 +22,6 @@ features:
     methodSecurity: 0.2.0
 docs:
   version: 0.7.0
-  maintainTagBasedOrdering: true
   imports:
     option: openapi
     paths:
@@ -32,6 +31,7 @@ docs:
       shared: shared
       webhooks: webhooks
   inputModelSuffix: input
+  maintainTagBasedOrdering: true
   outputModelSuffix: output
   packageName: hathora-sdk-docs
 typescript:
