@@ -11,6 +11,7 @@ content/pages/01-reference/typescript/installation/installation.mdx
 content/pages/01-reference/typescript/resources/app_v1/app_v1.mdx
 content/pages/01-reference/typescript/resources/app_v1/create_app/_header.mdx
 content/pages/01-reference/typescript/resources/app_v1/create_app/_parameters.mdx
+content/pages/01-reference/typescript/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
 content/pages/01-reference/typescript/resources/app_v1/create_app/_response.mdx
 content/pages/01-reference/typescript/resources/app_v1/create_app/_usage.mdx
 content/pages/01-reference/typescript/resources/app_v1/create_app/create_app.mdx
@@ -326,6 +327,7 @@ content/pages/01-reference/unity/installation/installation.mdx
 content/pages/01-reference/unity/resources/app_v1/app_v1.mdx
 content/pages/01-reference/unity/resources/app_v1/create_app/_header.mdx
 content/pages/01-reference/unity/resources/app_v1/create_app/_parameters.mdx
+content/pages/01-reference/unity/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
 content/pages/01-reference/unity/resources/app_v1/create_app/_response.mdx
 content/pages/01-reference/unity/resources/app_v1/create_app/_usage.mdx
 content/pages/01-reference/unity/resources/app_v1/create_app/create_app.mdx
@@ -1001,6 +1003,7 @@ content/pages/01-reference/curl/resources/app_v1/get_apps/_response.mdx
 content/pages/01-reference/curl/resources/app_v1/get_apps/_parameters.mdx
 content/pages/01-reference/curl/resources/app_v1/get_apps/_usage.mdx
 content/pages/01-reference/curl/resources/app_v1/get_apps/_header.mdx
+content/pages/01-reference/curl/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
 content/pages/01-reference/curl/resources/app_v1/create_app/create_app.mdx
 content/pages/01-reference/curl/resources/app_v1/create_app/_authentication.mdx
 content/pages/01-reference/curl/resources/app_v1/create_app/_response.mdx
@@ -1677,6 +1680,8 @@ src/.gen/pages/01-reference/typescript/global_parameters/global_parameters_conte
 src/.gen/pages/01-reference/typescript/installation/_snippet.mdx
 src/.gen/pages/01-reference/typescript/installation/installation.mdx
 src/.gen/pages/01-reference/typescript/installation/installation_content.mdx
+src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
+src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_ratelimits/ratelimits_content.mdx
 src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_header.mdx
 src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_parameters.mdx
 src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_response.mdx
@@ -2156,6 +2161,8 @@ src/.gen/pages/01-reference/unity/global_parameters/global_parameters_content.md
 src/.gen/pages/01-reference/unity/installation/_snippet.mdx
 src/.gen/pages/01-reference/unity/installation/installation.mdx
 src/.gen/pages/01-reference/unity/installation/installation_content.mdx
+src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
+src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_ratelimits/ratelimits_content.mdx
 src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_header.mdx
 src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_parameters.mdx
 src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_response.mdx
@@ -2623,6 +2630,8 @@ src/pages/curl/[[...rest]].mdx
 src/.gen/pages/01-reference/curl/client_sdks/_snippet.mdx
 src/.gen/pages/01-reference/curl/client_sdks/client_sdks.mdx
 src/.gen/pages/01-reference/curl/client_sdks/client_sdks_content.mdx
+src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
+src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_ratelimits/ratelimits_content.mdx
 src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_authentication.mdx
 src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_header.mdx
 src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_parameters.mdx
