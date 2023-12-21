@@ -1,0 +1,48 @@
+{/* Start Typescript Errors */}
+All SDK methods return a response object or throw an error. If Error objects are specified in your OpenAPI Spec, the SDK will throw the appropriate Error type.
+
+
+
+Example
+
+```typescript
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+import * as errors from "@hathora/cloud-sdk-typescript/models/errors";
+
+async function run() {
+    const sdk = new HathoraCloud({
+        hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
+        appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    });
+
+    const res = await sdk.appV1
+        .createApp({
+            authConfiguration: {
+                google: {
+                    clientId: "string",
+                },
+                nickname: {},
+                anonymous: {},
+            },
+            appName: "minecraft",
+        })
+        .catch((err) => {
+            if (err instanceof errors.ApiError) {
+                console.error(err); // handle exception
+                return null;
+            } else {
+                throw err;
+            }
+        });
+
+    if (res?.statusCode !== 200) {
+        throw new Error("Unexpected status code: " + res?.statusCode || "-");
+    }
+
+    // handle response
+}
+
+run();
+
+```
+{/* End Typescript Errors */}

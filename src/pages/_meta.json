@@ -1,9 +1,20 @@
 {
-  "*": {
+  "custom": {
+    "title": "Custom Link",
+    "type": "page",
+    "href": "https://www.speakeasyapi.dev/",
+    "newWindow": true
+  },
+  "typescript": {
     "type": "page",
     "display": "hidden"
   },
-  "typescript": "typescript",
-  "unity": "unity",
-  "curl": "curl"
+  "unity": {
+    "type": "page",
+    "display": "hidden"
+  },
+  "curl": {
+    "type": "page",
+    "display": "hidden"
+  }
 }

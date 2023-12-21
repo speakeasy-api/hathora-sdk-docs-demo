@@ -1,17 +1,15 @@
 {
-  "custom": {
-    "title": "Custom Link",
-    "type": "page",
-    "href": "https://www.speakeasyapi.dev/",
-    "newWindow": true
-  },
   "-- guides": {
     "title": "Guides",
     "type": "separator"
   },
   "client_sdks": "Client SDKs",
   "installation": "Installation",
+  "custom_http_client": "Custom Http Client",
+  "security_options": "Security Options",
   "global_parameters": "Global Parameters",
+  "errors": "Errors",
+  "server_options": "Server Options",
   "-- resources": {
     "title": "Resources",
     "type": "separator"
@@ -29,6 +27,6 @@
   "lobby_v1": "Lobby V1",
   "lobby_v2": "Lobby V2",
   "room_v1": "Room V1",
-  "management_v1": "Management V1",
-  "billing_v1": "Billing V1"
+  "billing_v1": "Billing V1",
+  "management_v1": "Management V1"
 }
