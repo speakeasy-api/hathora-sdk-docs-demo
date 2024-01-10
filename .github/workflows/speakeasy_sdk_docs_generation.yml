@@ -24,7 +24,7 @@ jobs:
         - typescript
         - unity
         - curl
-      mode: direct
+      mode: pr
       openapi_docs: |
         - ./openapi.json
       speakeasy_version: latest
