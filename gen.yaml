@@ -1,25 +1,11 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 1479776500b62c5496bb0b8438c267c3
-  docVersion: 0.0.1
-  speakeasyVersion: 1.128.1
-  generationVersion: 2.223.0
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: Hathora-Cloud
   maintainOpenAPIOrder: true
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  docs:
-    core: 1.21.0
-    deprecations: 0.1.0
-    globalSecurity: 0.1.1
-    globalServerURLs: 0.1.1
-    globals: 0.1.0
-    methodSecurity: 0.2.0
 docs:
   version: 0.7.1
   imports:
@@ -32,6 +18,7 @@ docs:
       webhooks: webhooks
   inputModelSuffix: input
   maintainTagBasedOrdering: true
+  maxMethodParams: 4
   outputModelSuffix: output
   packageName: hathora-sdk-docs
   static: true
@@ -49,7 +36,6 @@ typescript:
       shared: models/components
       webhooks: models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/hathora/cloud-sdk-typescript
   maxMethodParams: 3
   outputModelSuffix: output
   packageName: '@hathora/cloud-sdk-typescript'
