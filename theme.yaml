@@ -34,6 +34,10 @@ fonts:
 
 navLinks:
   custom:
-    title: Custom Link
-    href: https://www.speakeasyapi.dev/
+    title: Log In
+    href: https://console.hathora.dev/login
+    new_window: true
+  docs:
+    title: Docs
+    href: https://hathora.dev/docs
     new_window: true
