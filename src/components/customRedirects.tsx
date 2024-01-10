@@ -20,6 +20,21 @@ export const CustomRedirects = () => {
       from: `/${lang}`,
       to: `/${lang}/client_sdks/`,
     })),
+    { from: '#tag/AppV1*', to: '/curl/app_v1' },
+    { from: '#tag/AuthV1*', to: '/curl/auth_v1' },
+    { from: '#tag/BuildV1*', to: '/curl/build_v1' },
+    { from: '#tag/DeploymentV1*', to: '/curl/deployment_v1' },
+    { from: '#tag/DiscoveryV1*', to: '/curl/discovery_v1' },
+    { from: '#tag/LobbyV3*', to: '/curl/lobby_v3' },
+    { from: '#tag/LogV1*', to: '/curl/log_v1' },
+    { from: '#tag/MetricsV1*', to: '/curl/metrics_v1' },
+    { from: '#tag/ProcessesV1*', to: '/curl/processes_v1' },
+    { from: '#tag/RoomV2*', to: '/curl/room_v2' },
+    { from: '#tag/LobbyV1*', to: '/curl/lobby_v1' },
+    { from: '#tag/LobbyV2*', to: '/curl/lobby_v2' },
+    { from: '#tag/RoomV1*', to: '/curl/room_v1' },
+    { from: '#tag/BillingV1*', to: '/curl/billing_v1' },
+    { from: '#tag/ManagementV1*', to: '/curl/management_v1' },
   ];
 
   useLayoutEffect(() => {
