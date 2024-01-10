@@ -50,7 +50,7 @@ typescript:
       webhooks: models/webhooks
   inputModelSuffix: input
   installationURL: https://github.com/hathora/cloud-sdk-typescript
-  maxMethodParams: "3"
+  maxMethodParams: 3
   outputModelSuffix: output
   packageName: '@hathora/cloud-sdk-typescript'
   templateVersion: v2
