@@ -1659,7 +1659,6 @@ src/utils/themeLoader.js
 theme.config.tsx
 tsconfig.json
 Makefile
-src/components/customRedirects.tsx
 next.config.js
 server.go
 Dockerfile
