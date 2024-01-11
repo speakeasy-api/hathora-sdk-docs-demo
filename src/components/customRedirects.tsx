@@ -20,7 +20,28 @@ export const CustomRedirects = () => {
       from: `/${lang}`,
       to: `/${lang}/client_sdks/`,
     })),
+    { from: `*#tag/AppV1/operation/GetApps*`, to: '/curl/app_v1/get_apps' },
+    { from: `*#tag/AppV1/operation/CreateApp*`, to: '/curl/app_v1/create_app' },
+    { from: `*#tag/AppV1/operation/UpdateApp*`, to: '/curl/app_v1/update_app' },
+    {
+      from: `*#tag/AppV1/operation/GetAppInfo*`,
+      to: '/curl/app_v1/get_app_info',
+    },
+    { from: `*#tag/AppV1/operation/DeleteApp*`, to: '/curl/app_v1/delete_app' },
     { from: `*#tag/AppV1*`, to: '/curl/app_v1' },
+    {
+      from: `*#tag/AuthV1/operation/LoginAnonymous*`,
+      to: '/curl/auth_v1/login_anonymous',
+    },
+    {
+      from: `*#tag/AuthV1/operation/LoginNickname*`,
+      to: '/curl/auth_v1/login_nickname',
+    },
+    {
+      from: `*#tag/AuthV1/operation/LoginGoogle*`,
+      to: '/curl/auth_v1/login_google',
+    },
+    { from: `*#tag/AuthV1*`, to: '/curl/auth_v1' },
     { from: '*#tag/BuildV1*', to: '/curl/build_v1' },
     { from: '*#tag/DeploymentV1*', to: '/curl/deployment_v1' },
     { from: '*#tag/DiscoveryV1*', to: '/curl/discovery_v1' },
