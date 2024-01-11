@@ -46,6 +46,16 @@ module.exports = withPlugins([], {
         destination: '/curl/client_sdks/',
         permanent: true,
       },
+      {
+        source: '/api#tag/BuildV1/operation/GetBuildInfo',
+        destination: '/curl/build_v1/get_build_info',
+        permanent: true,
+      },
+      {
+        source: '/api#tag/BuildV1/operation/CreateBuild',
+        destination: '/curl/build_v1/create_build',
+        permanent: true,
+      },
     ]
   },
 });
