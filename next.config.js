@@ -56,6 +56,11 @@ module.exports = withPlugins([], {
         destination: '/curl/build_v1/create_build',
         permanent: true,
       },
+            {
+        source: '/api',
+        destination: '/curl/build_v1/create_build',
+        permanent: true,
+      },
     ]
   },
 });
