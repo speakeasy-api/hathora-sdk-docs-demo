@@ -20,14 +20,32 @@ module.exports = withPlugins([], {
   sassOptions: {
     importer: jsonImporter(),
   },
-  ...withNextra({
-    output: 'export',
-    distDir: 'out',
-    images: {
-      unoptimized: true,
-    },
-  }),
+  ...withNextra(),
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/curl/client_sdks/',
+        permanent: true,
+      },
+      {
+        source: '/typescript',
+        destination: '/typescript/client_sdks/',
+        permanent: true,
+      },
+      {
+        source: '/unity',
+        destination: '/unity/client_sdks/',
+        permanent: true,
+      },
+      {
+        source: '/curl',
+        destination: '/curl/client_sdks/',
+        permanent: true,
+      },
+    ]
   },
 });

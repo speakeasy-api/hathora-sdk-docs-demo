@@ -1,7 +1,14 @@
-import React, {createContext, ReactNode, useContext, useEffect, useMemo, useState,} from 'react';
-import {RouteContext} from '@/src/components/routeProvider';
-import {getPagesUnderRoute} from 'nextra/context';
-import {useRouter} from 'next/router';
+import React, {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
+import { RouteContext } from '@/src/components/routeProvider';
+import { getPagesUnderRoute } from 'nextra/context';
+import { useRouter } from 'next/router';
 
 export const MultiPageContext = createContext(false);
 export const ScrollContext = createContext<{
@@ -20,12 +27,9 @@ export const ScrollContext = createContext<{
   headingToPosition: {},
   currentHeading: '',
   visibleHeadings: [],
-  upsertHeading: () => {
-  },
-  scrollTo: () => {
-  },
-  setPage: () => {
-  },
+  upsertHeading: () => {},
+  scrollTo: () => {},
+  setPage: () => {},
 });
 
 export const useSetPage = () => useContext(ScrollContext).setPage;
@@ -42,7 +46,7 @@ export const ScrollManager = (props: {
   children: ReactNode;
 }): React.ReactElement => {
   const isMultipage = useContext(MultiPageContext);
-  const {route, setRoute} = useContext(RouteContext);
+  const { route, setRoute } = useContext(RouteContext);
   const router = useRouter();
 
   const [initialScrollTarget, setInitialScrollTarget] = useState<string>();
@@ -50,7 +54,7 @@ export const ScrollManager = (props: {
 
   const rootPage = useMemo(
     () => (isMultipage ? route?.split('/').at(1) ?? '' : ''),
-    [route]
+    [route],
   );
 
   const reset = () => {
@@ -96,18 +100,13 @@ export const ScrollManager = (props: {
         route += `#${heading}`;
       }
 
-      const newValues = {
+      return {
         ...currentValues,
         [route]: {
           elem,
           position,
         },
       };
-
-      // This is necessary because sometimes the page loads out of order when we do client-side redirects
-      return Object.fromEntries(
-        Object.entries(newValues).filter(([k, _]) => k.startsWith(`/${rootPage}`))
-      );
     });
   };
 
@@ -126,7 +125,7 @@ export const ScrollManager = (props: {
 
       const visible = entries
         .filter(
-          ([_, {position}]) =>
+          ([_, { position }]) =>
             window.scrollY < position &&
             position < window.scrollY + window.innerHeight,
         )
@@ -134,7 +133,7 @@ export const ScrollManager = (props: {
 
       // Find the first heading that is below the current scroll position
       const nextIndex = entries.findIndex(
-        ([_, {position}]) => position > window.scrollY,
+        ([_, { position }]) => position > window.scrollY,
       );
 
       // The current heading is the one before that
@@ -142,8 +141,8 @@ export const ScrollManager = (props: {
         nextIndex === -1
           ? entries.length - 1
           : nextIndex - 1 >= 0
-            ? nextIndex - 1
-            : 0;
+          ? nextIndex - 1
+          : 0;
       const closest = entries[currentIndex]?.[0];
 
       setClosestHeading(closest);
@@ -177,11 +176,11 @@ export const ScrollManager = (props: {
           () => {
             setClosestHeading(route);
           },
-          {once: true},
+          { once: true },
         );
 
         // Scroll down a bit further than the heading so that it lines up right at the top
-        window.scrollTo({top: headingToPosition[route].position + 100});
+        window.scrollTo({ top: headingToPosition[route].position + 100 });
       }
     },
     [headingToPosition],

@@ -7,7 +7,8 @@ generation:
   fixes:
     nameResolutionDec2023: false
 docs:
-  version: 0.7.1
+  version: 0.8.0
+  defaultLanguage: curl
   imports:
     option: openapi
     paths:
@@ -21,7 +22,7 @@ docs:
   maxMethodParams: 4
   outputModelSuffix: output
   packageName: hathora-sdk-docs
-  static: true
+  static: false
 typescript:
   version: 1.22.2
   author: Hathora

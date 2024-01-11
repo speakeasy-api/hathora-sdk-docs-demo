@@ -1,26 +1,31 @@
-FROM golang:1.21-alpine as builder
+# Get NPM packages
+FROM node:14-alpine AS dependencies
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --only=production
 
+# Rebuild the source code only when needed
+FROM node:14-alpine AS builder
+WORKDIR /app
+COPY . .
+COPY --from=dependencies /app/node_modules ./node_modules
+RUN npm run build
+
+# Production image, copy all the files and run next
+FROM node:14-alpine AS runner
 WORKDIR /app
 
-RUN go mod init server
+ENV NODE_ENV production
 
-# Copy the server.go file.
-COPY server.go ./
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
 
-# Copy the 'out' directory
-COPY out/ ./out/
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
 
-RUN go build -o /server
+USER nextjs
+EXPOSE 3000
 
-FROM gcr.io/distroless/base
-
-WORKDIR /
-
-COPY --from=builder /server /server
-COPY --from=builder /app/out/ /out/
-
-ENV PORT=8080
-
-EXPOSE 8080
-
-ENTRYPOINT ["/server"]
+CMD ["npm", "start"]
