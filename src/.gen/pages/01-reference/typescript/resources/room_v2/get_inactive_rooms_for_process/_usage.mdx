@@ -12,13 +12,10 @@ async function run() {
   const processId = "cbfcddd2-0006-43ae-996c-995fff7bed2e";
   const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
   
-  const res = await sdk.roomV2.getInactiveRoomsForProcess(processId, appId);
+  const result = await sdk.roomV2.getInactiveRoomsForProcess(processId, appId);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -32,8 +29,8 @@ run();
       "roomId": "2swovpy1fnunu",
       "roomConfig": "{\"name\":\"my-room\"}",
       "currentAllocation": {
-        "unscheduledAt": "2024-12-06T12:43:25.437Z",
-        "scheduledAt": "2022-03-03T01:31:09.417Z",
+        "unscheduledAt": "2023-05-10T11:17:31.065Z",
+        "scheduledAt": "2024-03-21T05:35:21.278Z",
         "processId": "cbfcddd2-0006-43ae-996c-995fff7bed2e",
         "roomAllocationId": "e3a0aa32-1711-4036-acfa-008b96061a78"
       }

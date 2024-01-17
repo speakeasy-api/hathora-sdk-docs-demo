@@ -25,23 +25,24 @@ Current status of your build.
 `succeeded`: the game server artifact was successfully built and stored in the Hathora registries
 
 `failed`: the build process was unsuccessful, most likely due to an error with the `Dockerfile`
-<Collapsible content={() => import('/content/types/shared/build_status/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/build_status/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
-##### `deletedAt` _date-time_
+##### `deletedAt` _datetime_
 When the build was deleted.
 
 ---
-##### `finishedAt` _date-time_
+##### `finishedAt` _datetime_
 When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) finished executing.
 
 ---
-##### `startedAt` _date-time_
+##### `startedAt` _datetime_
 When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) is called.
 
 ---
-##### `createdAt` _date-time_
+##### `createdAt` _datetime_
 When [`CreateBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/CreateBuild) is called.
 
 ---

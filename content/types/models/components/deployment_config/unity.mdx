@@ -4,8 +4,9 @@ import Labels from "/src/lib/labels";
 
 ##### *{`List<DeploymentConfigEnv>`}* `Env`
 The environment variable that our process will have access to at runtime.
-<Collapsible content={() => import('/content/types/models/components/deployment_config_env/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/deployment_config_env/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`int`}* `RoomsPerProcess`
@@ -26,20 +27,23 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 `large`: 4 core, 8gb memory
 <br/>
 **Example:** `tiny`
-<Collapsible content={() => import('/content/types/models/components/plan_name/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/plan_name/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`List<ContainerPort>`}* `AdditionalContainerPorts`
 Additional ports your server listens on.
-<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`TransportType`}* `TransportType`
 Transport type specifies the underlying communication protocol to the exposed port.
-<Collapsible content={() => import('/content/types/models/components/transport_type/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/transport_type/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`int`}* `ContainerPort`

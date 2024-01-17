@@ -9,14 +9,16 @@ import Labels from "/src/lib/labels";
 ---
 ##### `state?`: *{`components.State`}*
 JSON blob to store metadata for a room. Must be smaller than 1MB.
-<Collapsible content={() => import('/content/types/models/components/state/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/state/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `initialConfig`: *{`components.LobbyInitialConfig`}*
 User input to initialize the game state. Object must be smaller than 64KB.
-<Collapsible content={() => import('/content/types/models/components/lobby_initial_config/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/lobby_initial_config/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `createdAt`: [*{ `Date` }*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
@@ -43,13 +45,15 @@ Types of lobbies a player can create.
 `local`: for testing with a server running locally
 <br/>
 **Example:** `private`
-<Collapsible content={() => import('/content/types/models/components/lobby_visibility/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/lobby_visibility/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `region`: *{`components.Region`}*
-<Collapsible content={() => import('/content/types/models/components/region/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/region/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `roomId`: *{`string`}*

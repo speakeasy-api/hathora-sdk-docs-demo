@@ -11,7 +11,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"201"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `shortCode` _string_
       User\-defined identifier for a lobby.
           <br/>
@@ -19,7 +19,7 @@ import StatusCode from '@/src/components/StatusCode';
       **Example:** `LFG4`
         
       ---
-      ##### `createdAt` _date-time_
+      ##### `createdAt` _datetime_
       When the lobby was created.
           
         
@@ -70,7 +70,7 @@ Note: error will be returned if `roomId` is not globally unique.
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"400"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -79,7 +79,7 @@ Note: error will be returned if `roomId` is not globally unique.
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"401"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -88,7 +88,7 @@ Note: error will be returned if `roomId` is not globally unique.
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"404"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -97,7 +97,7 @@ Note: error will be returned if `roomId` is not globally unique.
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"422"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -106,7 +106,7 @@ Note: error will be returned if `roomId` is not globally unique.
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"429"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -115,7 +115,7 @@ Note: error will be returned if `roomId` is not globally unique.
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"500"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         

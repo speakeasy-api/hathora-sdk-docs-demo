@@ -1,5 +1,11 @@
-import {createContext, ReactNode, useContext, useEffect, useState,} from 'react';
-import {useRouter} from 'next/router';
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
+import { useRouter } from 'next/router';
 
 type RouteProviderProps = {
   route: string;
@@ -7,8 +13,7 @@ type RouteProviderProps = {
 };
 export const RouteContext = createContext<RouteProviderProps>({
   route: '/',
-  setRoute: () => {
-  },
+  setRoute: () => {},
 });
 
 export const useRoute = () => useContext(RouteContext).route;
@@ -35,12 +40,12 @@ export const RouteProvider = (props: { children: ReactNode }) => {
       updateUrlShallow(window, newRoute);
     } else {
       // This causes the page to reload
-      router.push(newRoute, newRoute, {scroll: false});
+      router.push(newRoute, newRoute, { scroll: false });
     }
   };
 
   return (
-    <RouteContext.Provider value={{route, setRoute: handleRouteChange}}>
+    <RouteContext.Provider value={{ route, setRoute: handleRouteChange }}>
       {props.children}
     </RouteContext.Provider>
   );

@@ -4,14 +4,15 @@
 curl https://api.hathora.dev/lobby/v3/app-af469a92-5b45-4565-b3c4-b79878de67d2/create?roomId=2swovpy1fnunu&shortCode=LFG4 \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
---header 'Authorization: YOUR_BEARER_TOKEN_HERE'
+--header 'Authorization: YOUR_BEARER_TOKEN_HERE' \
+--data '{"roomConfig":"{\"name\":\"my-room\"}"}'
 ```
 ---
 
 ```json Example Response
   {
     "shortCode": "LFG4",
-    "createdAt": "2023-07-25T10:38:22.728Z",
+    "createdAt": "2022-05-10T15:05:25.593Z",
     "createdBy": "dev@hathora.dev",
     "roomConfig": "{\"name\":\"my-room\"}",
     "roomId": "2swovpy1fnunu",

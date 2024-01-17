@@ -3,8 +3,9 @@ import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
 ##### `currentAllocation`: *{`components.RoomCurrentAllocation`}*
-<Collapsible content={() => import('/content/types/models/components/room_current_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/room_current_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `status`: *{`components.RoomStatus`}*
@@ -19,13 +20,15 @@ The allocation status of a room.
 `destroyed`: all associated metadata is deleted
 <br/>
 **Example:** `active`
-<Collapsible content={() => import('/content/types/models/components/room_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/room_status/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `allocations`: *{`components.RoomAllocation[]`}*
-<Collapsible content={() => import('/content/types/models/components/room_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/room_allocation/typescript.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `roomConfig`: *{`string`}*

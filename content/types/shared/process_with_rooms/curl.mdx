@@ -8,11 +8,11 @@ Measures network traffic leaving the process in bytes.
 **Example:** `435`
 
 ---
-##### `idleSince` _date-time_
+##### `idleSince` _datetime_
 : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ---
-##### `activeConnectionsUpdatedAt` _date-time_
+##### `activeConnectionsUpdatedAt` _datetime_
 : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ---
@@ -22,7 +22,7 @@ Tracks the number of active connections to a process.
 **Example:** `10`
 
 ---
-##### `roomsAllocatedUpdatedAt` _date-time_
+##### `roomsAllocatedUpdatedAt` _datetime_
 
 ---
 ##### `roomsAllocated` _number_
@@ -31,7 +31,7 @@ Tracks the number of rooms that have been allocated to the process.
 **Example:** `1`
 
 ---
-##### `roomSlotsAvailableUpdatedAt` _date-time_
+##### `roomSlotsAvailableUpdatedAt` _datetime_
 : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ---
@@ -43,19 +43,19 @@ Tracks the number of rooms that have been allocated to the process.
 Process in drain will not accept any new rooms.
 
 ---
-##### `terminatedAt` _date-time_
+##### `terminatedAt` _datetime_
 When the process has been terminated.
 
 ---
-##### `stoppingAt` _date-time_
+##### `stoppingAt` _datetime_
 When the process is issued to stop. We use this to determine when we should stop billing.
 
 ---
-##### `startedAt` _date-time_
+##### `startedAt` _datetime_
 When the process bound to the specified port. We use this to determine when we should start billing.
 
 ---
-##### `startingAt` _date-time_
+##### `startingAt` _datetime_
 When the process started being provisioned.
 
 ---
@@ -72,8 +72,9 @@ Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#ro
 ---
 ##### `exposedPort` _object (optional)_
 Connection details for an active process.
-<Collapsible content={() => import('/content/types/shared/exposed_port/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/exposed_port/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `port` _number_
@@ -85,8 +86,9 @@ Connection details for an active process.
 
 ---
 ##### `region` _enumeration_
-<Collapsible content={() => import('/content/types/shared/region/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/region/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `processId` _string_

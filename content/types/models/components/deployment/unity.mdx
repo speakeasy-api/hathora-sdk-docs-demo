@@ -4,8 +4,9 @@ import Labels from "/src/lib/labels";
 
 ##### *{`List<Env>`}* `Env`
 The environment variable that our process will have access to at runtime.
-<Collapsible content={() => import('/content/types/models/components/env/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/env/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`int`}* `RoomsPerProcess`
@@ -26,28 +27,32 @@ A plan defines how much CPU and memory is required to run an instance of your ga
 `large`: 4 core, 8gb memory
 <br/>
 **Example:** `tiny`
-<Collapsible content={() => import('/content/types/models/components/plan_name/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/plan_name/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`List<ContainerPort>`}* `AdditionalContainerPorts`
 Additional ports your server listens on.
 <br/>
 **Example:** `{"transportType":"tcp","port":4000,"name":"debug"}`
-<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`ContainerPort`}* `DefaultContainerPort`
 A container port object represents the transport configruations for how your server will listen.
-<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/container_port/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`DeploymentTransportType`}* `TransportType`
 : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
-<Collapsible content={() => import('/content/types/models/components/deployment_transport_type/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/models/components/deployment_transport_type/unity.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### *{`double`}* `ContainerPort`

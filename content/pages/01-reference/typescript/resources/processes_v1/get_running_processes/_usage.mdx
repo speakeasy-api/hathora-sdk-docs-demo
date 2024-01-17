@@ -13,13 +13,10 @@ async function run() {
   const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
   const region = Region.Chicago;
   
-  const res = await sdk.processesV1.getRunningProcesses(appId, region);
+  const result = await sdk.processesV1.getRunningProcesses(appId, region);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

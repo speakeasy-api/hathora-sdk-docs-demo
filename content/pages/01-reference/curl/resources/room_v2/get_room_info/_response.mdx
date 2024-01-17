@@ -11,7 +11,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"200"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `currentAllocation` _object_
 
       <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
@@ -55,7 +55,7 @@ Note: error will be returned if `roomId` is not globally unique.
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"404"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         

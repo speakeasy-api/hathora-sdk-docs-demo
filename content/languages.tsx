@@ -8,7 +8,7 @@ import {useSetPage} from '@/src/components/scrollManager';
 
 export const Languages = ["typescript", "unity", "curl"];
 export type Language = (typeof Languages)[number];
-export const DefaultLanguage = 'typescript';
+export const DefaultLanguage = 'curl';
 
 export const LanguageProvider = (props: { children: ReactNode }) => {
   const router = useRouter();

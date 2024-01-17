@@ -3,15 +3,52 @@
 
 ### Select Server by Index
 
-You can override the default server globally by passing a server index to the `serverIdx: number` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+You can override the default server globally by passing a server index to the `serverIdx` optional parameter when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
 
 
 
+```typescript
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
 
+async function run() {
+    const sdk = new HathoraCloud({
+        serverIdx: 1,
+        hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
+        appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    });
+
+    const result = await sdk.appV1.getApps();
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
 
 
 ### Override Server URL Per-Client
 
-The default server can also be overridden globally by passing a URL to the `serverURL: str` optional parameter when initializing the SDK client instance. For example:
+The default server can also be overridden globally by passing a URL to the `serverURL` optional parameter when initializing the SDK client instance. For example:
 
+```typescript
+import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
+
+async function run() {
+    const sdk = new HathoraCloud({
+        serverURL: "https://api.hathora.dev",
+        hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
+        appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
+    });
+
+    const result = await sdk.appV1.getApps();
+
+    // Handle the result
+    console.log(result);
+}
+
+run();
+
+```
 {/* End Typescript Server Options */}

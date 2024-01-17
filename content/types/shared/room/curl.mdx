@@ -3,8 +3,9 @@ import Collapsible from "/src/components/Collapsible";
 import Labels from "/src/lib/labels";
 
 ##### `currentAllocation` _object_
-<Collapsible content={() => import('/content/types/shared/room_current_allocation/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/room_current_allocation/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `status` _enumeration_
@@ -19,8 +20,9 @@ The allocation status of a room.
 `destroyed`: all associated metadata is deleted
 <br/>
 **Example:** `active`
-<Collapsible content={() => import('/content/types/shared/room_status/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/room_status/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `allocations` _array_

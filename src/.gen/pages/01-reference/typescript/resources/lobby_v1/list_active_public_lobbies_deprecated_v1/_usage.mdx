@@ -14,13 +14,10 @@ async function run() {
   const local = false;
   const region = Region.Mumbai;
   
-  const res = await sdk.lobbyV1.listActivePublicLobbiesDeprecatedV1(appId, local, region);
+  const result = await sdk.lobbyV1.listActivePublicLobbiesDeprecatedV1(appId, local, region);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
