@@ -15,8 +15,9 @@ async function run() {
         appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2",
     });
 
-    const res = await sdk.appV1
-        .createApp({
+    let result;
+    try {
+        result = await sdk.appV1.createApp({
             authConfiguration: {
                 google: {
                     clientId: "string",
@@ -25,21 +26,21 @@ async function run() {
                 anonymous: {},
             },
             appName: "minecraft",
-        })
-        .catch((err) => {
-            if (err instanceof errors.ApiError) {
+        });
+    } catch (err) {
+        switch (true) {
+            case err instanceof errors.ApiError: {
                 console.error(err); // handle exception
-                return null;
-            } else {
+                return;
+            }
+            default: {
                 throw err;
             }
-        });
-
-    if (res?.statusCode !== 200) {
-        throw new Error("Unexpected status code: " + res?.statusCode || "-");
+        }
     }
 
-    // handle response
+    // Handle the result
+    console.log(result);
 }
 
 run();

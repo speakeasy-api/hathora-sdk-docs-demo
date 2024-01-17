@@ -7,7 +7,7 @@ generation:
   fixes:
     nameResolutionDec2023: false
 docs:
-  version: 0.8.0
+  version: 0.8.1
   defaultLanguage: curl
   imports:
     option: openapi

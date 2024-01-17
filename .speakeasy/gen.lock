@@ -4,14 +4,14 @@ management:
   docChecksum: 1479776500b62c5496bb0b8438c267c3
   docVersion: 0.0.1
   speakeasyVersion: internal
-  generationVersion: 2.230.3
-  releaseVersion: 0.8.0
-  configChecksum: 5b961fe17a87b7a8fa4adcedf2efe849
+  generationVersion: 2.234.3
+  releaseVersion: 0.8.1
+  configChecksum: f11cac7a0802ccc16ce392f00183e4e3
   installationURL: https://github.com/hathora/cloud-sdk-typescript
 features:
   docs:
     constsAndDefaults: 0.1.0
-    core: 1.23.1
+    core: 1.23.3
     deprecations: 0.1.0
     flattening: 0.1.0
     globalSecurity: 0.1.1
@@ -647,6 +647,8 @@ generatedFiles:
   - content/pages/01-reference/unity/server_options/server_options.mdx
   - content/types/models/components/ach_payment_method/typescript.mdx
   - content/types/models/components/ach_payment_method/unity.mdx
+  - content/types/models/components/active_connection_info/typescript.mdx
+  - content/types/models/components/active_connection_info_status/typescript.mdx
   - content/types/models/components/api_error/unity.mdx
   - content/types/models/components/app_config/typescript.mdx
   - content/types/models/components/app_config/unity.mdx
@@ -664,6 +666,7 @@ generatedFiles:
   - content/types/models/components/card_brand/unity.mdx
   - content/types/models/components/card_payment_method/typescript.mdx
   - content/types/models/components/card_payment_method/unity.mdx
+  - content/types/models/components/connection_info/typescript.mdx
   - content/types/models/components/connection_info_v2/typescript.mdx
   - content/types/models/components/connection_info_v2/unity.mdx
   - content/types/models/components/connection_info_v2_status/typescript.mdx
@@ -752,6 +755,8 @@ generatedFiles:
   - content/types/models/components/set_lobby_state_params/unity.mdx
   - content/types/models/components/set_lobby_state_params_state/typescript.mdx
   - content/types/models/components/set_lobby_state_params_state/unity.mdx
+  - content/types/models/components/starting_connection_info/typescript.mdx
+  - content/types/models/components/starting_connection_info_status/typescript.mdx
   - content/types/models/components/state/typescript.mdx
   - content/types/models/components/state/unity.mdx
   - content/types/models/components/status/typescript.mdx

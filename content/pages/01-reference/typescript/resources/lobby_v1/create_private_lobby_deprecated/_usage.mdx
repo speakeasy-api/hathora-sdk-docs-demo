@@ -13,13 +13,10 @@ async function run() {
   const local = false;
   const operationSecurity: CreatePrivateLobbyDeprecatedSecurity = "<YOUR_BEARER_TOKEN_HERE>";
   
-  const res = await sdk.lobbyV1.createPrivateLobbyDeprecated(operationSecurity, appId, region, local);
+  const result = await sdk.lobbyV1.createPrivateLobbyDeprecated(operationSecurity, appId, region, local);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

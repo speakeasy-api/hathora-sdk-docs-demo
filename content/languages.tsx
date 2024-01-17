@@ -1,25 +1,35 @@
-import React, {ReactElement, ReactNode, useCallback, useContext, useMemo,} from 'react';
-import {Columns, RHS} from '@/src/components/Columns';
-import {Authentication, Parameters, Response,} from '@/src/components/Parameters';
-import {LanguageContext} from '@/src/utils/contexts/languageContext';
-import {LinkableContext} from '@/src/utils/contexts/linkableContext';
-import {useRouter} from 'next/router';
-import {useSetPage} from '@/src/components/scrollManager';
+import React, {
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useContext,
+  useMemo,
+} from 'react';
+import { Columns, RHS } from '@/src/components/Columns';
+import {
+  Authentication,
+  Parameters,
+  Response,
+} from '@/src/components/Parameters';
+import { LanguageContext } from '@/src/utils/contexts/languageContext';
+import { LinkableContext } from '@/src/utils/contexts/linkableContext';
+import { usePathname } from 'next/navigation';
+import { useSetPage } from '@/src/components/scrollManager';
 
 export const Languages = ["typescript", "unity", "curl"];
 export type Language = (typeof Languages)[number];
-export const DefaultLanguage = 'typescript';
+export const DefaultLanguage = 'curl';
 
 export const LanguageProvider = (props: { children: ReactNode }) => {
-  const router = useRouter();
+  const slug = usePathname();
   const setPage = useSetPage();
 
   const language = useMemo(() => {
     // slug is in the form "/typescript/installation" (or null)
-    const routeLang = router.asPath?.split('/')[1];
+    const routeLang = slug?.split('/')[1];
 
     return routeLang || DefaultLanguage;
-  }, [router.asPath]);
+  }, [slug]);
 
   const setLanguage = useCallback(
     (newLanguage: string) => {
@@ -52,7 +62,7 @@ export const LanguageProvider = (props: { children: ReactNode }) => {
 export const LanguageSwitch = (props: {
   langToContent: Partial<Record<Language, JSX.Element>>;
 }) => {
-  const {language} = useContext(LanguageContext);
+  const { language } = useContext(LanguageContext);
 
   return (
     <LinkableContext.Provider value={false}>

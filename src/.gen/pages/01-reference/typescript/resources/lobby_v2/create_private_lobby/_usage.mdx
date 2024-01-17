@@ -18,13 +18,10 @@ async function run() {
   const roomId = "2swovpy1fnunu";
   const operationSecurity: CreatePrivateLobbySecurity = "<YOUR_BEARER_TOKEN_HERE>";
   
-  const res = await sdk.lobbyV2.createPrivateLobby(operationSecurity, requestBody, appId, roomId);
+  const result = await sdk.lobbyV2.createPrivateLobby(operationSecurity, requestBody, appId, roomId);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
