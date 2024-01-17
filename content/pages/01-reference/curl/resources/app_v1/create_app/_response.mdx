@@ -10,7 +10,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"201"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `deletedBy` _string_
       Email address for the user that deleted the application.
           <br/>
@@ -18,12 +18,12 @@ import StatusCode from '@/src/components/StatusCode';
       **Example:** `dev@hathora.dev`
         
       ---
-      ##### `deletedAt` _date-time_
+      ##### `deletedAt` _datetime_
       When the application was deleted.
           
         
       ---
-      ##### `createdAt` _date-time_
+      ##### `createdAt` _datetime_
       When the application was created.
           
         
@@ -74,7 +74,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"422"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -83,7 +83,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"500"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         

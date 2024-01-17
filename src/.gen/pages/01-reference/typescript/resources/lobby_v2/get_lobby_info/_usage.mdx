@@ -12,13 +12,10 @@ async function run() {
   const roomId = "2swovpy1fnunu";
   const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
   
-  const res = await sdk.lobbyV2.getLobbyInfo(roomId, appId);
+  const result = await sdk.lobbyV2.getLobbyInfo(roomId, appId);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();

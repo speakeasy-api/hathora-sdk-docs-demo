@@ -9,17 +9,19 @@ import Labels from "/src/lib/labels";
 ---
 ##### `state` _object (optional)_
 JSON blob to store metadata for a room. Must be smaller than 1MB.
-<Collapsible content={() => import('/content/types/shared/state/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/state/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `initialConfig` _object_
 User input to initialize the game state. Object must be smaller than 64KB.
-<Collapsible content={() => import('/content/types/shared/lobby_initial_config/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/lobby_initial_config/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
-##### `createdAt` _date-time_
+##### `createdAt` _datetime_
 When the lobby was created.
 
 ---
@@ -43,13 +45,15 @@ Types of lobbies a player can create.
 `local`: for testing with a server running locally
 <br/>
 **Example:** `private`
-<Collapsible content={() => import('/content/types/shared/lobby_visibility/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/lobby_visibility/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `region` _enumeration_
-<Collapsible content={() => import('/content/types/shared/region/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
-</Collapsible>
+
+<Collapsible content={() => import('/content/types/shared/region/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
+
 
 ---
 ##### `roomId` _string_

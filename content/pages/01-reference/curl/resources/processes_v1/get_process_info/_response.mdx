@@ -11,7 +11,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"200"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `egressedBytes` _number_
       Measures network traffic leaving the process in bytes.
           <br/>
@@ -19,12 +19,12 @@ import StatusCode from '@/src/components/StatusCode';
       **Example:** `435`
         
       ---
-      ##### `idleSince` _date-time_
+      ##### `idleSince` _datetime_
       : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
           
         
       ---
-      ##### `activeConnectionsUpdatedAt` _date-time_
+      ##### `activeConnectionsUpdatedAt` _datetime_
       : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
           
         
@@ -36,7 +36,7 @@ import StatusCode from '@/src/components/StatusCode';
       **Example:** `10`
         
       ---
-      ##### `roomsAllocatedUpdatedAt` _date-time_
+      ##### `roomsAllocatedUpdatedAt` _datetime_
           
         
       ---
@@ -47,7 +47,7 @@ import StatusCode from '@/src/components/StatusCode';
       **Example:** `1`
         
       ---
-      ##### `roomSlotsAvailableUpdatedAt` _date-time_
+      ##### `roomSlotsAvailableUpdatedAt` _datetime_
       : warning: \*\* DEPRECATED \*\*: This will be removed in a future release, please migrate away from it as soon as possible.
           
         
@@ -62,22 +62,22 @@ import StatusCode from '@/src/components/StatusCode';
           
         
       ---
-      ##### `terminatedAt` _date-time_
+      ##### `terminatedAt` _datetime_
       When the process has been terminated.
           
         
       ---
-      ##### `stoppingAt` _date-time_
+      ##### `stoppingAt` _datetime_
       When the process is issued to stop. We use this to determine when we should stop billing.
           
         
       ---
-      ##### `startedAt` _date-time_
+      ##### `startedAt` _datetime_
       When the process bound to the specified port. We use this to determine when we should start billing.
           
         
       ---
-      ##### `startingAt` _date-time_
+      ##### `startingAt` _datetime_
       When the process started being provisioned.
           
         
@@ -144,7 +144,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"404"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -153,7 +153,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"500"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         

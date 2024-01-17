@@ -12,7 +12,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"201"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `env` _array_
       The environment variable that our process will have access to at runtime.
           
@@ -58,7 +58,7 @@ import StatusCode from '@/src/components/StatusCode';
           
         
       ---
-      ##### `createdAt` _date-time_
+      ##### `createdAt` _datetime_
       When the deployment was created.
           
         
@@ -109,7 +109,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"400"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -118,7 +118,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"404"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
@@ -127,7 +127,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"500"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         

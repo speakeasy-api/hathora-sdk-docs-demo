@@ -17,13 +17,10 @@ async function run() {
   const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
   const roomId = "2swovpy1fnunu";
   
-  const res = await sdk.roomV2.createRoom(createRoomParams, appId, roomId);
+  const result = await sdk.roomV2.createRoom(createRoomParams, appId, roomId);
 
-  if (res?.statusCode !== 200) {
-    throw new Error("Unexpected status code: " + res?.statusCode || "-");
-  }
-  
-  // handle response
+  // Handle the result
+  console.log(result)
 }
 
 run();
@@ -34,7 +31,7 @@ run();
   {
     "additionalExposedPorts": [],
     "exposedPort": {
-        "port": 6736.6,
+        "port": 9764.6,
         "host": "string",
         "name": "string"
       },

@@ -10,7 +10,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"200"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `buildTag` _string_
           <br/>
 
@@ -34,22 +34,22 @@ import StatusCode from '@/src/components/StatusCode';
       </Collapsible>
         
       ---
-      ##### `deletedAt` _date-time_
+      ##### `deletedAt` _datetime_
       When the build was deleted.
           
         
       ---
-      ##### `finishedAt` _date-time_
+      ##### `finishedAt` _datetime_
       When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) finished executing.
           
         
       ---
-      ##### `startedAt` _date-time_
+      ##### `startedAt` _datetime_
       When [`RunBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/RunBuild) is called.
           
         
       ---
-      ##### `createdAt` _date-time_
+      ##### `createdAt` _datetime_
       When [`CreateBuild()`](https://hathora.dev/api\#tag/BuildV1/operation/CreateBuild) is called.
           
         
@@ -79,7 +79,7 @@ import StatusCode from '@/src/components/StatusCode';
   {/* prettier-ignore */}
   <Tab title={<StatusCode code={"404"} />}>
     *JSON object*
-    <Collapsible openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} defaultOpen={true}>
+    <Collapsible defaultOpen openLabel={Labels.showProperties} closeLabel={Labels.hideProperties}>
       ##### `message` _string_
           
         
