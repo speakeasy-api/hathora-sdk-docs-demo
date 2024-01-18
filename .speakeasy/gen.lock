@@ -4,14 +4,14 @@ management:
   docChecksum: 1479776500b62c5496bb0b8438c267c3
   docVersion: 0.0.1
   speakeasyVersion: internal
-  generationVersion: 2.235.3
-  releaseVersion: 0.9.0
-  configChecksum: cb1d97967763e6e9a4fa4ae493a92efe
+  generationVersion: 2.237.2
+  releaseVersion: 0.9.1
+  configChecksum: ccb71559c243b3ac217cad567c100c5b
   installationURL: https://github.com/hathora/cloud-sdk-typescript
 features:
   docs:
     constsAndDefaults: 0.1.0
-    core: 1.24.1
+    core: 1.24.2
     deprecations: 0.1.0
     flattening: 0.1.0
     globalSecurity: 0.1.1
