@@ -1549,17 +1549,6 @@
 		"/apps/v1/create": {
 			"post": {
 				"operationId": "CreateApp",
-				"x-speakeasy-docs-rate-limits": [
-					{
-						"stategy": "sliding_window",
-						"sliding_window": {
-							"rate": 3,
-							"period": "second"
-						},
-						"identifier": "appID",
-						"description": "Rate Limit on AppID for creating apps."
-					}	
-				],
 				"responses": {
 					"201": {
 						"description": "",
