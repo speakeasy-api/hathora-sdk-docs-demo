@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 0d8d398f-c6c1-425e-bec7-2e23a8a886c6
 management:
-  docChecksum: 1479776500b62c5496bb0b8438c267c3
+  docChecksum: 91c15407d9fcb8e0450a119d41153ea7
   docVersion: 0.0.1
   speakeasyVersion: internal
   generationVersion: 2.237.2
-  releaseVersion: 0.9.1
-  configChecksum: ccb71559c243b3ac217cad567c100c5b
+  releaseVersion: 0.9.2
+  configChecksum: bb0fd22792f5d5b805b53a4217a66b7e
   installationURL: https://github.com/hathora/cloud-sdk-typescript
 features:
   docs:
@@ -29,7 +29,6 @@ generatedFiles:
   - content/pages/01-reference/typescript/resources/app_v1/app_v1.mdx
   - content/pages/01-reference/typescript/resources/app_v1/create_app/_header.mdx
   - content/pages/01-reference/typescript/resources/app_v1/create_app/_parameters.mdx
-  - content/pages/01-reference/typescript/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
   - content/pages/01-reference/typescript/resources/app_v1/create_app/_response.mdx
   - content/pages/01-reference/typescript/resources/app_v1/create_app/_usage.mdx
   - content/pages/01-reference/typescript/resources/app_v1/create_app/create_app.mdx
@@ -341,7 +340,6 @@ generatedFiles:
   - content/pages/01-reference/unity/resources/app_v1/app_v1.mdx
   - content/pages/01-reference/unity/resources/app_v1/create_app/_header.mdx
   - content/pages/01-reference/unity/resources/app_v1/create_app/_parameters.mdx
-  - content/pages/01-reference/unity/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
   - content/pages/01-reference/unity/resources/app_v1/create_app/_response.mdx
   - content/pages/01-reference/unity/resources/app_v1/create_app/_usage.mdx
   - content/pages/01-reference/unity/resources/app_v1/create_app/create_app.mdx
@@ -1021,7 +1019,6 @@ generatedFiles:
   - content/pages/01-reference/curl/resources/app_v1/get_apps/_parameters.mdx
   - content/pages/01-reference/curl/resources/app_v1/get_apps/_usage.mdx
   - content/pages/01-reference/curl/resources/app_v1/get_apps/_header.mdx
-  - content/pages/01-reference/curl/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
   - content/pages/01-reference/curl/resources/app_v1/create_app/create_app.mdx
   - content/pages/01-reference/curl/resources/app_v1/create_app/_authentication.mdx
   - content/pages/01-reference/curl/resources/app_v1/create_app/_response.mdx
@@ -1708,8 +1705,6 @@ generatedFiles:
   - src/.gen/pages/01-reference/typescript/installation/_snippet.mdx
   - src/.gen/pages/01-reference/typescript/installation/installation.mdx
   - src/.gen/pages/01-reference/typescript/installation/installation_content.mdx
-  - src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
-  - src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_ratelimits/ratelimits_content.mdx
   - src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_header.mdx
   - src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_parameters.mdx
   - src/.gen/pages/01-reference/typescript/resources/app_v1/create_app/_response.mdx
@@ -2189,8 +2184,6 @@ generatedFiles:
   - src/.gen/pages/01-reference/unity/installation/_snippet.mdx
   - src/.gen/pages/01-reference/unity/installation/installation.mdx
   - src/.gen/pages/01-reference/unity/installation/installation_content.mdx
-  - src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
-  - src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_ratelimits/ratelimits_content.mdx
   - src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_header.mdx
   - src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_parameters.mdx
   - src/.gen/pages/01-reference/unity/resources/app_v1/create_app/_response.mdx
@@ -2658,8 +2651,6 @@ generatedFiles:
   - src/.gen/pages/01-reference/curl/client_sdks/_snippet.mdx
   - src/.gen/pages/01-reference/curl/client_sdks/client_sdks.mdx
   - src/.gen/pages/01-reference/curl/client_sdks/client_sdks_content.mdx
-  - src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_ratelimits/ratelimits.mdx
-  - src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_ratelimits/ratelimits_content.mdx
   - src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_authentication.mdx
   - src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_header.mdx
   - src/.gen/pages/01-reference/curl/resources/app_v1/create_app/_parameters.mdx
