@@ -113,3 +113,9 @@ Based on:
 Based on:
 - OpenAPI Doc 0.0.1 
 - Speakeasy CLI 1.151.0 (2.239.0) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-25 00:12:21
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.152.0 (2.239.1) https://github.com/speakeasy-api/speakeasy
