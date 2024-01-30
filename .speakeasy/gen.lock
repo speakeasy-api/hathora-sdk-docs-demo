@@ -1343,6 +1343,13 @@ generatedFiles:
   - content/pages/01-reference/curl/resources/room_v1/get_connection_info_deprecated/_parameters.mdx
   - content/pages/01-reference/curl/resources/room_v1/get_connection_info_deprecated/_usage.mdx
   - content/pages/01-reference/curl/resources/room_v1/get_connection_info_deprecated/_header.mdx
+  - content/pages/01-reference/curl/resources/management_v1/management_v1.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/send_verification_email.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_authentication.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_response.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_parameters.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_usage.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_header.mdx
   - content/pages/01-reference/curl/resources/billing_v1/billing_v1.mdx
   - content/pages/01-reference/curl/resources/billing_v1/get_balance/get_balance.mdx
   - content/pages/01-reference/curl/resources/billing_v1/get_balance/_authentication.mdx
@@ -1368,13 +1375,6 @@ generatedFiles:
   - content/pages/01-reference/curl/resources/billing_v1/get_invoices/_parameters.mdx
   - content/pages/01-reference/curl/resources/billing_v1/get_invoices/_usage.mdx
   - content/pages/01-reference/curl/resources/billing_v1/get_invoices/_header.mdx
-  - content/pages/01-reference/curl/resources/management_v1/management_v1.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/send_verification_email.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_authentication.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_response.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_parameters.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_usage.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_header.mdx
   - content/types/operations/get_apps_response/curl.mdx
   - content/types/operations/create_app_response/curl.mdx
   - content/types/operations/create_app_request_body/curl.mdx
@@ -1502,13 +1502,13 @@ generatedFiles:
   - content/types/operations/suspend_room_deprecated_response/curl.mdx
   - content/types/operations/get_connection_info_deprecated_request/curl.mdx
   - content/types/operations/get_connection_info_deprecated_response/curl.mdx
+  - content/types/operations/send_verification_email_response/curl.mdx
+  - content/types/operations/send_verification_email_request_body/curl.mdx
   - content/types/operations/get_balance_response/curl.mdx
   - content/types/operations/get_payment_method_response/curl.mdx
   - content/types/operations/init_stripe_customer_portal_url_response/curl.mdx
   - content/types/operations/init_stripe_customer_portal_url_request_body/curl.mdx
   - content/types/operations/get_invoices_response/curl.mdx
-  - content/types/operations/send_verification_email_response/curl.mdx
-  - content/types/operations/send_verification_email_request_body/curl.mdx
   - content/types/shared/application_with_deployment/curl.mdx
   - content/types/shared/env/curl.mdx
   - content/types/shared/deployment_transport_type/curl.mdx
@@ -1563,6 +1563,9 @@ generatedFiles:
   - content/types/shared/starting_connection_info/curl.mdx
   - content/types/shared/active_connection_info_status/curl.mdx
   - content/types/shared/active_connection_info/curl.mdx
+  - content/types/shared/verification_email_response_status/curl.mdx
+  - content/types/shared/verification_email_response/curl.mdx
+  - content/types/shared/verification_email_request/curl.mdx
   - content/types/shared/payment_method/curl.mdx
   - content/types/shared/link_payment_method/curl.mdx
   - content/types/shared/ach_payment_method/curl.mdx
@@ -1571,9 +1574,6 @@ generatedFiles:
   - content/types/shared/customer_portal_url/curl.mdx
   - content/types/shared/status/curl.mdx
   - content/types/shared/invoice/curl.mdx
-  - content/types/shared/verification_email_response_status/curl.mdx
-  - content/types/shared/verification_email_response/curl.mdx
-  - content/types/shared/verification_email_request/curl.mdx
   - content/types/shared/security/curl.mdx
   - content/languages.tsx
   - content/pages/01-reference/typescript/resources/resources.mdx
