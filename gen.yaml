@@ -7,7 +7,7 @@ generation:
   fixes:
     nameResolutionDec2023: false
 docs:
-  version: 0.9.2
+  version: 0.10.0
   defaultLanguage: curl
   imports:
     option: openapi
@@ -44,6 +44,7 @@ typescript:
 unity:
   version: 0.21.4
   author: Hathora
+  flattenGlobalSecurity: true
   imports:
     option: openapi
     paths:

@@ -6,9 +6,7 @@ using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
 var sdk = new HathoraCloud(
-    security: new Security() {
-        HathoraDevToken = "<YOUR_BEARER_TOKEN_HERE>",
-    },
+    hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
 HathoraUnitySDK.Models.Requests.LoginGoogleRequest req = new HathoraUnitySDK.Models.Requests.LoginGoogleRequest() {
@@ -19,7 +17,6 @@ HathoraUnitySDK.Models.Requests.LoginGoogleRequest req = new HathoraUnitySDK.Mod
 
 using(var res = await sdk.AuthV1.LoginGoogleAsync(req))
 {
-
     // handle response
 }
 ```

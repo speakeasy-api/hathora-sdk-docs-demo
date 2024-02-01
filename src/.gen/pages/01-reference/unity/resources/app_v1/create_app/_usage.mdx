@@ -5,9 +5,7 @@ using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Components;
 
 var sdk = new HathoraCloud(
-    security: new Security() {
-        HathoraDevToken = "<YOUR_BEARER_TOKEN_HERE>",
-    },
+    hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
 AppConfig req = new AppConfig() {
@@ -23,7 +21,6 @@ AppConfig req = new AppConfig() {
 
 using(var res = await sdk.AppV1.CreateAppAsync(req))
 {
-
     // handle response
 }
 ```
