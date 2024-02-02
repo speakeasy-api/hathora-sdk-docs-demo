@@ -6,9 +6,12 @@ generation:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
+    parameterOrderingFeb2024: false
 docs:
-  version: 0.10.0
+  version: 0.11.0
   defaultLanguage: curl
+  docsLanguages:
+    - go
   imports:
     option: openapi
     paths:
