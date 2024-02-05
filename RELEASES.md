@@ -95,3 +95,69 @@ Based on:
 Based on:
 - OpenAPI Doc 0.0.1 
 - Speakeasy CLI 1.146.0 (2.237.2) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-22 00:12:58
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.148.0 (2.237.3) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-23 00:12:22
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.148.0 (2.237.3) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-24 00:12:25
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.151.0 (2.239.0) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-25 00:12:21
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.152.0 (2.239.1) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-27 00:11:03
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.152.1 (2.239.4) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-29 00:11:51
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.152.1 (2.239.4) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-30 00:11:13
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.153.0 (2.239.4) https://github.com/speakeasy-api/speakeasy
+
+## 2024-01-31 00:11:32
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.155.0 (2.239.4) https://github.com/speakeasy-api/speakeasy
+
+## 2024-02-01 00:12:12
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.161.0 (2.245.1) https://github.com/speakeasy-api/speakeasy
+
+## 2024-02-02 00:11:14
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.163.1 (2.248.1) https://github.com/speakeasy-api/speakeasy
+
+## 2024-02-03 00:11:59
+### Changes
+Based on:
+- OpenAPI Doc 0.0.1 
+- Speakeasy CLI 1.166.0 (2.248.6) https://github.com/speakeasy-api/speakeasy

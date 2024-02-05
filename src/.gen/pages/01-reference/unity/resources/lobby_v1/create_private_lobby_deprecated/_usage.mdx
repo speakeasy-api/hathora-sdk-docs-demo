@@ -3,16 +3,14 @@ using HathoraUnitySDK;
 using HathoraUnitySDK.Models.Requests;
 using HathoraUnitySDK.Models.Components;
 
-var sdk = new HathoraCloud(
-    appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
+var sdk = new HathoraCloud(appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
 CreatePrivateLobbyDeprecatedRequest req = new CreatePrivateLobbyDeprecatedRequest() {};
 
-using(var res = await sdk.LobbyV1.CreatePrivateLobbyDeprecatedAsync(new CreatePrivateLobbyDeprecatedSecurity() {
-    PlayerAuth = "<YOUR_BEARER_TOKEN_HERE>",
-}, req))
+using(var res = await sdk.LobbyV1.CreatePrivateLobbyDeprecatedAsync(
+    "<YOUR_BEARER_TOKEN_HERE>",
+    req))
 {
-
     // handle response
 }
 ```
