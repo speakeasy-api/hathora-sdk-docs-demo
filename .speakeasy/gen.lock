@@ -4,9 +4,9 @@ management:
   docChecksum: 91c15407d9fcb8e0450a119d41153ea7
   docVersion: 0.0.1
   speakeasyVersion: internal
-  generationVersion: 2.250.2
-  releaseVersion: 0.11.0
-  configChecksum: ea5948ba9c772daf275be27f07db7e95
+  generationVersion: 2.252.2
+  releaseVersion: 0.11.1
+  configChecksum: 796cd0cc143ec08fbf0856e17934b394
   installationURL: https://github.com/hathora/cloud-sdk-typescript
 features:
   docs:
