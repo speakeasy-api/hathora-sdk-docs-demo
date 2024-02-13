@@ -13,7 +13,7 @@ CreateRoomRequest req = new CreateRoomRequest() {
     RoomId = "2swovpy1fnunu",
     CreateRoomParams = new CreateRoomParams() {
         RoomConfig = "{\"name\":\"my-room\"}",
-        Region = Region.SaoPaulo,
+        Region = Region.Mumbai,
     },
 };
 
@@ -28,9 +28,9 @@ using(var res = await sdk.RoomV2.CreateRoomAsync(req))
   {
     "additionalExposedPorts": [],
     "exposedPort": {
-        "port": 6736.6,
-        "host": "string",
-        "name": "string"
+        "port": 0,
+        "host": "None",
+        "name": "None"
       },
     "roomId": "2swovpy1fnunu"
   }

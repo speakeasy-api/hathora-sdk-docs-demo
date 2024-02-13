@@ -12,9 +12,6 @@ var sdk = new HathoraCloud(
 
 GetMetricsRequest req = new GetMetricsRequest() {
     ProcessId = "cbfcddd2-0006-43ae-996c-995fff7bed2e",
-    Metrics = new List<MetricName>() {
-        MetricName.RateEgress,
-    },
 };
 
 using(var res = await sdk.MetricsV1.GetMetricsAsync(req))
@@ -28,32 +25,32 @@ using(var res = await sdk.MetricsV1.GetMetricsAsync(req))
   {
     "cpu": [
       {
-        "value": 9437.49,
-        "timestamp": 9025.99
+        "value": 0,
+        "timestamp": 0
       }
     ],
     "memory": [
       {
-        "value": 6818.2,
-        "timestamp": 4499.5
+        "value": 0,
+        "timestamp": 0
       }
     ],
     "rate_egress": [
       {
-        "value": 3595.08,
-        "timestamp": 6130.64
+        "value": 0,
+        "timestamp": 0
       }
     ],
     "total_egress": [
       {
-        "value": 4370.32,
-        "timestamp": 9023.49
+        "value": 0,
+        "timestamp": 0
       }
     ],
     "active_connections": [
       {
-        "value": 6976.31,
-        "timestamp": 992.8
+        "value": 0,
+        "timestamp": 0
       }
     ]
   }

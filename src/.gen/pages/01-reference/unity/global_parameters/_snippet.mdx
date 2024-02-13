@@ -19,13 +19,7 @@ var sdk = new HathoraCloud(
 
 UpdateAppRequest req = new UpdateAppRequest() {
     AppConfig = new AppConfig() {
-        AuthConfiguration = new AuthConfiguration() {
-            Google = new Google() {
-                ClientId = "string",
-            },
-            Nickname = new RecordStringNever() {},
-            Anonymous = new RecordStringNever() {},
-        },
+        AuthConfiguration = new AuthConfiguration() {},
         AppName = "minecraft",
     },
 };

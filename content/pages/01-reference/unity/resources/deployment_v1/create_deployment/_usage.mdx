@@ -21,14 +21,7 @@ CreateDeploymentRequest req = new CreateDeploymentRequest() {
         },
         RoomsPerProcess = 3,
         PlanName = PlanName.Tiny,
-        AdditionalContainerPorts = new List<ContainerPort>() {
-            new ContainerPort() {
-                TransportType = TransportType.Tcp,
-                Port = 8000,
-                Name = "default",
-            },
-        },
-        TransportType = TransportType.Udp,
+        TransportType = TransportType.Tcp,
         ContainerPort = 4000,
     },
 };
@@ -54,8 +47,8 @@ using(var res = await sdk.DeploymentV1.CreateDeploymentAsync(req))
         "port": 8000,
         "name": "default"
       },
-    "containerPort": 6399.21,
-    "createdAt": "2023-09-30T21:26:54.920Z",
+    "containerPort": 0,
+    "createdAt": "None",
     "createdBy": "dev@hathora.dev",
     "requestedMemoryMB": 1024,
     "requestedCPU": 0.5,
