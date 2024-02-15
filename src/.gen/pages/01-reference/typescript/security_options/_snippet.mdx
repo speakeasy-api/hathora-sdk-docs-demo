@@ -31,7 +31,6 @@ Some operations in this SDK require the security scheme to be specified at the r
 ```typescript
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
 import { Region } from "@hathora/cloud-sdk-typescript/models/components";
-import { CreatePrivateLobbyDeprecatedSecurity } from "@hathora/cloud-sdk-typescript/models/operations";
 
 async function run() {
     const sdk = new HathoraCloud({
@@ -41,7 +40,7 @@ async function run() {
     const appId = "app-af469a92-5b45-4565-b3c4-b79878de67d2";
     const region = Region.London;
     const local = false;
-    const operationSecurity: CreatePrivateLobbyDeprecatedSecurity = "<YOUR_BEARER_TOKEN_HERE>";
+    const operationSecurity = "<YOUR_BEARER_TOKEN_HERE>";
 
     const result = await sdk.lobbyV1.createPrivateLobbyDeprecated(
         operationSecurity,

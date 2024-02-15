@@ -7,7 +7,6 @@ Example
 
 ```typescript
 import { HathoraCloud } from "@hathora/cloud-sdk-typescript";
-import * as errors from "@hathora/cloud-sdk-typescript/models/errors";
 
 async function run() {
     const sdk = new HathoraCloud({
@@ -20,7 +19,7 @@ async function run() {
         result = await sdk.appV1.createApp({
             authConfiguration: {
                 google: {
-                    clientId: "string",
+                    clientId: "<value>",
                 },
                 nickname: {},
                 anonymous: {},
