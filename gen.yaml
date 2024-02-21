@@ -9,7 +9,7 @@ generation:
     parameterOrderingFeb2024: false
     requestResponseComponentNamesFeb2024: false
 docs:
-  version: 0.11.2
+  version: 0.11.3
   defaultLanguage: curl
   docsLanguages:
     - go
@@ -29,6 +29,10 @@ docs:
   static: false
 typescript:
   version: 1.22.2
+  additionalDependencies:
+    dependencies: {}
+    devDependencies: {}
+    peerDependencies: {}
   author: Hathora
   clientServerStatusCodesAsErrors: true
   flattenGlobalSecurity: true
