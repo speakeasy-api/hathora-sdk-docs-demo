@@ -5,20 +5,20 @@ curl https://api.hathora.dev/apps/v1/create \
 --header 'Content-Type: application/json' \
 --header 'Accept: application/json' \
 --header 'Authorization: YOUR_BEARER_TOKEN_HERE' \
---data '{"authConfiguration":{"google":{"clientId":"string"},"nickname":{},"anonymous":{}},"appName":"minecraft"}'
+--data '{"authConfiguration":{"google":{"clientId":"None"},"nickname":{},"anonymous":{}},"appName":"minecraft"}'
 ```
 ---
 
 ```json Example Response
   {
     "deletedBy": "dev@hathora.dev",
-    "deletedAt": "2023-08-21T04:36:25.552Z",
-    "createdAt": "2024-07-17T14:06:34.909Z",
+    "deletedAt": "None",
+    "createdAt": "None",
     "createdBy": "dev@hathora.dev",
     "orgId": "google-oauth2|107030234048588177467",
     "authConfiguration": {
       "google": {
-        "clientId": "string"
+        "clientId": "None"
       },
       "nickname": {},
       "anonymous": {}

@@ -1,7 +1,7 @@
 {
-  "get_builds": "Get Builds",
-  "get_build_info": "Get Build Info",
   "create_build": "Create Build",
-  "run_build": "Run Build",
-  "delete_build": "Delete Build"
+  "delete_build": "Delete Build",
+  "get_build_info": "Get Build Info",
+  "get_builds": "Get Builds",
+  "run_build": "Run Build"
 }

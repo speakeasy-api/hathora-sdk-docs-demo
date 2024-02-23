@@ -14,18 +14,12 @@ using HathoraUnitySDK.Models.Components;
 using HathoraUnitySDK.Models.Requests;
 
 var sdk = new HathoraCloud(
-    hathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
+    HathoraDevToken: "<YOUR_BEARER_TOKEN_HERE>",
     appId: "app-af469a92-5b45-4565-b3c4-b79878de67d2");
 
 UpdateAppRequest req = new UpdateAppRequest() {
     AppConfig = new AppConfig() {
-        AuthConfiguration = new AuthConfiguration() {
-            Google = new Google() {
-                ClientId = "string",
-            },
-            Nickname = new RecordStringNever() {},
-            Anonymous = new RecordStringNever() {},
-        },
+        AuthConfiguration = new AuthConfiguration() {},
         AppName = "minecraft",
     },
 };

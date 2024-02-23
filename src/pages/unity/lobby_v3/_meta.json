@@ -1,6 +1,6 @@
 {
   "create_lobby": "Create Lobby",
-  "list_active_public_lobbies": "List Active Public Lobbies",
   "get_lobby_info_by_room_id": "Get Lobby Info By Room Id",
-  "get_lobby_info_by_short_code": "Get Lobby Info By Short Code"
+  "get_lobby_info_by_short_code": "Get Lobby Info By Short Code",
+  "list_active_public_lobbies": "List Active Public Lobbies"
 }

@@ -1,5 +1,5 @@
 {
-  "get_deployments": "Get Deployments",
+  "create_deployment": "Create Deployment",
   "get_deployment_info": "Get Deployment Info",
-  "create_deployment": "Create Deployment"
+  "get_deployments": "Get Deployments"
 }
