@@ -4,9 +4,9 @@ management:
   docChecksum: 91c15407d9fcb8e0450a119d41153ea7
   docVersion: 0.0.1
   speakeasyVersion: internal
-  generationVersion: 2.263.3
-  releaseVersion: 0.11.3
-  configChecksum: 276301f500772d1cc97a82fcb328484d
+  generationVersion: 2.269.0
+  releaseVersion: 0.11.4
+  configChecksum: 24295b8bc7fd5c5f91282810d0dcf5d5
   installationURL: https://github.com/hathora/cloud-sdk-typescript
 features:
   docs:
@@ -699,6 +699,7 @@ generatedFiles:
   - content/types/models/components/exposed_port/unity.mdx
   - content/types/models/components/google/typescript.mdx
   - content/types/models/components/google/unity.mdx
+  - content/types/models/components/http_metadata/typescript.mdx
   - content/types/models/components/invoice/typescript.mdx
   - content/types/models/components/invoice/unity.mdx
   - content/types/models/components/link_payment_method/typescript.mdx
