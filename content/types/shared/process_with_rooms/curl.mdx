@@ -67,13 +67,25 @@ Governs how many [rooms](https://hathora.dev/docs/concepts/hathora\-entities\#ro
 ---
 ##### `additionalExposedPorts` _array_
 <br/>
-**Example:** `[{"host":"1.proxy.hathora.dev","name":"debug","port":72941,"transportType":"tcp"}]`
+**Example:** `[
+{
+"host": "1.proxy.hathora.dev",
+"name": "debug",
+"port": 72941,
+"transportType": "tcp"
+}
+]`
 
 ---
 ##### `exposedPort` _object (optional)_
 Connection details for an active process.
 <br/>
-**Example:** `{"host":"1.proxy.hathora.dev","name":"default","port":34567,"transportType":"tcp"}`
+**Example:** `{
+"host": "1.proxy.hathora.dev",
+"name": "default",
+"port": 34567,
+"transportType": "tcp"
+}`
 
 <Collapsible content={() => import('/content/types/shared/exposed_port/curl.mdx')} openLabel={Labels.showProperties} closeLabel={Labels.hideProperties} />
 
