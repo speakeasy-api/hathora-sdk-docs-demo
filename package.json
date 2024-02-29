@@ -1,6 +1,6 @@
 {
   "name": "hathora-sdk-docs",
-  "version": "0.11.4",
+  "version": "0.11.5",
   "description": "Nextra docs template",
   "private": true,
   "scripts": {
