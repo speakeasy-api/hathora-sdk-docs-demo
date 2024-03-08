@@ -4,21 +4,21 @@ management:
   docChecksum: 91c15407d9fcb8e0450a119d41153ea7
   docVersion: 0.0.1
   speakeasyVersion: internal
-  generationVersion: 2.269.0
-  releaseVersion: 0.11.4
-  configChecksum: 24295b8bc7fd5c5f91282810d0dcf5d5
+  generationVersion: 2.279.1
+  releaseVersion: 0.11.5
+  configChecksum: b91002378e86bf422e093e8598c48e92
   installationURL: https://github.com/hathora/cloud-sdk-typescript
 features:
   docs:
-    constsAndDefaults: 0.1.0
-    core: 1.26.2
+    constsAndDefaults: 0.1.1
+    core: 1.26.3
     deprecations: 0.1.0
     flattening: 0.1.0
-    globalSecurity: 0.1.1
+    globalSecurity: 0.1.3
     globalServerURLs: 0.1.1
     globals: 0.1.0
     methodSecurity: 0.2.0
-    unions: 0.1.2
+    unions: 0.1.3
 generatedFiles:
   - content/pages/01-reference/typescript/client_sdks/_snippet.mdx
   - content/pages/01-reference/typescript/client_sdks/client_sdks.mdx
@@ -1344,13 +1344,6 @@ generatedFiles:
   - content/pages/01-reference/curl/resources/room_v1/get_connection_info_deprecated/_parameters.mdx
   - content/pages/01-reference/curl/resources/room_v1/get_connection_info_deprecated/_usage.mdx
   - content/pages/01-reference/curl/resources/room_v1/get_connection_info_deprecated/_header.mdx
-  - content/pages/01-reference/curl/resources/management_v1/management_v1.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/send_verification_email.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_authentication.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_response.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_parameters.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_usage.mdx
-  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_header.mdx
   - content/pages/01-reference/curl/resources/billing_v1/billing_v1.mdx
   - content/pages/01-reference/curl/resources/billing_v1/get_balance/get_balance.mdx
   - content/pages/01-reference/curl/resources/billing_v1/get_balance/_authentication.mdx
@@ -1376,6 +1369,13 @@ generatedFiles:
   - content/pages/01-reference/curl/resources/billing_v1/get_invoices/_parameters.mdx
   - content/pages/01-reference/curl/resources/billing_v1/get_invoices/_usage.mdx
   - content/pages/01-reference/curl/resources/billing_v1/get_invoices/_header.mdx
+  - content/pages/01-reference/curl/resources/management_v1/management_v1.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/send_verification_email.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_authentication.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_response.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_parameters.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_usage.mdx
+  - content/pages/01-reference/curl/resources/management_v1/send_verification_email/_header.mdx
   - content/types/operations/get_apps_response/curl.mdx
   - content/types/operations/create_app_response/curl.mdx
   - content/types/operations/create_app_request_body/curl.mdx
@@ -1503,13 +1503,13 @@ generatedFiles:
   - content/types/operations/suspend_room_deprecated_response/curl.mdx
   - content/types/operations/get_connection_info_deprecated_request/curl.mdx
   - content/types/operations/get_connection_info_deprecated_response/curl.mdx
-  - content/types/operations/send_verification_email_response/curl.mdx
-  - content/types/operations/send_verification_email_request_body/curl.mdx
   - content/types/operations/get_balance_response/curl.mdx
   - content/types/operations/get_payment_method_response/curl.mdx
   - content/types/operations/init_stripe_customer_portal_url_response/curl.mdx
   - content/types/operations/init_stripe_customer_portal_url_request_body/curl.mdx
   - content/types/operations/get_invoices_response/curl.mdx
+  - content/types/operations/send_verification_email_response/curl.mdx
+  - content/types/operations/send_verification_email_request_body/curl.mdx
   - content/types/shared/application_with_deployment/curl.mdx
   - content/types/shared/env/curl.mdx
   - content/types/shared/deployment_transport_type/curl.mdx
@@ -1564,9 +1564,6 @@ generatedFiles:
   - content/types/shared/starting_connection_info/curl.mdx
   - content/types/shared/active_connection_info_status/curl.mdx
   - content/types/shared/active_connection_info/curl.mdx
-  - content/types/shared/verification_email_response_status/curl.mdx
-  - content/types/shared/verification_email_response/curl.mdx
-  - content/types/shared/verification_email_request/curl.mdx
   - content/types/shared/payment_method/curl.mdx
   - content/types/shared/link_payment_method/curl.mdx
   - content/types/shared/ach_payment_method/curl.mdx
@@ -1575,6 +1572,9 @@ generatedFiles:
   - content/types/shared/customer_portal_url/curl.mdx
   - content/types/shared/status/curl.mdx
   - content/types/shared/invoice/curl.mdx
+  - content/types/shared/verification_email_response_status/curl.mdx
+  - content/types/shared/verification_email_response/curl.mdx
+  - content/types/shared/verification_email_request/curl.mdx
   - content/types/shared/security/curl.mdx
   - content/languages.tsx
   - content/pages/01-reference/typescript/resources/resources.mdx
