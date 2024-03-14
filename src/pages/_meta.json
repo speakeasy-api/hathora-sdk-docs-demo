@@ -1,16 +1,4 @@
 {
-  "custom": {
-    "title": "Log In",
-    "type": "page",
-    "href": "https://console.hathora.dev/login",
-    "newWindow": true
-  },
-  "docs": {
-    "title": "Docs",
-    "type": "page",
-    "href": "https://hathora.dev/docs",
-    "newWindow": true
-  },
   "typescript": {
     "type": "page",
     "display": "hidden"
