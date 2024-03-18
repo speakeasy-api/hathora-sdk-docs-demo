@@ -8,8 +8,10 @@ generation:
     nameResolutionDec2023: false
     parameterOrderingFeb2024: false
     requestResponseComponentNamesFeb2024: false
+  auth:
+    oAuth2ClientCredentialsEnabled: false
 docs:
-  version: 0.11.4
+  version: 0.11.5
   defaultLanguage: curl
   docsLanguages:
     - go
